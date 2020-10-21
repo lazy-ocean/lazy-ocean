@@ -2,8 +2,8 @@
 $color-yellow: #ffe0ac;
 $color-yellow-dark: #ffc563;
 $color-font-grey: #454545;
-$color-background: #f9f9f9;
-
+$color-background: #e5e5e5;
+$color-card-background: #f9f9f9;
 /// font
 $font-size-general: 2rem;
 
@@ -12,3 +12,15 @@ $bp-largest: 75em; // 1200
 $bp-large: 62.5em; // 1000
 $bp-medium: 53.125em; // 850
 $bp-smallest: 37.5em; // 600
+
+/// frameworks-colors
+$js-yellow-back: #fddb3a;
+$js-yellow-font: #8d7500;
+$gulp-peach-back: #ffbfc0;
+$gulp-peach-font: #cf4647;
+$sass-pink-back: #ffb7db;
+$sass-pink-font: #bf4080;
+$html-green-back: #caffb7;
+$html-green-font: #5ea03e;
+$npm-blue-back: #b7ffff;
+$npm-blue-font: #568484;

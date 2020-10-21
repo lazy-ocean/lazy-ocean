@@ -1,0 +1,96 @@
+.projects {
+  width: 100%;
+  display: block;
+  margin: 0 auto;
+
+  &__card {
+    margin: 4rem 0;
+    background-color: $color-card-background;
+    display: flex;
+    padding: 3rem;
+    box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132),
+      0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+
+    &__text {
+      padding-right: 3rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      flex-shrink: 10;
+      overflow: hidden;
+      &--h {
+        display: flex;
+      }
+
+      &--techs {
+        margin-top: auto;
+        padding-top: 2rem;
+        ul {
+          display: flex;
+          list-style: none;
+          flex-wrap: wrap;
+          li {
+            display: block;
+            padding: 1rem;
+            margin: 1rem 1.5rem 1rem 0;
+            font-size: 1.5rem;
+            font-weight: bold;
+            min-width: 7.5rem;
+            text-align: center;
+            border-radius: 7px;
+
+            &:first-child {
+              margin-left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    &__pics {
+      display: grid;
+      grid-template-columns: repeat(3, 30%);
+      grid-template-rows: repeat(3, 30%);
+
+      @media only screen and (max-width: $bp-medium) {
+        display: none;
+      }
+
+      .pic1 {
+        grid-area: 1 / 2 / 3 / 4;
+      }
+      .pic2 {
+        grid-area: 2 / 1 / 4 / 3;
+      }
+    }
+  }
+}
+
+.projects__card__pic {
+  max-width: 20rem;
+}
+
+.js-yellow {
+  color: $js-yellow-font;
+  background-color: $js-yellow-back;
+}
+
+.gulp-peach {
+  color: $gulp-peach-font;
+  background-color: $gulp-peach-back;
+}
+
+.sass-pink {
+  color: $sass-pink-font;
+  background-color: $sass-pink-back;
+}
+
+.html-green {
+  color: $html-green-font;
+  background-color: $html-green-back;
+}
+
+.npm-blue {
+  color: $npm-blue-font;
+  background-color: $npm-blue-back;
+}

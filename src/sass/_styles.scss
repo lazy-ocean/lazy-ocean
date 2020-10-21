@@ -15,10 +15,16 @@ html {
 
 body {
   margin: 0 auto;
-  max-width: 1466px;
+  //max-width: 1466px;
 }
 
 main {
-  padding: 5rem auto;
+  margin: 0 auto;
+  padding: 5rem 18rem;
+  width: 100%;
   background-color: $color-background;
+  z-index: 5;
+  @media only screen and (max-width: $bp-largest) {
+    padding: 5rem 8rem;
+  }
 }

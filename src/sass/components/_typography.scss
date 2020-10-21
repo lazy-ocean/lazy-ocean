@@ -14,3 +14,35 @@
     padding-top: 1.5rem;
   }
 }
+
+.projects__h2 {
+  font-size: 3.6rem;
+  color: $color-font-grey;
+}
+
+.projects__card__text--h {
+  color: $color-font-grey;
+  padding-bottom: 1rem;
+  h3 {
+    font-size: 2.5rem;
+
+    a,
+    a:visited {
+      color: $color-font-grey;
+      text-decoration: none;
+      transition: all 0.1s;
+      border-bottom: 2px dotted $color-font-grey;
+    }
+  }
+  p {
+    font-size: 2rem;
+    font-style: italic;
+    padding-left: 1.2rem;
+    line-height: 1.68;
+  }
+}
+
+.projects__card__text p {
+  color: $color-font-grey;
+  font-size: $font-size-general;
+}
