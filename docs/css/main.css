@@ -1,49 +1,57 @@
-* {
-  margin: 0;
-  padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box; }
-
-html {
-  font-size: 62.5%;
-  font-family: "Raleway", sans-serif; }
-
-body {
-  margin: 0 auto;
-  max-width: 1466px; }
-
 .header__text {
-  color: #454545; }
+  color: #454545;
+  flex-direction: column; }
   .header__text--main {
     font-size: 4.2rem; }
+    @media only screen and (max-width: 600px) {
+      .header__text--main {
+        padding-top: 1rem; } }
   .header__text--small {
     font-size: 2rem;
     padding-top: 1.5rem; }
 
 header {
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   min-height: 25rem;
   padding: 5rem 18rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   background: linear-gradient(176deg, #ffe0ac 0%, #ffc563 100%); }
+  header div {
+    display: flex;
+    margin: 0 auto; }
+    @media only screen and (max-width: 37.5em) {
+      header div {
+        flex-direction: column; } }
+  @media only screen and (max-width: 75em) {
+    header {
+      padding: 5rem 8rem; } }
 
 .header__photo {
   width: 150px;
   height: 150px;
   border-radius: 10px;
   margin: 0 2.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .header__photo {
+      margin: 0; } }
 
 .header__links ul {
   list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex; }
+  @media only screen and (max-width: 53.125em) {
+    .header__links ul {
+      flex-direction: column; } }
+  @media only screen and (max-width: 37.5em) {
+    .header__links ul {
+      flex-direction: row;
+      padding-top: 2.5rem; } }
 
 .header__links li {
-  padding-left: 4rem; }
+  padding-left: 4rem;
+  padding-bottom: 2.5rem; }
+  @media only screen and (max-width: 37.5em) {
+    .header__links li {
+      padding: 0 1.5rem; } }
 
 .header__links a,
 .header__links a:focus,
@@ -51,3 +59,23 @@ header {
   text-decoration: none;
   color: #454545;
   font-size: 2rem; }
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  font-family: "Raleway", sans-serif; }
+  @media only screen and (max-width: 62.5em) {
+    html {
+      font-size: 50%; } }
+
+body {
+  margin: 0 auto;
+  max-width: 1466px; }
+
+main {
+  padding: 5rem auto;
+  background-color: #f9f9f9; }

@@ -1,14 +1,23 @@
 header {
   width: 100%;
-  margin: 0 auto;
+  margin: 0;
   min-height: 25rem;
   padding: 5rem 18rem;
-  display: flex;
   background: linear-gradient(
     176deg,
     $color-yellow 0%,
     $color-yellow-dark 100%
   );
+  div {
+    display: flex;
+    margin: 0 auto;
+    @media only screen and (max-width: $bp-smallest) {
+      flex-direction: column;
+    }
+  }
+  @media only screen and (max-width: $bp-largest) {
+    padding: 5rem 8rem;
+  }
 }
 
 .header__photo {
@@ -16,16 +25,33 @@ header {
   height: 150px;
   border-radius: 10px;
   margin: 0 2.5rem;
+
+  @media only screen and (max-width: $bp-smallest) {
+    margin: 0;
+  }
 }
 
 .header__links {
   ul {
     list-style: none;
     display: flex;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+    }
+    @media only screen and (max-width: $bp-smallest) {
+      flex-direction: row;
+      padding-top: 2.5rem;
+    }
   }
 
   li {
     padding-left: 4rem;
+    padding-bottom: 2.5rem;
+
+    @media only screen and (max-width: $bp-smallest) {
+      padding: 0 1.5rem;
+    }
   }
 
   a,

@@ -1,5 +1,14 @@
+/// colors
 $color-yellow: #ffe0ac;
 $color-yellow-dark: #ffc563;
 $color-font-grey: #454545;
+$color-background: #f9f9f9;
 
+/// font
 $font-size-general: 2rem;
+
+/// media-queries breakpoints
+$bp-largest: 75em; // 1200
+$bp-large: 62.5em; // 1000
+$bp-medium: 53.125em; // 850
+$bp-smallest: 37.5em; // 600
