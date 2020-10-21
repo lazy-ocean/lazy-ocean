@@ -1,0 +1,42 @@
+{
+  "name": "lazy_ocean",
+  "version": "1.0.0",
+  "description": "Personal website",
+  "main": "index.js",
+  "scripts": {
+    "build": "gulp build",
+    "start": "gulp start",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.11.6",
+    "@babel/preset-env": "^7.11.5",
+    "@babel/preset-es2015": "^7.0.0-beta.53",
+    "autoprefixer": "9.8.x",
+    "babelify": "^10.0.0",
+    "browser-sync": "2.26.x",
+    "browserify": "^16.5.2",
+    "del": "^5.1.0",
+    "gulp": "4.0.x",
+    "gulp-csso": "^4.0.1",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-inline-source": "^4.0.0",
+    "gulp-plumber": "1.2.x",
+    "gulp-postcss": "8.0.x",
+    "gulp-posthtml": "^3.0.5",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "4.1.x",
+    "gulp-sourcemaps": "2.6.x",
+    "gulp-uglify": "^3.0.2",
+    "posthtml-include": "^1.4.3",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "IE 11",
+    "Firefox ESR"
+  ]
+}
