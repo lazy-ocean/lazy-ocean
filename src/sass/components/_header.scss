@@ -1,11 +1,38 @@
-.hello--heading {
-  padding: 15px;
-  font-weight: 400;
-}
-
 header {
   width: 100%;
   margin: 0 auto;
-  padding: 0 30px;
+  min-height: 25rem;
+  padding: 5rem 18rem;
   display: flex;
+  background: linear-gradient(
+    176deg,
+    $color-yellow 0%,
+    $color-yellow-dark 100%
+  );
+}
+
+.header__photo {
+  width: 150px;
+  height: 150px;
+  border-radius: 10px;
+  margin: 0 2.5rem;
+}
+
+.header__links {
+  ul {
+    list-style: none;
+    display: flex;
+  }
+
+  li {
+    padding-left: 4rem;
+  }
+
+  a,
+  a:focus,
+  a:visited {
+    text-decoration: none;
+    color: $color-font-grey;
+    font-size: $font-size-general;
+  }
 }

@@ -1,9 +1,15 @@
 * {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-body {
-  margin: 0;
+html {
+  font-size: 62.5%;
   font-family: "Raleway", sans-serif;
-  flex-direction: column;
+}
+
+body {
+  margin: 0 auto;
+  max-width: 1466px;
 }

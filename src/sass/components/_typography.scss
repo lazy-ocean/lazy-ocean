@@ -1,0 +1,12 @@
+.header__text {
+  color: $color-font-grey;
+
+  &--main {
+    font-size: 4.2rem;
+  }
+
+  &--small {
+    font-size: $font-size-general;
+    padding-top: 1.5rem;
+  }
+}
