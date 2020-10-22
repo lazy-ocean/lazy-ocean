@@ -31,7 +31,35 @@
       color: $color-font-grey;
       text-decoration: none;
       transition: all 0.1s;
-      border-bottom: 2px dotted $color-font-grey;
+      position: relative;
+      border-bottom: solid 2px $color-yellow;
+    }
+
+    a:before,
+    a:after {
+      content: "";
+      border-bottom: solid 4px $color-yellow;
+      position: absolute;
+      bottom: 0;
+      width: 0;
+    }
+
+    a:before {
+      left: 0;
+    }
+    a:after {
+      right: 0;
+    }
+
+    a:hover:before,
+    a:hover:after {
+      width: 50%;
+    }
+
+    a:before,
+    a:after {
+      -webkit-transition: all 0.2s ease;
+      transition: all 0.2s ease;
     }
   }
   p {
