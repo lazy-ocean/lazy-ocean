@@ -10,6 +10,8 @@
     padding: 3rem;
     box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132),
       0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+    position: sticky;
+    top: 10px;
 
     &__text {
       padding-right: 3rem;
@@ -63,6 +65,13 @@
         grid-area: 2 / 1 / 4 / 3;
       }
     }
+  }
+}
+
+@for $i from 1 through 8 {
+  .projects__card:nth-child(#{$i}n) {
+    top: $i * 20px;
+    box-shadow: 0 -1rem 1rem rgba(0, 0, 0, 0.048);
   }
 }
 
