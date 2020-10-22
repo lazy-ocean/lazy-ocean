@@ -1,0 +1,33 @@
+a,
+a:visited {
+  color: $color-font-grey;
+  text-decoration: none;
+  transition: all 0.1s;
+  position: relative;
+}
+
+a:before,
+a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  width: 0;
+}
+
+a:before {
+  left: 0;
+}
+a:after {
+  right: 0;
+}
+
+a:hover:before,
+a:hover:after {
+  width: 50%;
+}
+
+a:before,
+a:after {
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+}

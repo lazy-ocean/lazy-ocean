@@ -64,6 +64,17 @@
       .pic2 {
         grid-area: 2 / 1 / 4 / 3;
       }
+
+      .pic1,
+      .pic2 {
+        box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132),
+          0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
+        transition: all 0.3s;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+      }
     }
   }
 }

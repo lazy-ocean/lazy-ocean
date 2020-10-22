@@ -64,38 +64,12 @@ header {
   a,
   a:focus,
   a:visited {
-    text-decoration: none;
     color: $color-font-grey;
     font-size: $font-size-general;
-    transition: all 0.2s;
-    position: relative;
-    padding-bottom: 2px;
   }
 
   a:before,
   a:after {
-    content: "";
     border-bottom: solid 2px white;
-    position: absolute;
-    bottom: 0;
-    width: 0;
-  }
-
-  a:before {
-    left: 0;
-  }
-  a:after {
-    right: 0;
-  }
-
-  a:hover:before,
-  a:hover:after {
-    width: 50%;
-  }
-
-  a:before,
-  a:after {
-    -webkit-transition: all 0.2s ease;
-    transition: all 0.2s ease;
   }
 }
