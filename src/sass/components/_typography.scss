@@ -65,3 +65,18 @@
 .github-link:after {
   border-bottom: solid 2px $color-yellow;
 }
+
+.project__card__text--list {
+  padding: 2rem 0 0 2rem;
+  li {
+    padding-bottom: 1rem;
+  }
+  a {
+    font-size: $font-size-general;
+    border-bottom: solid 2px $color-yellow;
+  }
+  a:before,
+  a:after {
+    border-bottom: solid 2px $color-yellow;
+  }
+}

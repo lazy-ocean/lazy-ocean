@@ -55,6 +55,17 @@
 .github-link:after {
   border-bottom: solid 2px #ffe0ac; }
 
+.project__card__text--list {
+  padding: 2rem 0 0 2rem; }
+  .project__card__text--list li {
+    padding-bottom: 1rem; }
+  .project__card__text--list a {
+    font-size: 2rem;
+    border-bottom: solid 2px #ffe0ac; }
+  .project__card__text--list a:before,
+  .project__card__text--list a:after {
+    border-bottom: solid 2px #ffe0ac; }
+
 a,
 a:visited {
   color: #454545;
@@ -296,6 +307,10 @@ header {
 .npm-blue {
   color: #568484;
   background-color: #b7ffff; }
+
+.aem-orange {
+  color: #976200;
+  background-color: #ffbb3c; }
 
 * {
   margin: 0;
