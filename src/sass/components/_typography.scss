@@ -49,21 +49,31 @@
   font-size: $font-size-general;
 }
 
-.github-link,
-.github-link:focus,
-.github-link:visited {
-  font-size: 14px;
-  padding-top: 2rem;
-  padding-bottom: 2px;
-  font-style: italic;
-  color: $color-font-grey;
+.github-link {
+  padding: 1rem;
+  border: 1px solid rgb(207, 207, 207);
   display: block;
   width: fit-content;
+  font-size: 1.6rem;
+  margin-top: 1.5rem;
+  border-radius: 12px;
+  background-color: white;
+  line-height: 20px;
+  transition: all 0.2s;
+
+  &:hover {
+    box-shadow: 0 2px 5px 1px rgba(209, 209, 209, 0.35);
+  }
+  &:active {
+    transform: translate(0.1rem, 0.1rem);
+    box-shadow: 1px 2px 5px 1px rgba(209, 209, 209, 0.2);
+  }
 }
 
-.github-link:before,
-.github-link:after {
-  border-bottom: solid 2px $color-yellow;
+.git {
+  width: 2.5rem;
+  margin-right: 0.5rem;
+  vertical-align: middle;
 }
 
 .project__card__text--list {

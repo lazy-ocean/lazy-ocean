@@ -33,7 +33,7 @@
           flex-wrap: wrap;
           li {
             display: block;
-            padding: 1rem;
+            padding: 0.8rem;
             margin: 1rem 1.5rem 1rem 0;
             font-size: 1.5rem;
             font-weight: bold;
@@ -53,6 +53,11 @@
       display: grid;
       grid-template-columns: repeat(3, 30%);
       grid-template-rows: repeat(3, 30%);
+      transition: all 0.3s;
+
+      &:hover {
+        transform: scale(1.1);
+      }
 
       @media only screen and (max-width: $bp-medium) {
         display: none;
@@ -69,11 +74,6 @@
       .pic2 {
         box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132),
           0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
-        transition: all 0.3s;
-
-        &:hover {
-          transform: scale(1.1);
-        }
       }
     }
   }
