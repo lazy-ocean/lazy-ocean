@@ -23,6 +23,9 @@
     overflow: hidden;
     &--h {
       display: flex;
+      @media only screen and (max-width: $bp-medium) {
+        flex-direction: column;
+      }
     }
 
     &--techs {
@@ -84,7 +87,7 @@
 }
 
 @for $i from 1 through 8 {
-  .projects__card:nth-child(#{$i}n) {
+  .card:nth-child(#{$i}n) {
     top: $i * 20px;
     box-shadow: 0 -1rem 1rem rgba(0, 0, 0, 0.048);
   }

@@ -1,3 +1,6 @@
+p {
+  line-height: 150%;
+}
 .header__text {
   color: $color-font-grey;
   flex-direction: column;
@@ -31,6 +34,11 @@
     font-style: italic;
     padding-left: 1.2rem;
     line-height: 1.68;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding-left: 0;
+      margin-top: 1rem;
+    }
   }
 }
 
