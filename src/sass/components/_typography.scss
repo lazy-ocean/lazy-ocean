@@ -20,21 +20,11 @@
   color: $color-font-grey;
 }
 
-.projects__card__text--h {
+.card__text--h {
   color: $color-font-grey;
   padding-bottom: 1rem;
   h3 {
     font-size: 2.5rem;
-
-    a,
-    a:visited {
-      border-bottom: solid 2px $color-yellow;
-    }
-
-    a:before,
-    a:after {
-      border-bottom: solid 2px $color-yellow;
-    }
   }
   p {
     font-size: 2rem;
@@ -44,7 +34,7 @@
   }
 }
 
-.projects__card__text p {
+.card__text p {
   color: $color-font-grey;
   font-size: $font-size-general;
 }
@@ -60,6 +50,8 @@
   background-color: white;
   line-height: 20px;
   transition: all 0.2s;
+  text-decoration: none;
+  color: $color-font-grey;
 
   &:hover {
     box-shadow: 0 2px 5px 1px rgba(209, 209, 209, 0.35);
@@ -76,17 +68,12 @@
   vertical-align: middle;
 }
 
-.project__card__text--list {
+.card__text--list {
   padding: 2rem 0 0 2rem;
   li {
     padding-bottom: 1rem;
   }
   a {
     font-size: $font-size-general;
-    border-bottom: solid 2px $color-yellow;
-  }
-  a:before,
-  a:after {
-    border-bottom: solid 2px $color-yellow;
   }
 }

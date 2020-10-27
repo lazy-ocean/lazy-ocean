@@ -2,79 +2,83 @@
   width: 100%;
   display: block;
   margin: 0 auto;
+}
 
-  &__card {
-    margin: 4rem 0;
-    background-color: $color-card-background;
+.card {
+  margin: 4rem 0;
+  background-color: $color-card-background;
+  display: flex;
+  padding: 3rem;
+  box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132),
+    0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
+  position: sticky;
+  top: 10px;
+
+  &__text {
+    padding-right: 3rem;
     display: flex;
-    padding: 3rem;
-    box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132),
-      0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
-    position: sticky;
-    top: 10px;
-
-    &__text {
-      padding-right: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    flex-shrink: 10;
+    overflow: hidden;
+    &--h {
       display: flex;
-      flex-direction: column;
-      justify-content: center;
-      flex-shrink: 10;
-      overflow: hidden;
-      &--h {
+    }
+
+    &--techs {
+      margin-top: auto;
+      padding-top: 2rem;
+      ul {
         display: flex;
-      }
+        list-style: none;
+        flex-wrap: wrap;
+        li {
+          display: block;
+          padding: 0.8rem;
+          margin: 1rem 1.5rem 1rem 0;
+          font-size: 1.5rem;
+          font-weight: bold;
+          min-width: 7.5rem;
+          text-align: center;
+          border-radius: 7px;
 
-      &--techs {
-        margin-top: auto;
-        padding-top: 2rem;
-        ul {
-          display: flex;
-          list-style: none;
-          flex-wrap: wrap;
-          li {
-            display: block;
-            padding: 0.8rem;
-            margin: 1rem 1.5rem 1rem 0;
-            font-size: 1.5rem;
-            font-weight: bold;
-            min-width: 7.5rem;
-            text-align: center;
-            border-radius: 7px;
-
-            &:first-child {
-              margin-left: 0;
-            }
+          &:first-child {
+            margin-left: 0;
           }
         }
       }
     }
+  }
 
-    &__pics {
-      display: grid;
-      grid-template-columns: repeat(3, 30%);
-      grid-template-rows: repeat(3, 30%);
-      transition: all 0.3s;
+  &__pic {
+    max-width: 20rem;
+  }
 
-      &:hover {
-        transform: scale(1.1);
-      }
+  &__pics {
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    grid-template-rows: repeat(3, 30%);
+    transition: all 0.3s;
 
-      @media only screen and (max-width: $bp-medium) {
-        display: none;
-      }
+    &:hover {
+      transform: scale(1.1);
+    }
 
-      .pic1 {
-        grid-area: 1 / 2 / 3 / 4;
-      }
-      .pic2 {
-        grid-area: 2 / 1 / 4 / 3;
-      }
+    @media only screen and (max-width: $bp-medium) {
+      display: none;
+    }
 
-      .pic1,
-      .pic2 {
-        box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132),
-          0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
-      }
+    .pic1 {
+      grid-area: 1 / 2 / 3 / 4;
+    }
+    .pic2 {
+      grid-area: 2 / 1 / 4 / 3;
+    }
+
+    .pic1,
+    .pic2 {
+      box-shadow: 0 3.2px 7.2px 0 rgba(0, 0, 0, 0.132),
+        0 0.6px 1.8px 0 rgba(0, 0, 0, 0.108);
     }
   }
 }
@@ -84,10 +88,6 @@
     top: $i * 20px;
     box-shadow: 0 -1rem 1rem rgba(0, 0, 0, 0.048);
   }
-}
-
-.projects__card__pic {
-  max-width: 20rem;
 }
 
 .js-yellow {

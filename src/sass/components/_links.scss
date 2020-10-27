@@ -1,33 +1,38 @@
 a,
 a:visited {
-  color: $color-font-grey;
   text-decoration: none;
-  transition: all 0.1s;
-  position: relative;
+  color: $color-font-grey;
 }
 
-a:before,
-a:after {
+.a--animated,
+.a--animated:visited {
+  transition: all 0.1s;
+  position: relative;
+  border-bottom: solid 2px $color-yellow;
+}
+
+.a--animated:before,
+.a--animated:after {
+  border-bottom: solid 1px $color-yellow;
   content: "";
   position: absolute;
   bottom: 0;
   width: 0;
 }
-
-a:before {
+.a--animated:before {
   left: 0;
 }
-a:after {
+.a--animated:after {
   right: 0;
 }
 
-a:hover:before,
-a:hover:after {
+.a--animated:hover:before,
+.a--animated:hover:after {
   width: 50%;
 }
 
-a:before,
-a:after {
+.a--animated:before,
+.a--animated:after {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }
