@@ -140,6 +140,10 @@ header {
     .header__photo {
       margin: 0; } }
 
+@media only screen and (max-width: 37.5em) {
+  .header__links {
+    margin-left: 0; } }
+
 .header__links ul {
   list-style: none;
   display: -webkit-box;
@@ -157,14 +161,15 @@ header {
       -webkit-box-direction: normal;
           -ms-flex-direction: row;
               flex-direction: row;
-      padding-top: 2.5rem; } }
+      padding-top: 2.5rem;
+      text-align: left; } }
 
 .header__links li {
   padding-left: 4rem;
   padding-bottom: 2.5rem; }
   @media only screen and (max-width: 37.5em) {
     .header__links li {
-      padding: 0 1.5rem; } }
+      padding: 0 3rem 0 0; } }
 
 .header__links a,
 .header__links a:focus,
@@ -175,6 +180,14 @@ header {
 .header__links a:before,
 .header__links a:after {
   border-bottom: solid 2px white; }
+
+.header__link {
+  height: 3.5rem;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s; }
+  .header__link:hover {
+    -webkit-filter: invert(100%) brightness(1.75);
+            filter: invert(100%) brightness(1.75); }
 
 .projects {
   width: 100%;

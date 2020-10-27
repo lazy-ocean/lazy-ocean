@@ -39,6 +39,9 @@ header {
 }
 
 .header__links {
+  @media only screen and (max-width: $bp-smallest) {
+    margin-left: 0;
+  }
   ul {
     list-style: none;
     display: flex;
@@ -49,6 +52,7 @@ header {
     @media only screen and (max-width: $bp-smallest) {
       flex-direction: row;
       padding-top: 2.5rem;
+      text-align: left;
     }
   }
 
@@ -57,7 +61,7 @@ header {
     padding-bottom: 2.5rem;
 
     @media only screen and (max-width: $bp-smallest) {
-      padding: 0 1.5rem;
+      padding: 0 3rem 0 0;
     }
   }
 
@@ -71,5 +75,14 @@ header {
   a:before,
   a:after {
     border-bottom: solid 2px white;
+  }
+}
+
+.header__link {
+  height: 3.5rem;
+  transition: all 0.2s;
+
+  &:hover {
+    filter: invert(100%) brightness(1.75);
   }
 }
