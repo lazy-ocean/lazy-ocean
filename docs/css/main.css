@@ -125,7 +125,7 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    max-width: 1466px;
+    max-width: 1440px;
     margin: 0 auto; }
     @media only screen and (max-width: 37.5em) {
       header div {
@@ -197,7 +197,7 @@ header {
             filter: invert(100%) brightness(1.75); }
 
 .projects {
-  width: 100%;
+  max-width: 1440px;
   display: block;
   margin: 0 auto; }
 
@@ -207,6 +207,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 3rem;
   -webkit-box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
           box-shadow: 0 1.6px 3.6px 0 rgba(0, 0, 0, 0.132), 0 0.3px 0.9px 0 rgba(0, 0, 0, 0.108);
