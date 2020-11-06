@@ -1,5 +1,7 @@
 p {
   line-height: 150%;
+  font-size: 2rem;
+  color: $color-font-grey;
 }
 .header__text {
   color: $color-font-grey;
@@ -7,7 +9,7 @@ p {
 
   &--main {
     font-size: 4.2rem;
-    @media only screen and (max-width: 600px) {
+    @media only screen and (max-width: $bp-smallest) {
       padding-top: 1rem;
     }
   }
@@ -18,19 +20,21 @@ p {
   }
 }
 
-.projects__h2 {
+.h2 {
   font-size: 3.6rem;
+  color: $color-font-grey;
+}
+
+h3 {
+  font-size: 2.5rem;
   color: $color-font-grey;
 }
 
 .card__text--h {
   color: $color-font-grey;
   padding-bottom: 1rem;
-  h3 {
-    font-size: 2.5rem;
-  }
+
   p {
-    font-size: 2rem;
     font-style: italic;
     padding-left: 1.2rem;
     line-height: 1.68;
