@@ -13,16 +13,20 @@ header {
   z-index: 1000;
   position: relative;
 
-  div {
-    display: flex;
-    max-width: 1440px;
-    margin: 0 auto;
-    @media only screen and (max-width: $bp-smallest) {
-      flex-direction: column;
-    }
-  }
   @media only screen and (max-width: $bp-largest) {
     padding: 5rem 8rem;
+  }
+}
+
+.header__container {
+  display: flex;
+  max-width: 1440px;
+  margin: 0 auto;
+  @media only screen and (max-width: $bp-medium) {
+    align-items: center;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    flex-direction: column;
   }
 }
 
@@ -39,6 +43,7 @@ header {
 }
 
 .header__links {
+  margin-left: auto;
   @media only screen and (max-width: $bp-smallest) {
     margin-left: 0;
   }
