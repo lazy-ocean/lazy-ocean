@@ -154,7 +154,9 @@ header {
   margin-left: 0; }
   @media only screen and (max-width: 37.5em) {
     .header__photo {
-      margin: 0; } }
+      margin: 0;
+      -ms-flex-item-align: start;
+          align-self: start; } }
 
 .header__links {
   margin-left: auto; }
@@ -355,6 +357,20 @@ header {
   color: #976200;
   background-color: #ffbb3c; }
 
+.parcel-blue {
+  color: #2e4e6b;
+  background-color: #b7c3cf; }
+
+.jest-green {
+  color: #096607;
+  background-color: #bee9bc; }
+
+.tree {
+  font-size: 3rem; }
+
+.crossed {
+  text-decoration: line-through; }
+
 .skills {
   max-width: 1440px;
   display: block;
@@ -384,7 +400,7 @@ header {
 .skill h3 {
   padding: 1rem 0; }
 
-.skill span {
+.skill .tag {
   padding: 0.4rem 0.6rem;
   background-color: #f4f4f4;
   border-radius: 1rem; }
