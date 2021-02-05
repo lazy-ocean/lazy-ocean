@@ -378,8 +378,7 @@ header {
   .skills__section {
     padding: 5rem 3rem;
     display: grid;
-    grid-template-columns: repeat(3, minmax(-webkit-min-content, -webkit-max-content));
-    grid-template-columns: repeat(3, minmax(min-content, max-content));
+    grid-template-columns: repeat(3, 1fr);
     gap: 5rem; }
     @media only screen and (max-width: 53.125em) {
       .skills__section {
