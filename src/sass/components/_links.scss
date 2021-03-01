@@ -8,15 +8,15 @@ a:visited {
 .a--animated:visited {
   transition: all 0.1s;
   position: relative;
-  border-bottom: solid 2px $color-yellow;
+  border-bottom: solid 3px $color-yellow;
 }
 
 .a--animated:before,
 .a--animated:after {
-  border-bottom: solid 1px $color-yellow;
+  border-bottom: solid 3px $color-yellow;
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   width: 0;
 }
 .a--animated:before {

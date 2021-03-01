@@ -89,14 +89,14 @@ a:visited {
   -webkit-transition: all 0.1s;
   transition: all 0.1s;
   position: relative;
-  border-bottom: solid 2px #ffe0ac; }
+  border-bottom: solid 3px #ffe0ac; }
 
 .a--animated:before,
 .a--animated:after {
-  border-bottom: solid 1px #ffe0ac;
+  border-bottom: solid 3px #ffe0ac;
   content: "";
   position: absolute;
-  bottom: 0;
+  bottom: -2px;
   width: 0; }
 
 .a--animated:before {
