@@ -371,6 +371,14 @@ header {
 .crossed {
   text-decoration: line-through; }
 
+.react-blue {
+  color: #1f5b6b;
+  background-color: #a1e8fc; }
+
+.ts-blue {
+  color: #235a97;
+  background-color: #bdcde0; }
+
 .skills {
   max-width: 1440px;
   display: block;
