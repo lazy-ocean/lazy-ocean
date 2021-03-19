@@ -2,24 +2,25 @@
 
 "use strict";
 
-var gulp = require("gulp");
-var plumber = require("gulp-plumber");
-var sourcemaps = require("gulp-sourcemaps");
-var sass = require("gulp-sass");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
-var csso = require("gulp-csso");
-var rename = require("gulp-rename");
-var posthtml = require("gulp-posthtml");
-var include = require("posthtml-include");
-var del = require("del");
-var browserify = require("browserify");
-var source = require("vinyl-source-stream");
-var buffer = require("vinyl-buffer");
-var uglify = require("gulp-uglify");
-var inlinesource = require("gulp-inline-source");
-var htmlmin = require("gulp-htmlmin");
+const gulp = require("gulp");
+const plumber = require("gulp-plumber");
+const sourcemaps = require("gulp-sourcemaps");
+const sass = require("gulp-sass");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const server = require("browser-sync").create();
+const csso = require("gulp-csso");
+const rename = require("gulp-rename");
+const posthtml = require("gulp-posthtml");
+const include = require("posthtml-include");
+const del = require("del");
+const browserify = require("browserify");
+const source = require("vinyl-source-stream");
+const buffer = require("vinyl-buffer");
+const uglify = require("gulp-uglify");
+const inlinesource = require("gulp-inline-source");
+const htmlmin = require("gulp-htmlmin");
+const imagemin = require("gulp-imagemin");
 
 gulp.task("css", function () {
   return gulp
@@ -80,7 +81,7 @@ gulp.task("copy", function () {
 });
 
 gulp.task("img", function () {
-  return gulp.src("src/img/**/*").pipe(gulp.dest("docs/img"));
+  return gulp.src("src/img/**/*").pipe(imagemin()).pipe(gulp.dest("docs/img"));
 });
 
 gulp.task("cv", function () {
