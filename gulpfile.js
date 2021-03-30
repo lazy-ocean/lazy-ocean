@@ -80,8 +80,11 @@ gulp.task("copy", function () {
   return gulp.src("src/*.html").pipe(gulp.dest("docs"));
 });
 
+//gulp.task("img", function () {
+//  return gulp.src("src/img/**/*").pipe(imagemin()).pipe(gulp.dest("docs/img"));
+//});
 gulp.task("img", function () {
-  return gulp.src("src/img/**/*").pipe(imagemin()).pipe(gulp.dest("docs/img"));
+  return gulp.src("src/img/**/*").pipe(gulp.dest("docs/img"));
 });
 
 gulp.task("cv", function () {
