@@ -126,7 +126,7 @@ header {
   position: relative; }
   @media only screen and (max-width: 75em) {
     header {
-      padding: 5rem 8rem; } }
+      padding: 5rem; } }
 
 .header__container {
   display: -webkit-box;
@@ -384,7 +384,7 @@ header {
   display: block;
   margin: 0 auto; }
   .skills__section {
-    padding: 5rem 3rem;
+    padding: 5rem 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem; }
@@ -395,7 +395,7 @@ header {
       .skills__section {
         grid-template-columns: repeat(1, 1fr);
         gap: 3rem;
-        padding: 4rem 2rem; } }
+        padding: 4rem 0; } }
 
 .skill__img {
   height: 4rem;
