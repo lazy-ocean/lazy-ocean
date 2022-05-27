@@ -3,6 +3,7 @@ import Main from "../components/Main/Main";
 import { GlobalStyles, theme } from "../theme";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
+import Header from "../components/Header/Header";
 
 const MyApp = () => {
   /* let testLintIsWorking = ""; */
@@ -13,12 +14,12 @@ const MyApp = () => {
         <meta
           name="description"
           content="Hello! 👋
-I am Vladlena Panchenko and I am a frontent engineer"
+          I am Vladlena Panchenko and I am a frontent engineer"
         />
         <meta
           property="og:description"
           content="Hello! 👋
-    I am Vladlena Panchenko and I am a frontent engineer"
+        I am Vladlena Panchenko and I am a frontent engineer"
         />
         <meta property="og:url" content="https://lazy-ocean.github.io/" />
         <meta property="og:title" content="Vladlena | Frontend engineer" />
@@ -30,6 +31,7 @@ I am Vladlena Panchenko and I am a frontent engineer"
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
+        <Header />
         <Main />
       </ThemeProvider>
     </>
