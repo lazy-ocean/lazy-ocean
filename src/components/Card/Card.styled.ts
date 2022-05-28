@@ -59,6 +59,12 @@ export const CardHeader = styled.div`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacings.xs};
+  flex-wrap: wrap;
+
+  ${({ theme }) => `
+  @media only screen and ${theme.breakpoints.desktop}{
+    flex-wrap: nowrap;
+  `}
 `;
 
 export const Tag = styled.div<TagProps>`
@@ -71,7 +77,8 @@ export const Tag = styled.div<TagProps>`
 `;
 
 export const Link = styled.a`
-  border-bottom: 2.5px dashed ${({ color }) => color};
+  text-decoration: underline dashed ${({ color }) => color} 2.5px;
+  text-underline-offset: 2px;
 `;
 
 export const Wrapper = styled.div`

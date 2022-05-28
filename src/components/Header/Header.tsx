@@ -34,7 +34,7 @@ const socials: SocialLink[] = [
 const Header = () => {
   return (
     <Head>
-      <Image src="/icon.png" alt="logo" height="50" width="50" layout="fixed" />
+      <Image src="/icon.png" alt="logo" height="40" width="40" />
       <nav aria-label="Social links">
         <Socials>
           {socials.map(({ alt, src, link }: SocialLink) => (
@@ -45,7 +45,7 @@ const Header = () => {
                   alt={alt}
                   height="35"
                   width="35"
-                  layout="fixed"
+                  layout="intrinsic"
                   aria-hidden={true}
                 />
               </a>
