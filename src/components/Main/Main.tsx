@@ -1,5 +1,6 @@
 import React from "react";
 import { Container, Copy, WTTLink } from "./Main.styled";
+import Cards from "../Card/Card";
 
 const Main = () => {
   return (
@@ -22,6 +23,7 @@ const Main = () => {
         <br />
         Siberian-born living in Gdansk, Poland.
       </Copy>
+      <Cards />
     </Container>
   );
 };
