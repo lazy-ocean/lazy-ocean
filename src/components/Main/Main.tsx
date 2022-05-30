@@ -1,6 +1,34 @@
 import React from "react";
-import { Container, Copy, WTTLink, Sticky } from "./Main.styled";
+import { Container, Copy, WTTLink, Sticky, Skills } from "./Main.styled";
 import Cards from "../Card/Card";
+import Label from "../Label/Label";
+import { TechStack } from "../interfaces";
+
+const skills = [
+  {
+    h: "Frontend",
+    list: [
+      TechStack.TypeScript,
+      TechStack.JavaScript,
+      TechStack.react,
+      TechStack.Next,
+    ],
+  },
+  {
+    h: "Testing",
+    list: [TechStack.Jest, TechStack.cypress],
+  },
+  {
+    h: "Everything else",
+    list: [
+      TechStack.a11y,
+      TechStack.styled,
+      TechStack.npm,
+      TechStack.gulp,
+      TechStack.express,
+    ],
+  },
+];
 
 const Main = () => {
   return (
@@ -25,6 +53,17 @@ const Main = () => {
             <br />
             Siberian-born living in Gdansk, Poland.
           </p>
+          <article>
+            <h2>Skills</h2>
+            {skills.map(({ h, list }) => (
+              <Skills key={h}>
+                <h3>{h}</h3>
+                {list.map((item: TechStack, i: number) => (
+                  <Label text={item} key={i} />
+                ))}
+              </Skills>
+            ))}
+          </article>
         </Sticky>
       </Copy>
       <Cards />

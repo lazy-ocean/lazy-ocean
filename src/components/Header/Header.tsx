@@ -39,7 +39,7 @@ const Header = () => {
         <Socials>
           {socials.map(({ alt, src, link }: SocialLink) => (
             <li key={alt}>
-              <a href={link}>
+              <a href={link} target="_blank" rel="noreferrer">
                 <Image
                   src={src}
                   alt={alt}

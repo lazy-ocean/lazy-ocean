@@ -11,6 +11,7 @@ export enum TechStack {
   react = "React",
   express = "Express",
   cypress = "Cypress",
+  styled = "styled-components",
 }
 
 export enum Tags {
