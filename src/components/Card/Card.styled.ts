@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import { Tags } from "../interfaces";
 
 interface TagProps {
@@ -12,41 +12,61 @@ type Map = {
 const colorMap: Map = {
   [Tags.WTT]: "#96b3ff",
   [Tags.pet]: "#FFC5C8",
-  [Tags.freelance]: "freelance",
+  [Tags.freelance]: "#FFCBAD",
+  [Tags.learning]: "#A4CCA4",
 };
 
-export const Container = styled.div`
+const generateCardsTopPositions = () => {
+  let styles = "";
+  for (let i = 0; i < 8; i++) {
+    styles += `
+    &:nth-child(${i}) {
+      top: calc(${i} * 30px);
+    }
+    `;
+  }
+
+  return css`
+    ${styles}
+  `;
+};
+
+interface ContainerProps {
+  isStuck: boolean;
+  color: string;
+}
+
+export const Container = styled.div<ContainerProps>`
   background-color: ${({ theme }) => theme.palette.lightBg};
   border: 1px solid ${({ theme }) => theme.palette.text};
   padding: ${({ theme }) => theme.spacings.s};
   width: 100%;
   position: relative;
   height: max-content;
+  box-shadow: -10px 10px ${({ color }) => color},
+    -10px 10px 0px 1px ${({ theme }) => theme.palette.text};
+  position: sticky;
+  top: ${({ theme }) => theme.spacings.m};
+  transition: all 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
   h3 {
     font-size: 1rem;
     font-weight: 400;
   }
 
-  :after {
-    content: "";
-    position: absolute;
-    background-color: ${({ color }) => color};
-    top: 10px;
-    left: -10px;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-    border: 1px solid ${({ theme }) => theme.palette.text};
-  }
+  ${({ isStuck, color }) =>
+    !isStuck &&
+    `
+      &:hover {
+        transform: translate(-5px, 5px);
+        box-shadow: 0px 0px ${color};
+      }
+  `}
 
-  &:hover {
-    transform: translate(-5px, 5px);
-  }
-
-  &:hover :after {
-    opacity: 0;
-  }
+  ${generateCardsTopPositions()};
 `;
 
 export const Labels = styled.ul`
@@ -85,6 +105,7 @@ export const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
   gap: ${({ theme }) => theme.spacings.s};
+  margin-bottom: ${({ theme }) => theme.spacings.s};
 `;
 
 export const GithubLink = styled.a`

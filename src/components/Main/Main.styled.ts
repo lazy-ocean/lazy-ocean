@@ -32,3 +32,8 @@ export const Copy = styled.div`
 export const WTTLink = styled.a`
   border-bottom: 2.5px dashed #96b3ff;
 `;
+
+export const Sticky = styled.div`
+  position: sticky;
+  top: ${({ theme }) => theme.spacings.m};
+`;

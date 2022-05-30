@@ -1,8 +1,13 @@
 import { createGlobalStyle, DefaultTheme } from "styled-components";
 
 export enum AccentColours {
-  green = "#b9e7de",
+  teal = "#b9e7de",
   violet = "#d1b4de",
+  orange = "#FFC999",
+  blue = "#9ECEE6",
+  green = "#CDE4B4",
+  pink = "#FFADAD",
+  yellow = "#fae97a",
 }
 
 declare module "styled-components" {
@@ -11,8 +16,13 @@ declare module "styled-components" {
       bg: string;
       text: string;
       lightBg: string;
-      green: AccentColours.green;
+      teal: AccentColours.teal;
       violet: AccentColours.violet;
+      orange: AccentColours.orange;
+      blue: AccentColours.blue;
+      green: AccentColours.green;
+      pink: AccentColours.pink;
+      yellow: AccentColours.yellow;
     };
     breakpoints: {
       mobile: string;
@@ -33,8 +43,13 @@ export const theme: DefaultTheme = {
     bg: "#EDECE8",
     text: "#161614",
     lightBg: "#fff",
-    green: AccentColours.green,
+    teal: AccentColours.teal,
     violet: AccentColours.violet,
+    orange: AccentColours.orange,
+    blue: AccentColours.blue,
+    green: AccentColours.green,
+    pink: AccentColours.pink,
+    yellow: AccentColours.yellow,
   },
   breakpoints: {
     mobile: `(min-width: 600px)`,
