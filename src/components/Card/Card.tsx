@@ -13,7 +13,7 @@ import { AccentColours } from "../../theme";
 import { TechStack, Project } from "../interfaces";
 import Label from "../Label/Label";
 import projects from "./projects";
-import Image from "next/image";
+import { RiGithubLine } from "react-icons/ri";
 
 interface CardProps {
   card: Project;
@@ -22,14 +22,7 @@ interface CardProps {
 
 const Github = ({ link }: { link: string }) => (
   <GithubLink href={link} target="_blank">
-    <Image
-      layout="intrinsic"
-      src="/github_logo.png"
-      width={15}
-      height={15}
-      alt="GitHub logo"
-      aria-hidden
-    />
+    <RiGithubLine aria-hidden={true} title="GitHub" />
     View on GitHub
   </GithubLink>
 );
@@ -93,15 +86,17 @@ const Card = ({ card, i }: CardProps) => {
 
 const Cards = () => {
   return (
-    <Wrapper>
-      {projects.map((card: Project, i) => (
-        <Card card={card} i={i + 1} key={i} />
-      ))}
+    <div>
+      <Wrapper>
+        {projects.map((card: Project, i) => (
+          <Card card={card} i={i + 1} key={i} />
+        ))}
+      </Wrapper>
       <CardsFooter>
-        <p>Older projects and everything else: </p>
+        <p>Everything else: </p>
         <Github link="https://github.com/lazy-ocean"></Github>
       </CardsFooter>
-    </Wrapper>
+    </div>
   );
 };
 export default Cards;

@@ -21,7 +21,7 @@ const projects: Project[] = [
     title: "The Pushkin State Museum - a11y playground",
     tag: Tags.pet,
     date: "March - May 2022",
-    text: "An a11y playground website. Tested with VoiceOver, axe, w3c HTML validator, Wave, keyboard-friendly, WCAG 2.0 compliant colors, 4x 100% Lighthouse index.",
+    text: "An a11y showcase website. Tested with VoiceOver, axe, w3c HTML validator, Wave, keyboard-friendly, WCAG 2.0 compliant colors, 4x 100% Lighthouse index.",
     stack: [
       TechStack.a11y,
       TechStack.TypeScript,

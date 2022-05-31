@@ -113,9 +113,20 @@ export const GithubLink = styled.a`
   display: flex;
   align-items: center;
   gap: ${({ theme }) => theme.spacings.xxs};
+
+  svg {
+    width: 20px;
+    height: 20px;
+  }
 `;
 
 export const CardsFooter = styled.div`
   display: flex;
   gap: ${({ theme }) => theme.spacings.xxs};
+  justify-content: center;
+
+  ${({ theme }) => `
+  @media only screen and ${theme.breakpoints.desktop}{
+    justify-content: flex-start;
+  `}
 `;
