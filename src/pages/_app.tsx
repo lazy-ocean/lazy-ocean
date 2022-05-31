@@ -23,7 +23,10 @@ const MyApp = () => (
       <meta property="og:url" content="https://lazy-ocean.vercel.app/" />
       <meta property="og:title" content="Vladlena | Frontend engineer" />
       <meta property="og:type" content="website" />
-      <meta property="og:image" content="/meta-img.png" />
+      <meta
+        property="og:image"
+        content="https://lazy-ocean.vercel.app/meta-img.png"
+      />
       <link rel="icon" href="/favicon.ico" sizes="any" />
       <link rel="icon" href="/icon.png" type="image/png" />
       <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
