@@ -37,7 +37,7 @@ export const Copy = styled.div`
 `;
 
 export const WTTLink = styled.a`
-  border-bottom: 2.5px dashed #96b3ff;
+  border-bottom: 2.5px dashed ${({ theme }) => theme.palette.darkOrange};
 `;
 
 export const Sticky = styled.div`

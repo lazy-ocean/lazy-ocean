@@ -12,15 +12,15 @@ type Map = {
 const colorMap: Map = {
   [TechStack.TypeScript]: "#F1C0E8",
   [TechStack.Next]: "#d4d4d4",
-  [TechStack.Jest]: "#bee9bc",
+  [TechStack.Jest]: "#CDE4B4",
   [TechStack.a11y]: "#ffcccc",
-  [TechStack.JavaScript]: "#ffe982",
-  [TechStack.npm]: "#90DBF4",
-  [TechStack.gulp]: "#ffbfc0",
+  [TechStack.JavaScript]: "#fae97a",
+  [TechStack.npm]: "#9ECEE6",
+  [TechStack.gulp]: "#FFADAD",
   [TechStack.react]: "#81B2D9",
-  [TechStack.express]: "#c3a7db",
-  [TechStack.cypress]: "#ffd2a6",
-  [TechStack.styled]: "#a8f0e0",
+  [TechStack.express]: "#d1b4de",
+  [TechStack.cypress]: "#FFC999",
+  [TechStack.styled]: "#b9e7de",
 };
 
 export const LabelWrapper = styled.li<LabelsProps>`

@@ -16,6 +16,7 @@ declare module "styled-components" {
       bg: string;
       text: string;
       lightBg: string;
+      darkOrange: string;
       teal: AccentColours.teal;
       violet: AccentColours.violet;
       orange: AccentColours.orange;
@@ -43,6 +44,7 @@ export const theme: DefaultTheme = {
     bg: "#EDECE8",
     text: "#161614",
     lightBg: "#fff",
+    darkOrange: "#f2a71b",
     teal: AccentColours.teal,
     violet: AccentColours.violet,
     orange: AccentColours.orange,
