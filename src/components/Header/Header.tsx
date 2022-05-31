@@ -1,33 +1,39 @@
 import React from "react";
 import { Head, Socials } from "./Header.styled";
 import Image from "next/image";
+import {
+  AiOutlineLinkedin,
+  AiOutlineCodepen,
+  AiOutlineProfile,
+} from "react-icons/ai";
+import { RiGithubLine } from "react-icons/ri";
 
 interface SocialLink {
-  src: string;
   alt: string;
   link: string;
+  icon?: React.ReactElement;
 }
 
 const socials: SocialLink[] = [
   {
-    src: "/github_logo.png",
     alt: "GitHub",
     link: "https://github.com/lazy-ocean",
+    icon: <RiGithubLine aria-hidden={true} title="GitHub" />,
   },
   {
-    src: "/linkedin_logo.png",
     alt: "LinkedIn",
     link: "https://www.linkedin.com/in/vladlena-panchenko/",
+    icon: <AiOutlineLinkedin aria-hidden={true} title="LinkedIn" />,
   },
   {
-    src: "/cv_logo.png",
     alt: "CV",
     link: "https://lazy-ocean.github.io/CV%20Vladlena%20Panchenko.pdf",
+    icon: <AiOutlineProfile aria-hidden={true} title="CV" />,
   },
   {
-    src: "/codepen_logo.png",
     alt: "Codepen",
     link: "https://codepen.io/lazy_ocean/pens/public",
+    icon: <AiOutlineCodepen aria-hidden={true} title="Codepen" />,
   },
 ];
 
@@ -37,17 +43,10 @@ const Header = () => {
       <Image src="/icon.png" alt="logo" height="40" width="40" />
       <nav aria-label="Social links">
         <Socials>
-          {socials.map(({ alt, src, link }: SocialLink) => (
+          {socials.map(({ alt, link, icon }: SocialLink) => (
             <li key={alt}>
               <a href={link} target="_blank" rel="noreferrer">
-                <Image
-                  src={src}
-                  alt={alt}
-                  height="35"
-                  width="35"
-                  layout="intrinsic"
-                  aria-hidden={true}
-                />
+                {icon}
               </a>
             </li>
           ))}
