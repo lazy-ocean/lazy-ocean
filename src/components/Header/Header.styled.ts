@@ -13,23 +13,3 @@ export const Head = styled.header`
     gap: ${theme.spacings.m};
   `}
 `;
-
-export const Socials = styled.ul`
-  display: flex;
-  list-style-type: none;
-
-  li {
-    padding: 0 ${({ theme }) => theme.spacings.xxs};
-  }
-
-  svg {
-    width: 35px;
-    height: 35px;
-    fill: ${({ theme }) => theme.palette.text};
-    transition: fill 0.4s ease-in-out;
-
-    &:hover {
-      fill: ${({ theme }) => theme.palette.darkOrange};
-    }
-  }
-`;

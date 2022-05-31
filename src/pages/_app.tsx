@@ -4,6 +4,7 @@ import { GlobalStyles, theme } from "../theme";
 import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import Header from "../components/Header/Header";
+import Footer from "../components/Footer/Footer";
 
 const MyApp = () => {
   /* let testLintIsWorking = ""; */
@@ -33,6 +34,7 @@ const MyApp = () => {
         <GlobalStyles />
         <Header />
         <Main />
+        <Footer />
       </ThemeProvider>
     </>
   );
