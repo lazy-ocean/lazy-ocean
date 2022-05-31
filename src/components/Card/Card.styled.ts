@@ -73,6 +73,7 @@ export const Labels = styled.ul`
   display: flex;
   gap: ${({ theme }) => theme.spacings.xs};
   padding: 0;
+  flex-wrap: wrap;
 `;
 
 export const CardHeader = styled.div`
@@ -111,5 +112,10 @@ export const Wrapper = styled.div`
 export const GithubLink = styled.a`
   display: flex;
   align-items: center;
+  gap: ${({ theme }) => theme.spacings.xxs};
+`;
+
+export const CardsFooter = styled.div`
+  display: flex;
   gap: ${({ theme }) => theme.spacings.xxs};
 `;

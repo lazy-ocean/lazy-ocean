@@ -50,4 +50,5 @@ export const Skills = styled.ul`
   gap: ${({ theme }) => theme.spacings.xs};
   padding: 0;
   align-items: center;
+  flex-wrap: wrap;
 `;

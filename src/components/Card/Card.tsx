@@ -7,6 +7,7 @@ import {
   Link,
   Wrapper,
   GithubLink,
+  CardsFooter,
 } from "./Card.styled";
 import { AccentColours } from "../../theme";
 import { TechStack, Project } from "../interfaces";
@@ -18,6 +19,20 @@ interface CardProps {
   card: Project;
   i: number;
 }
+
+const Github = ({ link }: { link: string }) => (
+  <GithubLink href={link} target="_blank">
+    <Image
+      layout="intrinsic"
+      src="/github_logo.png"
+      width={15}
+      height={15}
+      alt="GitHub logo"
+      aria-hidden
+    />
+    View on GitHub
+  </GithubLink>
+);
 
 const Card = ({ card, i }: CardProps) => {
   const [isStuck, setStuck] = useState(false);
@@ -66,19 +81,7 @@ const Card = ({ card, i }: CardProps) => {
       </CardHeader>
       <Tag tag={tag}>{tag}</Tag>
       <p>{text}</p>
-      {github && (
-        <GithubLink href={github} target="_blank">
-          <Image
-            layout="intrinsic"
-            src="/github_logo.png"
-            width={15}
-            height={15}
-            alt="GitHub logo"
-            aria-hidden
-          />
-          View on GitHub
-        </GithubLink>
-      )}
+      {github && <Github link={github} />}
       <Labels>
         {stack.map((item: TechStack, i) => (
           <Label text={item} key={i} />
@@ -94,6 +97,10 @@ const Cards = () => {
       {projects.map((card: Project, i) => (
         <Card card={card} i={i + 1} key={i} />
       ))}
+      <CardsFooter>
+        <p>Older projects and everything else: </p>
+        <Github link="https://github.com/lazy-ocean"></Github>
+      </CardsFooter>
     </Wrapper>
   );
 };
