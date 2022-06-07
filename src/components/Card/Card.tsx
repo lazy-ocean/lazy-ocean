@@ -33,7 +33,7 @@ const Card = ({ card, i }: CardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
   const onHover = (color: AccentColours) => {
-    if (!isStuck) {
+    if (!isStuck && window?.innerWidth > 810) {
       document.body.style.backgroundColor = color;
     }
   };
@@ -56,7 +56,7 @@ const Card = ({ card, i }: CardProps) => {
   return (
     <Container
       color={color}
-      onMouseOver={() => onHover(color)}
+      onMouseEnter={() => onHover(color)}
       onMouseLeave={resetBg}
       ref={cardRef}
       isStuck={isStuck}

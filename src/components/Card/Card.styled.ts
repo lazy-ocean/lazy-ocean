@@ -60,10 +60,12 @@ export const Container = styled.div<ContainerProps>`
   ${({ isStuck, color }) =>
     !isStuck &&
     `
+    @media (hover: hover) and (pointer: fine) {
       &:hover {
         transform: translate(-5px, 5px);
         box-shadow: 0px 0px ${color};
       }
+    }
   `}
 
   ${generateCardsTopPositions()};
@@ -98,8 +100,11 @@ export const Tag = styled.div<TagProps>`
 `;
 
 export const Link = styled.a`
-  text-decoration: underline dashed ${({ color }) => color} 2.5px;
-  text-underline-offset: 2px;
+  text-decoration-color: ${({ color }) => color};
+  text-decoration-style: dashed;
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 3px;
 `;
 
 export const Wrapper = styled.div`
