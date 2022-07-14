@@ -26,7 +26,7 @@ const socials: SocialLink[] = [
   },
   {
     alt: "CV",
-    link: "https://lazy-ocean.github.io/CV%20Vladlena%20Panchenko.pdf",
+    link: "/Vladlena_Panchenko_CV.pdf",
     icon: <AiOutlineProfile aria-hidden={true} title="CV" />,
   },
   {
