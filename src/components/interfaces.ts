@@ -12,11 +12,12 @@ export enum TechStack {
   express = "Express",
   cypress = "Cypress",
   styled = "styled-components",
+  Remix = "Remix",
 }
 
 export enum Tags {
   pet = "Pet Project",
-  WTT = "WTT",
+  job = "Job",
   freelance = "Freelance",
   learning = "Learning",
 }

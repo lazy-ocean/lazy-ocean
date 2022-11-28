@@ -21,6 +21,7 @@ const colorMap: Map = {
   [TechStack.express]: "#d1b4de",
   [TechStack.cypress]: "#FFC999",
   [TechStack.styled]: "#b9e7de",
+  [TechStack.Remix]: "#ffe3a1",
 };
 
 export const LabelWrapper = styled.li<LabelsProps>`

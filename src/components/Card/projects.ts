@@ -4,7 +4,7 @@ import { AccentColours } from "../../theme";
 const projects: Project[] = [
   {
     title: "Ted Baker",
-    tag: Tags.WTT,
+    tag: Tags.job,
     date: "June 2021 - current",
     text: "A composable modern eCommerce website, made on a multi-storefront Bloomreach headless CMS. Next.js-built integrated SPA.",
     stack: [
@@ -18,8 +18,22 @@ const projects: Project[] = [
     link: "https://www.tedbaker.com/",
   },
   {
-    title: "The Pushkin State Museum - a11y playground",
+    title: "Spotify Releaser",
     tag: Tags.pet,
+    date: "July 2022 - current",
+    text: "Never miss new releases! Spotify API integrated app to track new music from your favourite artists. Built with Remix.run. Please reach out to get a full access!",
+    stack: [
+      TechStack.TypeScript,
+      TechStack.Remix,
+      TechStack.a11y,
+      TechStack.styled,
+    ],
+    color: AccentColours.lightgreen,
+    link: "https://spotify-releaser.vercel.app/",
+  },
+  {
+    title: "The Pushkin State Museum - a11y playground",
+    tag: Tags.learning,
     date: "March - May 2022",
     text: "An a11y showcase website. Tested with VoiceOver, axe, w3c HTML validator, Wave, keyboard-friendly, WCAG 2.0 compliant colors, 4x 100% Lighthouse index.",
     stack: [
@@ -38,7 +52,7 @@ const projects: Project[] = [
     date: "January 2022 - current",
     text: "A Next.js boilerplate to create SPA-s without breaking a sweat. Made with testing (Jest), lintering (eslint + Prettier) and conventional commits (Husky) in mind.",
     stack: [TechStack.TypeScript, TechStack.Next, TechStack.Jest],
-    color: AccentColours.green,
+    color: AccentColours.pink,
     link: "https://github.com/lazy-ocean/next-js-boilerplate",
     github: "https://github.com/lazy-ocean/next-js-boilerplate",
   },
@@ -58,7 +72,7 @@ const projects: Project[] = [
     date: "March - May 2021",
     text: "A basic fullstack todo app with user authentication. Built as a tryout of using Express for backend.",
     stack: [TechStack.JavaScript, TechStack.react, TechStack.express],
-    color: AccentColours.pink,
+    color: AccentColours.green,
     link: "https://justdoltapp.herokuapp.com/",
     github: "https://github.com/lazy-ocean/just-do-it-app",
   },

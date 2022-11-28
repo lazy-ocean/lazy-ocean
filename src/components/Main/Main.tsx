@@ -12,6 +12,7 @@ const skills = [
       TechStack.JavaScript,
       TechStack.react,
       TechStack.Next,
+      TechStack.Remix,
     ],
   },
   {

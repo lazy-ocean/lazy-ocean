@@ -10,7 +10,7 @@ type Map = {
 };
 
 const colorMap: Map = {
-  [Tags.WTT]: "#96b3ff",
+  [Tags.job]: "#96b3ff",
   [Tags.pet]: "#FFC5C8",
   [Tags.freelance]: "#FFCBAD",
   [Tags.learning]: "#A4CCA4",

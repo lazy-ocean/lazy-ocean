@@ -8,6 +8,7 @@ export enum AccentColours {
   green = "#CDE4B4",
   pink = "#FFADAD",
   yellow = "#fae97a",
+  lightgreen = "#bbf2bc",
 }
 
 declare module "styled-components" {
