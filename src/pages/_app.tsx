@@ -30,12 +30,12 @@ const MyApp = () => {
         <meta
           name="description"
           content="Hello! 👋
-          I am Vladlena Panchenko and I am a frontent engineer"
+          I am Vladlena Panchenko and I am a frontend engineer"
         />
         <meta
           property="og:description"
           content="Hello! 👋
-        I am Vladlena Panchenko and I am a frontent engineer"
+        I am Vladlena Panchenko and I am a frontend engineer"
         />
         <meta property="og:url" content="https://lazy-ocean.vercel.app/" />
         <meta property="og:title" content="Vladlena | Frontend engineer" />

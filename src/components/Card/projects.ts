@@ -30,6 +30,7 @@ const projects: Project[] = [
     ],
     color: AccentColours.lightgreen,
     link: "https://spotify-releaser.vercel.app/",
+    github: "https://github.com/lazy-ocean/releaser",
   },
   {
     title: "The Pushkin State Museum - a11y playground",

@@ -12,7 +12,7 @@ const Footer = () => {
       <Copyright>
         <p>Vladlena Panchenko</p>
         <AiFillHeart />
-        <p>2022</p>
+        <p>{new Date().getFullYear()}</p>
       </Copyright>
       <SocialLinks />
     </Container>
