@@ -48,10 +48,10 @@ const projects: Project[] = [
     github: "https://github.com/lazy-ocean/a11y-showcase-museum",
   },
   {
-    title: "SPA boilerplate",
+    title: "App boilerplate",
     tag: Tags.pet,
     date: "January 2022 - current",
-    text: "A Next.js boilerplate to create SPA-s without breaking a sweat. Made with testing (Jest), lintering (eslint + Prettier) and conventional commits (Husky) in mind.",
+    text: "A Next.js boilerplate to create SSRd apps without breaking a sweat. Made with testing (Jest), lintering (eslint + Prettier) and conventional commits (Husky) in mind.",
     stack: [TechStack.TypeScript, TechStack.Next, TechStack.Jest],
     color: AccentColours.pink,
     link: "https://github.com/lazy-ocean/next-js-boilerplate",
