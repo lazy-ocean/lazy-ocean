@@ -16,6 +16,7 @@
     }
   },
   "dependencies": {
+    "@notionhq/client": "^2.2.9",
     "next": "12",
     "react": "^18.1.0",
     "react-dom": "^18.1.0",

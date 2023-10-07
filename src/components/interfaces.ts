@@ -32,3 +32,25 @@ export interface Project {
   link: string;
   github?: string;
 }
+
+export enum Roles {
+  cv = "cv",
+  frontendTags = "frontendTags",
+  testingTags = "testingTags",
+  otherTags = "otherTags",
+  description = "description",
+  header = "header",
+}
+
+export interface Tag {
+  id: string;
+  name: string;
+  color: string;
+}
+
+export interface MainData {
+  cv: string;
+  header: string;
+  description: string;
+  tags: { [key: string]: TechStack[] };
+}

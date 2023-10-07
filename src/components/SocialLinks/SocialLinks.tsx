@@ -24,11 +24,11 @@ const socials: SocialLink[] = [
     link: "https://www.linkedin.com/in/vladlena-panchenko/",
     icon: <AiOutlineLinkedin aria-hidden={true} title="LinkedIn" />,
   },
-  {
+  /*   {
     alt: "CV",
     link: "/Vladlena_Panchenko_CV.pdf",
     icon: <AiOutlineProfile aria-hidden={true} title="CV" />,
-  },
+  }, */
   {
     alt: "Codepen",
     link: "https://codepen.io/lazy_ocean/pens/public",
@@ -36,18 +36,26 @@ const socials: SocialLink[] = [
   },
 ];
 
-const SocialLinks = () => (
-  <nav aria-label="Social links">
-    <Socials>
-      {socials.map(({ alt, link, icon }: SocialLink) => (
-        <li key={alt}>
-          <a href={link} target="_blank" rel="noreferrer">
-            {icon}
-          </a>
-        </li>
-      ))}
-    </Socials>
-  </nav>
-);
+const SocialLinks = ({ cv }: { cv: string }) => {
+  const resume = {
+    alt: "CV",
+    link: cv,
+    icon: <AiOutlineProfile aria-hidden={true} title="CV" />,
+  };
+
+  return (
+    <nav aria-label="Social links">
+      <Socials>
+        {[...socials, resume].map(({ alt, link, icon }: SocialLink) => (
+          <li key={alt}>
+            <a href={link} target="_blank" rel="noreferrer">
+              {icon}
+            </a>
+          </li>
+        ))}
+      </Socials>
+    </nav>
+  );
+};
 
 export default SocialLinks;

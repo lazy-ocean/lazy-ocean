@@ -52,3 +52,9 @@ export const Skills = styled.ul`
   align-items: center;
   flex-wrap: wrap;
 `;
+
+export const Description = styled.p`
+  .wttLink {
+    border-bottom: 2.5px dashed ${({ theme }) => theme.palette.darkOrange};
+  }
+`;

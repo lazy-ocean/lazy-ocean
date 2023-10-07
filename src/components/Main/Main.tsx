@@ -1,8 +1,8 @@
 import React from "react";
-import { Container, Copy, WTTLink, Sticky, Skills } from "./Main.styled";
+import { Container, Copy, Description, Sticky, Skills } from "./Main.styled";
 import Cards from "../Card/Card";
 import Label from "../Label/Label";
-import { TechStack } from "../interfaces";
+import { MainData, TechStack } from "../interfaces";
 
 const skills = [
   {
@@ -31,35 +31,23 @@ const skills = [
   },
 ];
 
-const Main = () => {
+const Main = (data: MainData) => {
+  const { header, description, tags } = data;
+
   return (
     <Container>
       <Copy>
         <Sticky>
-          <h1>
-            Hello! 👋
-            <br />I am Vladlena Panchenko
-          </h1>
-          <p>
-            I&apos;m a Frontend Engineer at{" "}
-            <WTTLink
-              href="https://www.wundermanthompson.com/expertise/technology"
-              target="_blank"
-              rel="noopener nofollow noreferrer"
-            >
-              Wunderman Thompson Technology
-            </WTTLink>
-            .<br />I love developing complex and accessible web-interfaces and
-            always eager to try something new.
-            <br />
-            Siberian-born living in Gdansk, Poland.
-          </p>
+          <h1 dangerouslySetInnerHTML={{ __html: header }} />
+          <Description
+            dangerouslySetInnerHTML={{ __html: description }}
+          ></Description>
           <article>
             <h2>Skills</h2>
-            {skills.map(({ h, list }) => (
-              <Skills key={h}>
-                <h3>{h}</h3>
-                {list.map((item: TechStack, i: number) => (
+            {Object.keys(tags).map((name) => (
+              <Skills key={name}>
+                <h3>{name}</h3>
+                {tags[name].map((item: TechStack, i: number) => (
                   <Label text={item} key={i} />
                 ))}
               </Skills>
