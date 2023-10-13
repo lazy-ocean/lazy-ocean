@@ -7,14 +7,21 @@ import Footer from "../components/Footer/Footer";
 import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import * as gtag from "../lib/ga";
-import { queryDatabase } from "../api/queryDatabase";
-import { parseProperties } from "../utils/parseProps";
-import { MainData } from "../components/interfaces";
+import { queryDatabase, queryItemsDatabase } from "../api/queryDatabase";
+import { parseItemProperties, parseMainProperties } from "../utils/parseProps";
+import { MainData, Project } from "../components/interfaces";
+import projects from "../backups/projects";
 
-const Home = ({ data }: { data: MainData }) => {
+const Home = ({
+  mainContent,
+  items,
+}: {
+  mainContent: MainData;
+  items: Project[];
+}) => {
   const router = useRouter();
   const isProd = process.env.NODE_ENV === "production";
-  console.log(data);
+
   useEffect(() => {
     const handleRouteChange = (url: URL) => {
       if (isProd) gtag.pageview(url);
@@ -52,8 +59,8 @@ const Home = ({ data }: { data: MainData }) => {
       </Head>
       <ThemeProvider theme={theme}>
         <GlobalStyles />
-        <Header cv={data.cv} />
-        <Main {...data} />
+        <Header cv={mainContent.cv} />
+        <Main {...mainContent} items={items} />
         <Footer />
       </ThemeProvider>
     </>
@@ -61,12 +68,27 @@ const Home = ({ data }: { data: MainData }) => {
 };
 
 export async function getStaticProps() {
-  const database = await queryDatabase();
-  const data: MainData = parseProperties(database);
+  let items: Project[] = projects;
+  let mainContent: MainData = null;
+
+  try {
+    const db = await queryDatabase();
+    mainContent = parseMainProperties(db);
+  } catch (e) {
+    console.log(e);
+  }
+
+  try {
+    const itemsDb = await queryItemsDatabase();
+    items = parseItemProperties(itemsDb);
+  } catch (e) {
+    console.log(e);
+  }
 
   return {
     props: {
-      data,
+      mainContent,
+      items: items,
     },
   };
 }

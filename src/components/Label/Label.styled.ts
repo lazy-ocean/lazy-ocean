@@ -15,7 +15,7 @@ const colorMap: Map = {
   [TechStack.Jest]: "#CDE4B4",
   [TechStack.a11y]: "#ffcccc",
   [TechStack.JavaScript]: "#fae97a",
-  [TechStack.npm]: "#9ECEE6",
+  [TechStack.node]: "#9ECEE6",
   [TechStack.gulp]: "#FFADAD",
   [TechStack.react]: "#81B2D9",
   [TechStack.express]: "#d1b4de",

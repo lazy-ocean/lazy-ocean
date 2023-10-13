@@ -12,7 +12,7 @@ import {
 import { AccentColours } from "../../theme";
 import { TechStack, Project } from "../interfaces";
 import Label from "../Label/Label";
-import projects from "./projects";
+import projects from "../../backups/projects";
 import { RiGithubLine } from "react-icons/ri";
 
 interface CardProps {
@@ -84,11 +84,11 @@ const Card = ({ card, i }: CardProps) => {
   );
 };
 
-const Cards = () => {
+const Cards = ({ items }) => {
   return (
     <div>
       <Wrapper>
-        {projects.map((card: Project, i) => (
+        {items.map((card: Project, i) => (
           <Card card={card} i={i + 1} key={i} />
         ))}
       </Wrapper>

@@ -1,5 +1,5 @@
-import { Project, Tags, TechStack } from "../interfaces";
-import { AccentColours } from "../../theme";
+import { Project, Tags, TechStack } from "../components/interfaces";
+import { AccentColours } from "../theme";
 
 const projects: Project[] = [
   {
@@ -86,7 +86,7 @@ const projects: Project[] = [
       TechStack.TypeScript,
       TechStack.JavaScript,
       TechStack.Jest,
-      TechStack.npm,
+      TechStack.node,
     ],
     color: AccentColours.blue,
     link: "https://github.com/lazy-ocean/coding_challenges",
@@ -97,7 +97,7 @@ const projects: Project[] = [
     tag: Tags.freelance,
     date: "July 2020",
     text: "An interactive form to calculate project ROI and generate annual cash flow table, designed and developed for robotics system integrator Inspair.",
-    stack: [TechStack.JavaScript, TechStack.npm, TechStack.gulp],
+    stack: [TechStack.JavaScript, TechStack.node, TechStack.gulp],
     color: AccentColours.orange,
     link: "https://inspair.ru/calc",
     github: "https://github.com/lazy-ocean/inspair-calculations-table",

@@ -6,7 +6,7 @@ export enum TechStack {
   JavaScript = "JavaScript",
   Jest = "Jest",
   a11y = "a11y",
-  npm = "npm",
+  node = "Node.js",
   gulp = "Gulp",
   react = "React",
   express = "Express",
