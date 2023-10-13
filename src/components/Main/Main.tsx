@@ -10,7 +10,6 @@ interface MainProps extends MainData {
 }
 
 const Main = ({ header, description, tags, items }: MainProps) => {
-  console.log(items);
   return (
     <Container>
       <Copy>

@@ -54,3 +54,9 @@ export interface MainData {
   description: string;
   tags: { [key: string]: TechStack[] };
 }
+
+export interface SocialLink {
+  alt: string;
+  link: string;
+  icon?: React.ReactElement;
+}

@@ -12,7 +12,6 @@ import {
 import { AccentColours } from "../../theme";
 import { TechStack, Project } from "../interfaces";
 import Label from "../Label/Label";
-import projects from "../../backups/projects";
 import { RiGithubLine } from "react-icons/ri";
 
 interface CardProps {
@@ -84,7 +83,7 @@ const Card = ({ card, i }: CardProps) => {
   );
 };
 
-const Cards = ({ items }) => {
+const Cards = ({ items }: { items: Project[] }) => {
   return (
     <div>
       <Wrapper>
@@ -99,4 +98,5 @@ const Cards = ({ items }) => {
     </div>
   );
 };
+
 export default Cards;
