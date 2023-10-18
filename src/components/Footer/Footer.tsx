@@ -3,7 +3,7 @@ import { Copyright, Container, Email } from "./Footer.styled";
 import { AiFillHeart } from "react-icons/ai";
 import SocialLinks from "../SocialLinks/SocialLinks";
 
-const Footer = () => {
+const Footer = ({ cv }: { cv: string }) => {
   return (
     <Container>
       <Email href="mailto:panchenko.vladlena@gmail.com">
@@ -14,7 +14,7 @@ const Footer = () => {
         <AiFillHeart />
         <p>{new Date().getFullYear()}</p>
       </Copyright>
-      <SocialLinks />
+      <SocialLinks cv={cv} />
     </Container>
   );
 };

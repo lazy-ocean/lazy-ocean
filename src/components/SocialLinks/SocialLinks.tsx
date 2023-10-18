@@ -1,53 +1,29 @@
 import React from "react";
 import { Socials } from "./SocialLinks.styled";
-import {
-  AiOutlineLinkedin,
-  AiOutlineCodepen,
-  AiOutlineProfile,
-} from "react-icons/ai";
-import { RiGithubLine } from "react-icons/ri";
+import { AiOutlineProfile } from "react-icons/ai";
+import { socials } from "../../backups/socialLinks";
+import { SocialLink } from "../interfaces";
 
-interface SocialLink {
-  alt: string;
-  link: string;
-  icon?: React.ReactElement;
-}
-
-const socials: SocialLink[] = [
-  {
-    alt: "GitHub",
-    link: "https://github.com/lazy-ocean",
-    icon: <RiGithubLine aria-hidden={true} title="GitHub" />,
-  },
-  {
-    alt: "LinkedIn",
-    link: "https://www.linkedin.com/in/vladlena-panchenko/",
-    icon: <AiOutlineLinkedin aria-hidden={true} title="LinkedIn" />,
-  },
-  {
+const SocialLinks = ({ cv }: { cv: string }) => {
+  const resume = {
     alt: "CV",
-    link: "/Vladlena_Panchenko_CV.pdf",
+    link: cv,
     icon: <AiOutlineProfile aria-hidden={true} title="CV" />,
-  },
-  {
-    alt: "Codepen",
-    link: "https://codepen.io/lazy_ocean/pens/public",
-    icon: <AiOutlineCodepen aria-hidden={true} title="Codepen" />,
-  },
-];
+  };
 
-const SocialLinks = () => (
-  <nav aria-label="Social links">
-    <Socials>
-      {socials.map(({ alt, link, icon }: SocialLink) => (
-        <li key={alt}>
-          <a href={link} target="_blank" rel="noreferrer">
-            {icon}
-          </a>
-        </li>
-      ))}
-    </Socials>
-  </nav>
-);
+  return (
+    <nav aria-label="Social links">
+      <Socials>
+        {[...socials, resume].map(({ alt, link, icon }: SocialLink) => (
+          <li key={alt}>
+            <a href={link} target="_blank" rel="noreferrer">
+              {icon}
+            </a>
+          </li>
+        ))}
+      </Socials>
+    </nav>
+  );
+};
 
 export default SocialLinks;

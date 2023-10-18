@@ -6,7 +6,7 @@ export enum TechStack {
   JavaScript = "JavaScript",
   Jest = "Jest",
   a11y = "a11y",
-  npm = "npm",
+  node = "Node.js",
   gulp = "Gulp",
   react = "React",
   express = "Express",
@@ -31,4 +31,32 @@ export interface Project {
   color: AccentColours;
   link: string;
   github?: string;
+}
+
+export enum Roles {
+  cv = "cv",
+  frontendTags = "frontendTags",
+  testingTags = "testingTags",
+  otherTags = "otherTags",
+  description = "description",
+  header = "header",
+}
+
+export interface Tag {
+  id: string;
+  name: string;
+  color: string;
+}
+
+export interface MainData {
+  cv: string;
+  header: string;
+  description: string;
+  tags: { [key: string]: TechStack[] };
+}
+
+export interface SocialLink {
+  alt: string;
+  link: string;
+  icon?: React.ReactElement;
 }
