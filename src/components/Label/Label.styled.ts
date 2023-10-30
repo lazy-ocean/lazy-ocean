@@ -2,7 +2,7 @@ import styled from "styled-components";
 import { TechStack } from "../interfaces";
 
 interface LabelsProps {
-  text: TechStack;
+  $text: TechStack;
 }
 
 type Map = {
@@ -26,8 +26,8 @@ const colorMap: Map = {
 
 export const LabelWrapper = styled.li<LabelsProps>`
   padding: ${({ theme }) => theme.spacings.xxs};
-  background-color: ${({ text }) =>
-    colorMap[text] ||
+  background-color: ${({ $text }) =>
+    colorMap[$text] ||
     Object.values(colorMap)[Math.floor(Math.random() * 10) + 0]};
   width: max-content;
   list-style-type: none;

@@ -58,7 +58,7 @@ const Card = ({ card, i }: CardProps) => {
       onMouseEnter={() => onHover(color)}
       onMouseLeave={resetBg}
       ref={cardRef}
-      isStuck={isStuck}
+      $isStuck={isStuck}
     >
       <CardHeader>
         <Link
@@ -71,7 +71,7 @@ const Card = ({ card, i }: CardProps) => {
         </Link>
         <h3>{date}</h3>
       </CardHeader>
-      <Tag tag={tag}>{tag}</Tag>
+      <Tag $tag={tag}>{tag}</Tag>
       <p>{text}</p>
       {github && <Github link={github} />}
       <Labels>

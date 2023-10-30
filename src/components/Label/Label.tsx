@@ -7,7 +7,7 @@ interface LabelsProps {
 }
 
 const Label = ({ text }: LabelsProps) => {
-  return <LabelWrapper text={text}>{text}</LabelWrapper>;
+  return <LabelWrapper $text={text}>{text}</LabelWrapper>;
 };
 
 export default Label;

@@ -2,7 +2,7 @@ import styled, { css } from "styled-components";
 import { Tags } from "../interfaces";
 
 interface TagProps {
-  tag: Tags;
+  $tag: Tags;
 }
 
 type Map = {
@@ -32,7 +32,7 @@ const generateCardsTopPositions = () => {
 };
 
 interface ContainerProps {
-  isStuck: boolean;
+  $isStuck: boolean;
   color: string;
 }
 
@@ -57,8 +57,8 @@ export const Container = styled.div<ContainerProps>`
     font-weight: 400;
   }
 
-  ${({ isStuck, color }) =>
-    !isStuck &&
+  ${({ $isStuck, color }) =>
+    !$isStuck &&
     `
     @media (hover: hover) and (pointer: fine) {
       &:hover {
@@ -96,7 +96,7 @@ export const Tag = styled.div<TagProps>`
   top: 0;
   font-size: 0.8rem;
   padding: ${({ theme }) => theme.spacings.xxs};
-  background-color: ${({ tag }) => colorMap[tag]};
+  background-color: ${({ $tag }) => colorMap[$tag]};
 `;
 
 export const Link = styled.a`
