@@ -36,27 +36,6 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;400;700&display=swap"
             rel="stylesheet"
           />
-          {/* Global Site Tag (gtag.js) - Google Analytics */}
-          <script
-            async
-            src={`https://www.googletagmanager.com/gtag/js?id=${
-              process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS as string
-            }`}
-          />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', '${
-              process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS as string
-            }', {
-              page_path: window.location.pathname,
-            });
-          `,
-            }}
-          />
         </Head>
         <body>
           <Main />

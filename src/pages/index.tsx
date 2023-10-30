@@ -4,9 +4,7 @@ import Head from "next/head";
 import { ThemeProvider } from "styled-components";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
-import React, { useEffect } from "react";
-import { useRouter } from "next/router";
-import * as gtag from "../lib/ga";
+import React from "react";
 import { queryDatabase, queryItemsDatabase } from "../api/queryDatabase";
 import { parseItemProperties, parseMainProperties } from "../utils/parseProps";
 import { MainData, Project } from "../components/interfaces";
@@ -20,19 +18,6 @@ const Home = ({
   mainContent: MainData;
   items: Project[];
 }) => {
-  const router = useRouter();
-  const isProd = process.env.NODE_ENV === "production";
-
-  useEffect(() => {
-    const handleRouteChange = (url: URL) => {
-      if (isProd) gtag.pageview(url);
-    };
-    router.events.on("routeChangeComplete", handleRouteChange);
-    return () => {
-      router.events.off("routeChangeComplete", handleRouteChange);
-    };
-  }, [router.events, isProd]);
-
   return (
     <>
       <Head>
