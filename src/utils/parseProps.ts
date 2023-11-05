@@ -17,7 +17,7 @@ export const parseMainProperties = (
 
     switch (role) {
       case Roles.cv:
-        data.cv = row.properties.file.files[0].file.url;
+        data.cv = "/Vladlena_Panchenko_CV.pdf";
         break;
       case Roles.header:
         data.header = row.properties.content.rich_text[0].plain_text;
