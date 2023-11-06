@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import Head from "next/head";
-import StyledComponentsRegistry from "./lib/registry";
 import { Raleway } from "next/font/google";
 import "./global.css";
 
@@ -46,9 +45,7 @@ export default function RootLayout({
           sizes="<generated>"
         />
       </Head>
-      <body>
-        <StyledComponentsRegistry>{children}</StyledComponentsRegistry>
-      </body>
+      <body>{children}</body>
     </html>
   );
 }

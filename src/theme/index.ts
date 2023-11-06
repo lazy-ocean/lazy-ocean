@@ -1,5 +1,3 @@
-import { createGlobalStyle, DefaultTheme } from "styled-components";
-
 export enum AccentColours {
   teal = "#b9e7de",
   violet = "#d1b4de",
@@ -11,7 +9,7 @@ export enum AccentColours {
   lightgreen = "#bbf2bc",
 }
 
-declare module "styled-components" {
+/* declare module "styled-components" {
   export interface DefaultTheme {
     palette: {
       bg: string;
@@ -38,9 +36,9 @@ declare module "styled-components" {
       m: string;
     };
   }
-}
+} */
 
-export const theme: DefaultTheme = {
+export const theme = {
   palette: {
     bg: "#EDECE8",
     text: "#161614",
@@ -65,11 +63,11 @@ export const theme: DefaultTheme = {
     s: "2rem",
     m: "4rem",
   },
-};
+}; /* 
 
 export const GlobalStyles = createGlobalStyle`
   body {
     background-color: ${({ theme }) => theme.palette.bg};
     color: ${({ theme }) => theme.palette.text};
   }
-`;
+`; */

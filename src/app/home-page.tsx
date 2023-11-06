@@ -1,7 +1,5 @@
 "use client";
 import Main from "../components/Main/Main";
-import { GlobalStyles, theme } from "../theme";
-import { ThemeProvider } from "styled-components";
 import Header from "../components/Header/Header";
 import Footer from "../components/Footer/Footer";
 import React from "react";
@@ -16,12 +14,9 @@ const Home = ({
 }) => {
   return (
     <>
-      <ThemeProvider theme={theme}>
-        <GlobalStyles />
-        <Header cv={mainContent.cv} />
-        <Main {...mainContent} items={items} />
-        <Footer cv={mainContent.cv} />
-      </ThemeProvider>
+      <Header cv={mainContent.cv} />
+      <Main {...mainContent} items={items} />
+      <Footer cv={mainContent.cv} />
     </>
   );
 };

@@ -1,5 +1,3 @@
-"use client";
-
 import HomePage from "./home-page";
 import React from "react";
 import { queryDatabase, queryItemsDatabase } from "../api/queryDatabase";
@@ -33,8 +31,6 @@ export async function getData() {
 }
 
 export default async function Page() {
-  // Fetch data directly in a Server Component
   const { mainContent, items } = await getData();
-  // Forward fetched data to your Client Component
   return <HomePage mainContent={mainContent} items={items} />;
 }
