@@ -1,8 +1,8 @@
 import React from "react";
-import { Socials } from "./SocialLinks.styled";
 import { AiOutlineProfile } from "react-icons/ai";
 import { socials } from "../../backups/socialLinks";
 import { SocialLink } from "../interfaces";
+import styles from "./SocialLinks.module.css";
 
 const SocialLinks = ({ cv }: { cv: string }) => {
   const resume = {
@@ -13,7 +13,7 @@ const SocialLinks = ({ cv }: { cv: string }) => {
 
   return (
     <nav aria-label="Social links">
-      <Socials>
+      <ul className={styles.socials}>
         {[...socials, resume].map(({ alt, link, icon }: SocialLink) => (
           <li key={alt}>
             <a href={link} target="_blank" rel="noreferrer">
@@ -21,7 +21,7 @@ const SocialLinks = ({ cv }: { cv: string }) => {
             </a>
           </li>
         ))}
-      </Socials>
+      </ul>
     </nav>
   );
 };

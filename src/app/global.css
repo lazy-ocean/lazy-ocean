@@ -1,8 +1,20 @@
+:root {
+  --spacings-xxs: 0.5rem;
+  --spacings-s: 2rem;
+  --spacings-m: 4rem;
+
+  --palette-bg: #edece8;
+  --palette-text: #161614;
+  --palette-dark-orange: #f2a71b;
+}
+
 html,
 body {
   padding: 0;
   margin: 0;
   font-family: "Raleway", sans-serif;
+  background-color: var(--palette-bg);
+  color: var(--palette-text);
 }
 
 a {
