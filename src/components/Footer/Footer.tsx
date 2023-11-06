@@ -1,21 +1,21 @@
 import React from "react";
-import { Copyright, Container, Email } from "./Footer.styled";
 import { AiFillHeart } from "react-icons/ai";
 import SocialLinks from "../SocialLinks/SocialLinks";
+import styles from "./Footer.module.css";
 
 const Footer = ({ cv }: { cv: string }) => {
   return (
-    <Container>
-      <Email href="mailto:panchenko.vladlena@gmail.com">
+    <footer className={styles.container}>
+      <a href="mailto:panchenko.vladlena@gmail.com" className={styles.email}>
         panchenko.vladlena@gmail.com
-      </Email>
-      <Copyright>
+      </a>
+      <div className={styles.copyright}>
         <p>Vladlena Panchenko</p>
         <AiFillHeart />
         <p>{new Date().getFullYear()}</p>
-      </Copyright>
+      </div>
       <SocialLinks cv={cv} />
-    </Container>
+    </footer>
   );
 };
 
