@@ -11,14 +11,12 @@ const Home = ({
 }: {
   mainContent: MainData;
   items: Project[];
-}) => {
-  return (
-    <>
-      <Header cv={mainContent.cv} />
-      <Main {...mainContent} items={items} />
-      <Footer cv={mainContent.cv} />
-    </>
-  );
-};
+}) => (
+  <>
+    <Header cv={mainContent.cv} />
+    <Main {...mainContent} items={items} />
+    <Footer cv={mainContent.cv} />
+  </>
+);
 
 export default Home;

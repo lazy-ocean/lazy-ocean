@@ -21,6 +21,7 @@ const raleway = Raleway({
   weight: ["100", "400", "700"],
   display: "swap",
   subsets: ["latin"],
+  variable: "--font-raleway",
 });
 
 export default function RootLayout({

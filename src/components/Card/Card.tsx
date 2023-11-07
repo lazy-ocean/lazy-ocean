@@ -1,33 +1,27 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
-import {
-  Container,
-  Labels,
-  CardHeader,
-  Tag,
-  Link,
-  Wrapper,
-  GithubLink,
-  CardsFooter,
-} from "./Card.styled";
 import { AccentColours } from "../../theme";
-import { TechStack, Project } from "../interfaces";
+import { TechStack, Project, Tags } from "../interfaces";
 import Label from "../Label/Label";
-import { RiGithubLine } from "react-icons/ri";
+import styles from "./Card.module.css";
+import Github from "../SocialLinks/GithubLink";
 
 interface CardProps {
   card: Project;
   i: number;
 }
 
-const Github = ({ link }: { link: string }) => (
-  <GithubLink href={link} target="_blank">
-    <RiGithubLine aria-hidden={true} title="GitHub" />
-    View on GitHub
-  </GithubLink>
-);
+const colorMap: {
+  [key in Tags]?: string;
+} = {
+  [Tags.job]: "#96b3ff",
+  [Tags.pet]: "#FFC5C8",
+  [Tags.freelance]: "#FFCBAD",
+  [Tags.learning]: "#A4CCA4",
+};
 
 const Card = ({ card, i }: CardProps) => {
   const [isStuck, setStuck] = useState(false);
+  console.log(card);
   const { title, tag, date, text, stack, color, link, github } = card;
   const cardRef = useRef<HTMLDivElement>(null);
 
@@ -53,50 +47,40 @@ const Card = ({ card, i }: CardProps) => {
   }, [onScroll]);
 
   return (
-    <Container
+    <div
+      className={`${styles.container} ${isStuck ? " isStuck" : ""} ${
+        styles.childPosition
+      }`}
+      style={{ "--main-colour": color, "--index": i } as any}
       color={color}
       onMouseEnter={() => onHover(color)}
       onMouseLeave={resetBg}
       ref={cardRef}
-      $isStuck={isStuck}
     >
-      <CardHeader>
-        <Link
+      <div className={styles.header}>
+        <a
+          className={styles.link}
           href={link}
           target="_blank"
           rel="noopener nofollow noreferrer"
-          color={color}
+          style={{ "--main-colour": color } as any}
         >
           <h2>{title}</h2>
-        </Link>
+        </a>
         <h3>{date}</h3>
-      </CardHeader>
-      <Tag $tag={tag}>{tag}</Tag>
+      </div>
+      <div style={{ backgroundColor: colorMap[tag] }} className={styles.tag}>
+        {tag}
+      </div>
       <p>{text}</p>
       {github && <Github link={github} />}
-      <Labels>
+      <ul className={styles.labels}>
         {stack.map((item: TechStack, i) => (
           <Label text={item} key={i} />
         ))}
-      </Labels>
-    </Container>
-  );
-};
-
-const Cards = ({ items }: { items: Project[] }) => {
-  return (
-    <div>
-      <Wrapper>
-        {items.map((card: Project, i) => (
-          <Card card={card} i={i + 1} key={i} />
-        ))}
-      </Wrapper>
-      <CardsFooter>
-        <p>Everything else: </p>
-        <Github link="https://github.com/lazy-ocean"></Github>
-      </CardsFooter>
+      </ul>
     </div>
   );
 };
 
-export default Cards;
+export default Card;

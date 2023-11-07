@@ -7,13 +7,14 @@
   --palette-bg: #edece8;
   --palette-text: #161614;
   --palette-dark-orange: #f2a71b;
+  --palette-light-bg: #fff;
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: var(--font-raleway);
   background-color: var(--palette-bg);
   color: var(--palette-text);
 }
@@ -36,4 +37,8 @@ h4 {
 
 body {
   transition: background-color 0.4s ease-in-out;
+}
+
+.wttLink {
+  border-bottom: 2.5px dashed var(--palette-dark-orange);
 }
