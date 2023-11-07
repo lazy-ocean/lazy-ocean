@@ -6,7 +6,7 @@ import { MainData, Project } from "../components/interfaces";
 import projects from "../backups/projects";
 import { mainData } from "../backups/mainData";
 
-export async function getData() {
+async function getData() {
   let items: Project[] = projects;
   let mainContent: MainData = mainData;
 

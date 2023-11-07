@@ -4,8 +4,8 @@ import {
   QueryDatabaseResponse,
 } from "@notionhq/client/build/src/api-endpoints";
 import { MainData, Roles, Tags, TechStack } from "../components/interfaces";
-import { AccentColours } from "../theme";
 import { mainData } from "../backups/mainData";
+import { Project, AccentColours } from "../components/interfaces";
 
 export const parseMainProperties = (
   database: QueryDatabaseResponse

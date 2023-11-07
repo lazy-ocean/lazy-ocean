@@ -1,4 +1,13 @@
-import { AccentColours } from "../theme";
+export enum AccentColours {
+  teal = "#b9e7de",
+  violet = "#d1b4de",
+  orange = "#FFC999",
+  blue = "#9ECEE6",
+  green = "#CDE4B4",
+  pink = "#FFADAD",
+  yellow = "#fae97a",
+  lightgreen = "#bbf2bc",
+}
 
 export enum TechStack {
   Next = "Next.js",

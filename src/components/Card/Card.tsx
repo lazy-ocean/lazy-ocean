@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState, useCallback } from "react";
-import { AccentColours } from "../../theme";
-import { TechStack, Project, Tags } from "../interfaces";
+import { TechStack, Project, Tags, AccentColours } from "../interfaces";
 import Label from "../Label/Label";
 import styles from "./Card.module.css";
 import Github from "../SocialLinks/GithubLink";
@@ -21,7 +20,6 @@ const colorMap: {
 
 const Card = ({ card, i }: CardProps) => {
   const [isStuck, setStuck] = useState(false);
-  console.log(card);
   const { title, tag, date, text, stack, color, link, github } = card;
   const cardRef = useRef<HTMLDivElement>(null);
 
