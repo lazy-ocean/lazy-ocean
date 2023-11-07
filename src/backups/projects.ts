@@ -1,5 +1,9 @@
-import { Project, Tags, TechStack } from "../components/interfaces";
-import { AccentColours } from "../theme";
+import {
+  Project,
+  Tags,
+  TechStack,
+  AccentColours,
+} from "../components/interfaces";
 
 const projects: Project[] = [
   {

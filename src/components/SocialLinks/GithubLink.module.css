@@ -1,0 +1,10 @@
+.githubLink {
+  display: flex;
+  align-items: center;
+  gap: var(--spacings-xxs);
+}
+
+.githubLink svg {
+  width: 20px;
+  height: 20px;
+}

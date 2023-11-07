@@ -1,0 +1,44 @@
+:root {
+  --spacings-xxs: 0.5rem;
+  --spacings-xs: 1rem;
+  --spacings-s: 2rem;
+  --spacings-m: 4rem;
+
+  --palette-bg: #edece8;
+  --palette-text: #161614;
+  --palette-dark-orange: #f2a71b;
+  --palette-light-bg: #fff;
+}
+
+html,
+body {
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-raleway);
+  background-color: var(--palette-bg);
+  color: var(--palette-text);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+
+body {
+  transition: background-color 0.4s ease-in-out;
+}
+
+.wttLink {
+  border-bottom: 2.5px dashed var(--palette-dark-orange);
+}

@@ -1,0 +1,67 @@
+.container {
+  --main-colour: var(--main-color, #000);
+  background-color: var(--palette-light-bg);
+  border: 1px solid var(--palette-text);
+  padding: var(--spacings-s);
+  width: 100%;
+  position: relative;
+  height: max-content;
+  box-shadow: -10px 10px var(--main-colour),
+    -10px 10px 0px 1px var(--palette-text);
+  position: sticky;
+  top: var(--spacings-m);
+  transition: all 0.4s;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.childPosition {
+  top: calc(var(--index) * 30px);
+}
+
+.container h3 {
+  font-size: 1rem;
+  font-weight: 400;
+}
+
+.container:not(.isStuck):hover {
+  @media (hover: hover) and (pointer: fine) {
+    transform: translate(-5px, 5px);
+    box-shadow: 0px 0px var(--main-colour);
+  }
+}
+
+.labels {
+  display: flex;
+  gap: var(--spacings-xs);
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacings-xs);
+  flex-wrap: wrap;
+
+  @media only screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+  }
+}
+
+.tag {
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size: 0.8rem;
+  padding: var(--spacings-xxs);
+}
+
+.link {
+  text-decoration-color: var(--main-colour);
+  text-decoration-style: dashed;
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 3px;
+}
