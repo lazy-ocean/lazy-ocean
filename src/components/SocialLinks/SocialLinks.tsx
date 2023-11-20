@@ -3,12 +3,13 @@ import { AiOutlineProfile } from "react-icons/ai";
 import { socials } from "../../backups/socialLinks";
 import { SocialLink } from "../interfaces";
 import styles from "./SocialLinks.module.css";
+import { CiFileOn } from "react-icons/ci";
 
 const SocialLinks = ({ cv }: { cv: string }) => {
   const resume = {
     alt: "CV",
     link: cv,
-    icon: <AiOutlineProfile aria-hidden={true} title="CV" />,
+    icon: <CiFileOn aria-hidden={true} title="CV" />,
   };
 
   return (

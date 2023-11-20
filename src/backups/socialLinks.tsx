@@ -1,21 +1,23 @@
 import { SocialLink } from "../components/interfaces";
 import { AiOutlineLinkedin, AiOutlineCodepen } from "react-icons/ai";
-import { RiGithubLine } from "react-icons/ri";
+import { SlSocialLinkedin } from "react-icons/sl";
+import { PiCodepenLogoLight } from "react-icons/pi";
+import { VscGithubAlt } from "react-icons/vsc";
 
 export const socials: SocialLink[] = [
   {
     alt: "GitHub",
     link: "https://github.com/lazy-ocean",
-    icon: <RiGithubLine aria-hidden={true} title="GitHub" />,
+    icon: <VscGithubAlt aria-hidden={true} title="GitHub" />,
   },
   {
     alt: "LinkedIn",
     link: "https://www.linkedin.com/in/vladlena-panchenko/",
-    icon: <AiOutlineLinkedin aria-hidden={true} title="LinkedIn" />,
+    icon: <SlSocialLinkedin aria-hidden={true} title="LinkedIn" />,
   },
   {
     alt: "Codepen",
     link: "https://codepen.io/lazy_ocean/pens/public",
-    icon: <AiOutlineCodepen aria-hidden={true} title="Codepen" />,
+    icon: <PiCodepenLogoLight aria-hidden={true} title="Codepen" />,
   },
 ];

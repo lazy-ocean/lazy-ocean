@@ -7,7 +7,6 @@ const Header = ({ cv }: { cv: string }) => {
   return (
     <header className={styles.head}>
       <Image src="/icon.png" alt="logo" height="40" width="40" />
-      <SocialLinks cv={cv} />
     </header>
   );
 };

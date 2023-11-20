@@ -4,9 +4,9 @@
   --spacings-s: 2rem;
   --spacings-m: 4rem;
 
-  --palette-bg: #edece8;
+  --palette-bg: rgb(252 253 255);
   --palette-text: #161614;
-  --palette-dark-orange: #f2a71b;
+  --palette-dark-orange: #7498eb;
   --palette-light-bg: #fff;
 }
 
@@ -14,7 +14,7 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: var(--font-raleway);
+  font-family: var(--font-main), sans-serif;
   background-color: var(--palette-bg);
   color: var(--palette-text);
 }
@@ -33,6 +33,23 @@ h2,
 h3,
 h4 {
   margin: 0;
+  font-family: var(--font-header), serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.4rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1.2rem;
 }
 
 body {
@@ -41,4 +58,9 @@ body {
 
 .wttLink {
   border-bottom: 2.5px dashed var(--palette-dark-orange);
+}
+
+.isStuck {
+  transform: translate(-5px, 5px);
+  box-shadow: none !important;
 }

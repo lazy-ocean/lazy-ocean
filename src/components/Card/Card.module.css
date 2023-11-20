@@ -1,36 +1,70 @@
+.stickk {
+  position: sticky;
+  top: var(--spacings-m);
+}
+
 .container {
   --main-colour: var(--main-color, #000);
   background-color: var(--palette-light-bg);
-  border: 1px solid var(--palette-text);
+
   padding: var(--spacings-s);
   width: 100%;
   position: relative;
   height: max-content;
-  box-shadow: -10px 10px var(--main-colour),
-    -10px 10px 0px 1px var(--palette-text);
+  /*   box-shadow: -10px -10px var(--main-colour),
+    -20px -20px color-mix(in srgb, var(--main-colour) 55%, transparent),
+    -30px -30px color-mix(in srgb, var(--main-colour) 35%, transparent);
+    border: 2px solid var(--main-colour); */
+  box-shadow: -10px -10px color-mix(in srgb, var(--main-colour) 55%, transparent),
+    -20px -20px color-mix(in srgb, var(--main-colour) 35%, transparent);
+
+  border: 2px dashed var(--main-colour);
   position: sticky;
   top: var(--spacings-m);
   transition: all 0.4s;
   display: flex;
-  flex-direction: column;
+  /*   flex-direction: column; */
   justify-content: center;
+  padding-right: 0;
+}
+
+.container2 {
+  --main-colour: var(--main-color, #000);
+  background-color: var(--main-colour);
+  border-radius: 20px;
+  padding: var(--spacings-s);
+  width: 100%;
+  height: max-content;
+  transition: all 0.4s;
+  display: flex;
+  padding-right: 0;
+
+  position: sticky;
+  overflow: hidden;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 3rem;
+
+  border-radius: 2.5rem;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 2rem;
+  display: flex;
+  position: relative;
 }
 
 .childPosition {
   top: calc(var(--index) * 30px);
 }
 
-.container h3 {
-  font-size: 1rem;
-  font-weight: 400;
-}
-
-.container:not(.isStuck):hover {
+/* .container:not(.isStuck):hover {
   @media (hover: hover) and (pointer: fine) {
     transform: translate(-5px, 5px);
-    box-shadow: 0px 0px var(--main-colour);
+    box-shadow: none;
   }
-}
+} */
 
 .labels {
   display: flex;
@@ -39,29 +73,66 @@
   flex-wrap: wrap;
 }
 
+.labelsNew {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: auto;
+}
+
 .header {
   display: flex;
   align-items: center;
   gap: var(--spacings-xs);
   flex-wrap: wrap;
-
-  @media only screen and (min-width: 1200px) {
-    flex-wrap: nowrap;
-  }
 }
 
 .tag {
-  position: absolute;
   right: 0;
   top: 0;
-  font-size: 0.8rem;
-  padding: var(--spacings-xxs);
+  border: 2px dashed var(--color);
+  background-color: color-mix(in srgb, var(--color) 35%, transparent);
 }
 
 .link {
-  text-decoration-color: var(--main-colour);
+  /*  text-decoration-color: var(--main-colour); */
+  text-decoration-color: black;
   text-decoration-style: dashed;
   text-decoration-line: underline;
-  text-underline-offset: 3px;
+  text-underline-offset: 6px;
   text-decoration-thickness: 3px;
+}
+
+.cardImageWrapper {
+  /*   flex: 1; 
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  transform: rotate(-15deg); */
+
+  border-top-right-radius: 2rem;
+  border-bottom-right-radius: 2rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  display: flex;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+}
+.cardImage {
+  /*   width: 130%;
+  height: auto;
+  object-fit: cover;
+ */
+
+  width: 30%;
+  transform: rotate(-15deg);
+}
+
+.cardTextWrapper {
+  width: 60%;
 }

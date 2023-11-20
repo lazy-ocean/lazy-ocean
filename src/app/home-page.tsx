@@ -13,7 +13,7 @@ const Home = ({
   items: Project[];
 }) => (
   <>
-    <Header cv={mainContent.cv} />
+    {/*     <Header cv={mainContent.cv} /> */}
     <Main {...mainContent} items={items} />
     <Footer cv={mainContent.cv} />
   </>

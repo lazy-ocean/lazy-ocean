@@ -1,7 +1,8 @@
 import { Metadata } from "next";
 import Head from "next/head";
-import { Raleway } from "next/font/google";
+import { Quicksand, Raleway } from "next/font/google";
 import "./global.css";
+import localFont from "next/font/local";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lazy-ocean.vercel.app/"),
@@ -17,11 +18,31 @@ export const metadata: Metadata = {
   },
 };
 
-const raleway = Raleway({
+/* const raleway = Raleway({
+  weight: ["100", "400", "700"],
+  display: "swap",
+  
+  variable: "--font-raleway",
+}); */
+
+const myFont = localFont({
+  src: "./SandeMore-Regular.otf",
+  display: "swap",
+  variable: "--font-header",
+});
+
+/* const raleway = Raleway({
   weight: ["100", "400", "700"],
   display: "swap",
   subsets: ["latin"],
   variable: "--font-raleway",
+}); */
+
+const quicksand = Quicksand({
+  weight: ["300", "700"],
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-main",
 });
 
 export default function RootLayout({
@@ -30,7 +51,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={raleway.className}>
+    <html lang="en" className={`${quicksand.variable} ${myFont.variable}`}>
       <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link

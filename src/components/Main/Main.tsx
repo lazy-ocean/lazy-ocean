@@ -4,6 +4,8 @@ import Label from "../Label/Label";
 import { MainData, Project, TechStack } from "../interfaces";
 import { skills } from "../../backups/skills";
 import styles from "./Main.module.css";
+import MainInfo from "../Info/Info";
+import { TimeMachineBtn } from "../TimeMachine/TimeMachineBtn";
 
 interface MainProps extends MainData {
   items: Project[];
@@ -11,18 +13,20 @@ interface MainProps extends MainData {
 
 const Main = ({ header, description, tags, items }: MainProps) => (
   <main className={styles.container}>
-    <section className={styles.copy}>
-      <div className={styles.sticky}>
-        <h1 dangerouslySetInnerHTML={{ __html: header }} />
-        <p dangerouslySetInnerHTML={{ __html: description }} />
-        <article>
-          <h2>Skills</h2>
+    <TimeMachineBtn />
+    <MainInfo header={header} description={description} />
+    <section>
+      <div>
+        <h2>Skills</h2>
+        <article className={styles.skillsWrapper}>
           {Object.keys(tags || skills).map((name) => (
             <ul key={name} className={styles.skills}>
               <h3>{name}</h3>
-              {tags[name].map((item: TechStack, i: number) => (
-                <Label text={item} key={i} />
-              ))}
+              <div className="testtt">
+                {tags[name].map((item: TechStack, i: number) => (
+                  <Label text={item} key={i} />
+                ))}
+              </div>
             </ul>
           ))}
         </article>

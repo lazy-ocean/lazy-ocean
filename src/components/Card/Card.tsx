@@ -24,13 +24,13 @@ const Card = ({ card, i }: CardProps) => {
   const cardRef = useRef<HTMLDivElement>(null);
 
   const onHover = (color: AccentColours) => {
-    if (!isStuck && window?.innerWidth > 810) {
-      document.body.style.backgroundColor = color;
-    }
+    /*     if (!isStuck && window?.innerWidth > 810) {
+      document.body.style.backgroundColor = `color-mix(in srgb, ${color} 35%, transparent)`;
+    } */
   };
 
   const resetBg = () => {
-    document.body.style.backgroundColor = "#EDECE8";
+    document.body.style.backgroundColor = "var(--palette-bg)";
   };
 
   const onScroll = useCallback(() => {
@@ -45,38 +45,49 @@ const Card = ({ card, i }: CardProps) => {
   }, [onScroll]);
 
   return (
-    <div
-      className={`${styles.container} ${isStuck ? " isStuck" : ""} ${
-        styles.childPosition
-      }`}
-      style={{ "--main-colour": color, "--index": i } as any}
-      color={color}
-      onMouseEnter={() => onHover(color)}
-      onMouseLeave={resetBg}
-      ref={cardRef}
-    >
-      <div className={styles.header}>
-        <a
-          className={styles.link}
-          href={link}
-          target="_blank"
-          rel="noopener nofollow noreferrer"
-          style={{ "--main-colour": color } as any}
-        >
-          <h2>{title}</h2>
-        </a>
-        <h3>{date}</h3>
-      </div>
-      <div style={{ backgroundColor: colorMap[tag] }} className={styles.tag}>
-        {tag}
-      </div>
-      <p>{text}</p>
-      {github && <Github link={github} />}
-      <ul className={styles.labels}>
+    <div className={styles.stickk}>
+      <div
+        className={`${styles.container2} ${isStuck ? " isStuck" : ""} ${
+          styles.childPosition
+        }`}
+        style={{ "--main-colour": color, "--index": i } as any}
+        color={color}
+        onMouseEnter={() => onHover(color)}
+        onMouseLeave={resetBg}
+        ref={cardRef}
+      >
+        <div className={styles.cardTextWrapper}>
+          <div className={styles.header}>
+            <a
+              className={styles.link}
+              href={link}
+              target="_blank"
+              rel="noopener nofollow noreferrer"
+              style={{ "--main-colour": color } as any}
+            >
+              <h2>{title}</h2>
+            </a>
+            <h3>{date}</h3>
+            <div className={styles.tag}>💼</div>
+          </div>
+
+          <p>{text}</p>
+          {github && <Github link={github} />}
+          <ul className={styles.labels}>
+            {stack.map((item: TechStack, i) => (
+              <Label text={item} key={i} />
+            ))}
+          </ul>
+        </div>
+        <div className={styles.cardImageWrapper}>
+          <img src="/tedbaker.png" className={styles.cardImage} />
+        </div>
+        {/*     <ul className={styles.labels}>
         {stack.map((item: TechStack, i) => (
           <Label text={item} key={i} />
         ))}
-      </ul>
+      </ul> */}
+      </div>
     </div>
   );
 };

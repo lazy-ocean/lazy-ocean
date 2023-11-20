@@ -20,3 +20,7 @@
 .socials svg:hover {
   fill: var(--palette-dark-orange);
 }
+
+:where(main) .socials {
+  flex-direction: column;
+}

@@ -1,0 +1,12 @@
+.copy {
+  display: flex;
+}
+
+.copy p {
+  line-height: 2.2rem;
+  width: 100%;
+}
+
+.copy p > .wttLink {
+  border-bottom: 2.5px dashed var(--palette-dark-orange);
+}
