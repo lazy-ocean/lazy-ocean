@@ -1,8 +1,8 @@
-.stickk {
+/* .stickk {
   position: sticky;
   top: var(--spacings-m);
 }
-
+ */
 .container {
   --main-colour: var(--main-color, #000);
   background-color: var(--palette-light-bg);
@@ -38,6 +38,8 @@
   transition: all 0.4s;
   display: flex;
   padding-right: 0;
+  box-shadow: -10px -10px color-mix(in srgb, var(--main-colour) 55%, transparent),
+    -20px -20px color-mix(in srgb, var(--main-colour) 35%, transparent);
 
   position: sticky;
   overflow: hidden;
@@ -56,7 +58,7 @@
 }
 
 .childPosition {
-  top: calc(var(--index) * 30px);
+  /*  top: calc(var(--index) * 10px); */
 }
 
 /* .container:not(.isStuck):hover {
@@ -65,6 +67,11 @@
     box-shadow: none;
   }
 } */
+
+.container2:hover {
+  transform: translate(-5px, 5px);
+  box-shadow: none;
+}
 
 .labels {
   display: flex;
@@ -134,5 +141,5 @@
 }
 
 .cardTextWrapper {
-  width: 60%;
+  /*   width: 60%; */
 }

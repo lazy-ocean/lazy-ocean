@@ -1,5 +1,5 @@
 .container {
-  padding: var(--spacings-xxs) var(--spacings-s);
+  padding: var(--spacings-s) var(--spacings-s);
   gap: var(--spacings-s);
   display: flex;
   flex-direction: column;
@@ -28,6 +28,11 @@
 
 .skillsWrapper {
   display: grid;
-  grid-template-columns: 1fr minmax(auto, 0.6fr) 1fr;
+  grid-template-columns: 1fr minmax(auto, 0.5fr) 1fr;
   gap: var(--spacings-m);
+
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: var(--spacings-xs);
+  }
 }

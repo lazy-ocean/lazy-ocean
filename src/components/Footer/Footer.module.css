@@ -24,6 +24,7 @@
   gap: var(--spacings-xxs);
   font-weight: 700;
   grid-area: copy;
+  font-family: var(--font-header);
 }
 
 .copyright p {

@@ -1,5 +1,9 @@
 .copy {
   display: flex;
+
+  @media only screen and (max-width: 900px) {
+    flex-wrap: wrap;
+  }
 }
 
 .copy p {

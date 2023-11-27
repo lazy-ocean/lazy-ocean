@@ -1,4 +1,3 @@
-import Sparkles from "../Sparkles/Sparkles";
 import styles from "./TimeMachine.module.css";
 
 export const TimeMachineBtn = () => {

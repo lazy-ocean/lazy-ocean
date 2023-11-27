@@ -31,7 +31,7 @@ const Label = ({ text }: LabelsProps) => {
     Object.values(colorMap)[Math.floor(Math.random() * 10) + 0];
 
   return (
-    <li className={styles.label} style={{ "--color": colour }}>
+    <li className={styles.label} style={{ ["--color" as string]: colour }}>
       #{text}
     </li>
   );

@@ -27,6 +27,7 @@ const Card = ({ card, i }: CardProps) => {
     /*     if (!isStuck && window?.innerWidth > 810) {
       document.body.style.backgroundColor = `color-mix(in srgb, ${color} 35%, transparent)`;
     } */
+    /*    document.body.style.backgroundColor = `color-mix(in srgb, ${color} 35%, transparent)`; */
   };
 
   const resetBg = () => {
@@ -79,9 +80,9 @@ const Card = ({ card, i }: CardProps) => {
             ))}
           </ul>
         </div>
-        <div className={styles.cardImageWrapper}>
+        {/*         <div className={styles.cardImageWrapper}>
           <img src="/tedbaker.png" className={styles.cardImage} />
-        </div>
+        </div> */}
         {/*     <ul className={styles.labels}>
         {stack.map((item: TechStack, i) => (
           <Label text={item} key={i} />

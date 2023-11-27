@@ -32,6 +32,7 @@ const Main = ({ header, description, tags, items }: MainProps) => (
         </article>
       </div>
     </section>
+    <h2>Projects</h2>
     <Cards items={items} />
   </main>
 );

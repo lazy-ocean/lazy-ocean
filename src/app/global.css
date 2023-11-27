@@ -59,8 +59,8 @@ body {
 .wttLink {
   border-bottom: 2.5px dashed var(--palette-dark-orange);
 }
-
+/* 
 .isStuck {
   transform: translate(-5px, 5px);
   box-shadow: none !important;
-}
+} */
