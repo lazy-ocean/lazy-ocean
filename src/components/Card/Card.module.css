@@ -11,6 +11,7 @@
   width: 100%;
   position: relative;
   height: max-content;
+
   /*   box-shadow: -10px -10px var(--main-colour),
     -20px -20px color-mix(in srgb, var(--main-colour) 55%, transparent),
     -30px -30px color-mix(in srgb, var(--main-colour) 35%, transparent);
@@ -20,6 +21,7 @@
 
   border: 2px dashed var(--main-colour);
   position: sticky;
+
   top: var(--spacings-m);
   transition: all 0.4s;
   display: flex;
@@ -31,25 +33,24 @@
 .container2 {
   --main-colour: var(--main-color, #000);
   background-color: var(--main-colour);
-  border-radius: 20px;
+
   padding: var(--spacings-s);
   width: 100%;
   height: max-content;
   transition: all 0.4s;
   display: flex;
   padding-right: 0;
-  box-shadow: -10px -10px color-mix(in srgb, var(--main-colour) 55%, transparent),
-    -20px -20px color-mix(in srgb, var(--main-colour) 35%, transparent);
-
+  /*  box-shadow: -10px -10px color-mix(in srgb, var(--main-colour) 55%, transparent),
+    -20px -20px color-mix(in srgb, var(--main-colour) 35%, transparent); */
+  box-shadow: 8px 8px black;
   position: sticky;
   overflow: hidden;
-
+  border: 2.5px dashed black;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 3rem;
-
-  border-radius: 2.5rem;
+  border-radius: 1rem;
   flex-direction: column;
   align-items: flex-start;
   padding: 2rem;
@@ -71,6 +72,10 @@
 .container2:hover {
   transform: translate(-5px, 5px);
   box-shadow: none;
+}
+
+.container2:hover .cardImage {
+  filter: opacity(1);
 }
 
 .labels {
@@ -118,8 +123,6 @@
   overflow: hidden;
   transform: rotate(-15deg); */
 
-  border-top-right-radius: 2rem;
-  border-bottom-right-radius: 2rem;
   flex-direction: column;
   justify-content: center;
   align-items: flex-end;
@@ -130,16 +133,18 @@
   right: 0;
   overflow: hidden;
 }
-.cardImage {
-  /*   width: 130%;
-  height: auto;
-  object-fit: cover;
- */
 
+.cardImage {
   width: 30%;
   transform: rotate(-15deg);
+  filter: opacity(0.8);
+  transition: all 0.4s;
 }
 
 .cardTextWrapper {
-  /*   width: 60%; */
+  width: 60%;
+}
+
+.container2:not(:has(.cardImageWrapper)) .cardTextWrapper {
+  width: 100%;
 }

@@ -20,7 +20,7 @@ const colorMap: {
 
 const Card = ({ card, i }: CardProps) => {
   const [isStuck, setStuck] = useState(false);
-  const { title, tag, date, text, stack, color, link, github } = card;
+  const { title, tag, date, text, stack, color, link, github, image } = card;
   const cardRef = useRef<HTMLDivElement>(null);
 
   const onHover = (color: AccentColours) => {
@@ -71,7 +71,6 @@ const Card = ({ card, i }: CardProps) => {
             <h3>{date}</h3>
             <div className={styles.tag}>💼</div>
           </div>
-
           <p>{text}</p>
           {github && <Github link={github} />}
           <ul className={styles.labels}>
@@ -80,9 +79,12 @@ const Card = ({ card, i }: CardProps) => {
             ))}
           </ul>
         </div>
-        {/*         <div className={styles.cardImageWrapper}>
-          <img src="/tedbaker.png" className={styles.cardImage} />
-        </div> */}
+        {image && (
+          <div className={styles.cardImageWrapper}>
+            <img src={image} className={styles.cardImage} />
+          </div>
+        )}
+
         {/*     <ul className={styles.labels}>
         {stack.map((item: TechStack, i) => (
           <Label text={item} key={i} />

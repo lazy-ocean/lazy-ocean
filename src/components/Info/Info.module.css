@@ -12,5 +12,5 @@
 }
 
 .copy p > .wttLink {
-  border-bottom: 2.5px dashed var(--palette-dark-orange);
+  border-bottom: 2.5px dashed black;
 }

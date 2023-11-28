@@ -29,7 +29,8 @@
   padding: var(--spacings-xxs);
   width: max-content;
   list-style-type: none;
-  border: 2px dashed var(--color);
-  background-color: color-mix(in srgb, var(--color) 35%, transparent);
+  border: 2px dashed black;
+  background-color: var(--color);
+  /*     background-color: color-mix(in srgb, var(--color) 35%, transparent); */
   font-family: monospace;
 }

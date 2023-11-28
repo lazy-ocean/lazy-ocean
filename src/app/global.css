@@ -4,7 +4,7 @@
   --spacings-s: 2rem;
   --spacings-m: 4rem;
 
-  --palette-bg: rgb(252 253 255);
+  --palette-bg: rgb(255 253 247);
   --palette-text: #161614;
   --palette-dark-orange: #7498eb;
   --palette-light-bg: #fff;
@@ -57,7 +57,7 @@ body {
 }
 
 .wttLink {
-  border-bottom: 2.5px dashed var(--palette-dark-orange);
+  border-bottom: 2.5px dashed black;
 }
 /* 
 .isStuck {

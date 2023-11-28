@@ -3,8 +3,6 @@
   flex-direction: column;
   gap: var(--spacings-s);
   margin-bottom: var(--spacings-xs);
-
-  padding-left: var(--spacings-xs);
 }
 
 .footer {
