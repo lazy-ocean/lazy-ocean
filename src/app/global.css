@@ -6,8 +6,14 @@
 
   --palette-bg: rgb(255 253 247);
   --palette-text: #161614;
-  --palette-dark-orange: #7498eb;
-  --palette-light-bg: #fff;
+  --palette-accent: #ffae00;
+
+  --dashed-border-m: 3px dashed black;
+  --dashed-border-s: 2px dashed black;
+
+  @media only screen and (max-width: 900px) {
+    font-size: 13px;
+  }
 }
 
 html,
@@ -26,6 +32,10 @@ a {
 
 * {
   box-sizing: border-box;
+}
+
+ul {
+  padding: 0;
 }
 
 h1,
@@ -57,10 +67,10 @@ body {
 }
 
 .wttLink {
-  border-bottom: 2.5px dashed black;
+  border-bottom: var(--dashed-border-s);
+  transition: all 0.2s;
 }
-/* 
-.isStuck {
-  transform: translate(-5px, 5px);
-  box-shadow: none !important;
-} */
+
+.wttLink:hover {
+  border-bottom: 2px dashed var(--palette-accent);
+}

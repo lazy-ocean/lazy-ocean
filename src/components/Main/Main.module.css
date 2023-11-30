@@ -1,5 +1,5 @@
 .container {
-  padding: var(--spacings-s) var(--spacings-s);
+  padding: var(--spacings-s) var(--spacings-s) 0 var(--spacings-s);
   gap: var(--spacings-s);
   display: flex;
   flex-direction: column;
@@ -10,20 +10,18 @@
 }
 
 .skills {
-  gap: var(--spacings-xs);
-  padding: 0;
-  align-items: center;
-  flex-wrap: wrap;
+  margin: 0;
+  margin-top: var(--spacings-xs);
 }
 
 .skills div {
   display: flex;
-  gap: 1rem;
+  gap: var(--spacings-xs);
   flex-wrap: wrap;
 }
 
 .skills h3 {
-  margin-bottom: 1rem;
+  margin-bottom: var(--spacings-xs);
 }
 
 .skillsWrapper {

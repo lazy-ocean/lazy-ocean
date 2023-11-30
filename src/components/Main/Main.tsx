@@ -13,27 +13,27 @@ interface MainProps extends MainData {
 
 const Main = ({ header, description, tags, items }: MainProps) => (
   <main className={styles.container}>
-    <TimeMachineBtn />
+    {/*     <TimeMachineBtn /> */}
     <MainInfo header={header} description={description} />
     <section>
-      <div>
-        <h2>Skills</h2>
-        <article className={styles.skillsWrapper}>
-          {Object.keys(tags || skills).map((name) => (
-            <ul key={name} className={styles.skills}>
-              <h3>{name}</h3>
-              <div className="testtt">
-                {tags[name].map((item: TechStack, i: number) => (
-                  <Label text={item} key={i} />
-                ))}
-              </div>
-            </ul>
-          ))}
-        </article>
-      </div>
+      <h2>Skills</h2>
+      <article className={styles.skillsWrapper}>
+        {Object.keys(tags || skills).map((name) => (
+          <ul key={name} className={styles.skills}>
+            <h3>{name}</h3>
+            <div>
+              {tags[name].map((item: TechStack, i: number) => (
+                <Label text={item} key={i} />
+              ))}
+            </div>
+          </ul>
+        ))}
+      </article>
     </section>
-    <h2>Projects</h2>
-    <Cards items={items} />
+    <div>
+      <h2>Projects</h2>
+      <Cards items={items} />
+    </div>
   </main>
 );
 

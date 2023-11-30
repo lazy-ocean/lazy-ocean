@@ -3,7 +3,6 @@ import { Project } from "../interfaces";
 import styles from "./Cards.module.css";
 import Card from "./Card";
 import Github from "../SocialLinks/GithubLink";
-import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 const Cards = ({ items }: { items: Project[] }) => (
   <>

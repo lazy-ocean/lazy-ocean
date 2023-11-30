@@ -40,6 +40,7 @@ export interface Project {
   color: AccentColours;
   link: string;
   github?: string;
+  image?: string;
 }
 
 export enum Roles {
