@@ -1,0 +1,107 @@
+.sticky {
+  position: sticky;
+  top: var(--spacings-s);
+
+  @media only screen and (max-width: 900px) {
+    top: var(--spacings-xxs);
+  }
+}
+
+.container {
+  background-color: var(--main-colour);
+  box-shadow: 8px 8px black;
+  border: var(--dashed-border-m);
+  border-radius: 1rem;
+  padding: var(--spacings-s);
+  width: 100%;
+  height: 100%;
+  min-height: 18rem;
+  transition: all 0.4s;
+
+  position: sticky;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.childPosition {
+  top: calc(var(--index) * 20px);
+}
+
+.container:hover {
+  @media (hover: hover) and (pointer: fine) {
+    transform: translate(8px, 8px);
+    box-shadow: none;
+  }
+}
+
+.container:hover .cardImage {
+  box-shadow: none;
+}
+
+.labels {
+  display: flex;
+  column-gap: var(--spacings-xs);
+  padding: 0;
+  flex-wrap: wrap;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: var(--spacings-xs);
+  flex-wrap: wrap;
+}
+
+.tag {
+  border: var(--dashed-border-s);
+  background-color: var(--main-colour);
+  border-radius: 10px;
+  font-family: monospace;
+  padding: 5px;
+}
+
+.link {
+  text-decoration-color: black;
+  text-decoration-style: dashed;
+  text-decoration-line: underline;
+  text-underline-offset: 6px;
+  text-decoration-thickness: 3px;
+}
+
+.cardImageWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  overflow: hidden;
+
+  @media only screen and (max-width: 900px) {
+    display: none;
+  }
+}
+
+.cardImage {
+  width: 30%;
+  transform: rotate(-15deg);
+  transition: all 0.4s;
+  box-shadow: -8px 8px black;
+}
+
+.cardTextWrapper {
+  width: 60%;
+  z-index: 100;
+
+  @media only screen and (max-width: 900px) {
+    width: 100%;
+  }
+}
+
+.container:not(:has(.cardImageWrapper)) .cardTextWrapper {
+  width: 100%;
+}

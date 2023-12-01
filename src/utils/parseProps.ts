@@ -3,9 +3,14 @@ import {
   PageObjectResponse,
   QueryDatabaseResponse,
 } from "@notionhq/client/build/src/api-endpoints";
-import { MainData, Roles, Tags, TechStack } from "../components/interfaces";
+import {
+  MainData,
+  Roles,
+  Tags,
+  TechStack,
+} from "../components/2023/interfaces";
 import { mainData } from "../backups/mainData";
-import { Project, AccentColours } from "../components/interfaces";
+import { Project, AccentColours } from "../components/2023/interfaces";
 
 export const parseMainProperties = (
   database: QueryDatabaseResponse

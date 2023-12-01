@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  gap: var(--spacings-xxs);
+  justify-content: center;
+  margin-top: 0;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacings-s);
+  margin-bottom: 11rem;
+
+  @media only screen and (max-width: 900px) {
+    margin-bottom: 13rem;
+  }
+}

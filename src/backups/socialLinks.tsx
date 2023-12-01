@@ -1,4 +1,4 @@
-import { SocialLink } from "../components/interfaces";
+import { SocialLink } from "../components/2023/interfaces";
 import { AiOutlineLinkedin, AiOutlineCodepen } from "react-icons/ai";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { PiCodepenLogoLight } from "react-icons/pi";

@@ -1,0 +1,61 @@
+.header__text {
+  color: var(--2021-color-font-grey);
+  flex-direction: column;
+  font-family: var(--font-raleway);
+}
+
+.header__text__main {
+  font-size: 2.5rem;
+  font-family: var(--font-raleway);
+  @media only screen and (max-width: 600px) {
+    padding-top: 1rem;
+  }
+}
+
+.header__text__small {
+  font-family: var(--font-raleway);
+  font-size: var(--2021-font-size-general);
+  line-height: 150%;
+}
+
+.h2 {
+  font-size: 2rem;
+  color: var(--2021-color-font-grey);
+  font-family: var(--font-raleway);
+}
+
+.h3 {
+  font-size: 1.5rem;
+  color: var(--2021-color-font-grey);
+  font-family: var(--font-raleway);
+}
+
+.githubLink {
+  padding: 0.5rem;
+  border: 1px solid rgb(207, 207, 207);
+  display: flex;
+  width: fit-content;
+  font-size: 1rem;
+  margin-top: 1rem;
+  border-radius: 12px;
+  background-color: white;
+  line-height: 20px;
+  transition: all 0.2s;
+  text-decoration: none;
+  color: var(--2021-color-font-grey);
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.githubLink img {
+  height: 1.5rem;
+}
+
+.githubLink:hover {
+  box-shadow: 0 2px 5px 1px rgba(209, 209, 209, 0.35);
+}
+
+.githubLink:active {
+  transform: translate(0.1rem, 0.1rem);
+  box-shadow: 1px 2px 5px 1px rgba(209, 209, 209, 0.2);
+}

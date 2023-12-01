@@ -1,0 +1,14 @@
+.label {
+  list-style-type: none;
+  font-family: monospace;
+  padding-top: var(--spacings-xxs);
+}
+
+:where(section) .label {
+  padding: var(--spacings-xxs);
+  width: max-content;
+  list-style-type: none;
+  border: var(--dashed-border-s);
+  background-color: var(--color);
+  font-family: monospace;
+}

@@ -3,7 +3,7 @@ import {
   Tags,
   TechStack,
   AccentColours,
-} from "../components/interfaces";
+} from "../components/2023/interfaces";
 
 const projects: Project[] = [
   {

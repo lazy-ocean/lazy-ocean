@@ -1,0 +1,36 @@
+.container {
+  padding: var(--spacings-s) var(--spacings-s) 0 var(--spacings-s);
+  gap: var(--spacings-s);
+  display: flex;
+  flex-direction: column;
+
+  @media only screen and (min-width: 1200px) {
+    padding: var(--spacings-s) var(--spacings-m);
+  }
+}
+
+.skills {
+  margin: 0;
+  margin-top: var(--spacings-xs);
+}
+
+.skills div {
+  display: flex;
+  gap: var(--spacings-xs);
+  flex-wrap: wrap;
+}
+
+.skills h3 {
+  margin-bottom: var(--spacings-xs);
+}
+
+.skillsWrapper {
+  display: grid;
+  grid-template-columns: 1fr minmax(auto, 0.5fr) 1fr;
+  gap: var(--spacings-m);
+
+  @media only screen and (max-width: 900px) {
+    grid-template-columns: 1fr;
+    gap: var(--spacings-xs);
+  }
+}

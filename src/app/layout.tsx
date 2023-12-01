@@ -18,25 +18,11 @@ export const metadata: Metadata = {
   },
 };
 
-/* const raleway = Raleway({
-  weight: ["100", "400", "700"],
-  display: "swap",
-  
-  variable: "--font-raleway",
-}); */
-
 const myFont = localFont({
   src: "./SandeMore-Regular.otf",
   display: "swap",
   variable: "--font-header",
 });
-
-/* const raleway = Raleway({
-  weight: ["100", "400", "700"],
-  display: "swap",
-  subsets: ["latin"],
-  variable: "--font-raleway",
-}); */
 
 const quicksand = Quicksand({
   weight: ["300", "700"],
@@ -45,13 +31,23 @@ const quicksand = Quicksand({
   variable: "--font-main",
 });
 
+const raleway = Raleway({
+  weight: ["300", "700"],
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-raleway",
+});
+
 export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${quicksand.variable} ${myFont.variable}`}>
+    <html
+      lang="en"
+      className={`${quicksand.variable} ${myFont.variable} ${raleway.variable}`}
+    >
       <Head>
         <link rel="icon" href="/favicon.ico" sizes="any" />
         <link
