@@ -1,8 +1,7 @@
-"use client";
-import Main from "../components/Main/Main";
-import Footer from "../components/Footer/Footer";
+import Main from "../components/2023/Main/Main";
+import Footer from "../components/2023/Footer/Footer";
 import React from "react";
-import { MainData, Project } from "../components/interfaces";
+import { MainData, Project } from "../components/2023/interfaces";
 
 const Home = ({
   mainContent,
