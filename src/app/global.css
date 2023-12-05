@@ -4,7 +4,7 @@
   --spacings-s: 2rem;
   --spacings-m: 4rem;
 
-  --palette-bg: rgb(255 253 247);
+  --palette-bg: rgb(255 249 230);
   --palette-text: #161614;
   --palette-accent: #ffae00;
 
@@ -67,9 +67,8 @@ body {
 }
 
 .wttLink {
-  border-bottom: var(--dashed-border-s);
   transition: all 0.2s;
-  border-bottom: 2px dashed var(--palette-accent);
+  border-bottom: 2px dashed var(--palette-accent, --palette-bg);
 }
 
 .wttLink:hover {
