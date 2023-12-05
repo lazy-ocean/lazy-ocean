@@ -1,0 +1,43 @@
+.container {
+  justify-items: center;
+  align-items: center;
+  padding: var(--spacings-s);
+  gap: var(--spacings-xs);
+  display: grid;
+  grid-template-areas:
+    "email"
+    "social"
+    "copy";
+
+  @media only screen and (min-width: 810px) {
+    padding: var(--spacings-s) var(--spacings-m);
+    gap: var(--spacings-m);
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "email copy social";
+  }
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  gap: var(--spacings-xxs);
+  font-weight: 700;
+  grid-area: copy;
+}
+
+.copyright p {
+  margin: 0;
+}
+
+.copyright svg {
+  fill: var(--palette-dark-orange);
+}
+
+.email {
+  grid-area: email;
+
+  @media only screen and (max-width: 900px) {
+    font-size: 1.2rem;
+  }
+}

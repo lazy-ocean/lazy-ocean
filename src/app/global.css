@@ -59,7 +59,7 @@ h3 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.3rem;
 }
 
 body {
@@ -69,6 +69,7 @@ body {
 .wttLink {
   border-bottom: var(--dashed-border-s);
   transition: all 0.2s;
+  border-bottom: 2px dashed var(--palette-accent);
 }
 
 .wttLink:hover {
