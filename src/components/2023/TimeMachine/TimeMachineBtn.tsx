@@ -27,9 +27,13 @@ export const TimeMachineBtn = ({ current }: { current: Year }) => {
     window.addEventListener("scroll", listenScrollEvent);
     return () => window.removeEventListener("scroll", listenScrollEvent);
   }, [listenScrollEvent]);
-
+  console.log(current);
   return (
-    <div className={`${styles.wrapper} ${isVisible ? styles.active : ""}`}>
+    <div
+      className={`${styles.wrapper} ${isVisible ? styles.active : ""} ${
+        styles[current]
+      }`}
+    >
       <div className={styles.expandingButtons}>
         {current !== Year.twentyOne && (
           <Link href="/2021" className={styles.first}>

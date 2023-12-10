@@ -44,9 +44,9 @@ export interface Project {
 }
 
 export enum Year {
-  "twentyOne",
-  "twentyTwo",
-  "twentyThree",
+  twentyOne = "twentyOne",
+  "twentyTwo" = "twentyTwo",
+  "twentyThree" = "twentyThree",
 }
 
 export enum Roles {
