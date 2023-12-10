@@ -1,7 +1,7 @@
 import React from "react";
 import Cards from "../Card/Cards";
 import Label from "../Label/Label";
-import { MainData, Project, TechStack } from "../interfaces";
+import { MainData, Project, TechStack, Year } from "../interfaces";
 import { skills } from "../../../backups/skills";
 import styles from "./Main.module.css";
 import MainInfo from "../Info/Info";
@@ -13,7 +13,7 @@ interface MainProps extends MainData {
 
 const Main = ({ header, description, tags, items }: MainProps) => (
   <main className={styles.container}>
-    {/*     <TimeMachineBtn /> */}
+    <TimeMachineBtn current={Year.twentyThree} />
     <MainInfo header={header} description={description} />
     <section>
       <h2>Skills</h2>

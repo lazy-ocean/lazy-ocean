@@ -43,6 +43,12 @@ export interface Project {
   image?: string;
 }
 
+export enum Year {
+  "twentyOne",
+  "twentyTwo",
+  "twentyThree",
+}
+
 export enum Roles {
   cv = "cv",
   frontendTags = "frontendTags",

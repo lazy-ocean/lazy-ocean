@@ -4,6 +4,8 @@ import Label from "../Label/Label";
 import { MainData, Project, TechStack } from "../interfaces";
 import { skills } from "../../../backups/skills";
 import styles from "./Main.module.css";
+import { TimeMachineBtn } from "../../2023/TimeMachine/TimeMachineBtn";
+import { Year } from "../../2023/interfaces";
 
 interface MainProps extends MainData {
   items: Project[];
@@ -11,6 +13,7 @@ interface MainProps extends MainData {
 
 const Main = ({ header, description, tags, items }: MainProps) => (
   <main className={styles.container}>
+    <TimeMachineBtn current={Year.twentyTwo} />
     <section className={styles.copy}>
       <div className={styles.sticky}>
         <h1 dangerouslySetInnerHTML={{ __html: header }} />

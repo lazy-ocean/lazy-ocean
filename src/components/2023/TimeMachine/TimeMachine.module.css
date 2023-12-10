@@ -1,30 +1,81 @@
-.timeMachineBtn {
-  border: 0;
-  background-color: rgb(255, 255, 255);
-  padding: 1rem;
-  position: absolute;
-  top: 50%;
+.wrapper {
+  display: inline-block;
+  position: fixed;
+  top: 45%;
   right: 0%;
-  box-shadow: -4px 6px 14px 2px #a4a4a463;
-  z-index: 10;
+  z-index: 10000;
+  background-color: rgb(255, 255, 255);
+  padding: 0.8rem;
+  border: var(--dashed-border-s);
+  border-right: 0;
+  width: 5.6rem;
+  transition: all 0.3s ease;
+  text-align: center;
+  transform: translate3d(100%, 0, 0);
+}
+
+.timeMachineBtn {
+  cursor: pointer;
+  border: 0;
+  background-color: transparent;
 }
 
 .timeMachineBtn img {
-  height: 2.5rem;
+  height: 3rem;
   display: block;
 }
 
-/* @keyframes spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-} */
+.expandingButtons {
+  display: flex;
+  visibility: hidden;
+  opacity: 0;
+  flex-direction: column;
+  position: absolute;
+  top: -9rem;
+  width: 5.6rem;
+  right: 0;
+  background-color: #fff;
+  border: var(--dashed-border-s);
+  border-bottom: 0;
+  border-right: 0;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  padding: 0.8rem;
+  gap: 0.8rem;
+  font-family: inherit;
+}
 
-.timeMachineBtn:hover img {
-  animation: spin 1.5s ease-in;
+.wrapper:hover .expandingButtons,
+.wrapper:active .expandingButtons {
+  opacity: 1;
+  visibility: visible;
+}
+
+.wrapper:hover,
+.wrapper:active {
+  border-top: 2px dashed transparent;
+}
+
+.expandingButtons a {
+  border: 0;
+  font-size: 1.2rem;
+  font-family: monospace;
+  padding: var(--spacings-xs) 0;
+  outline: var(--dashed-border-s);
+  text-align: center;
+}
+
+.first {
+  background-color: #d1b4de;
+}
+
+.second {
+  background-color: #cde4b4;
+}
+
+.third {
+  background-color: #b9e7de;
+}
+
+.active {
+  transform: translate3d(0, 0, 0);
 }
