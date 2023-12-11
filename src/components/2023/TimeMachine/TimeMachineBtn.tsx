@@ -27,7 +27,7 @@ export const TimeMachineBtn = ({ current }: { current: Year }) => {
     window.addEventListener("scroll", listenScrollEvent);
     return () => window.removeEventListener("scroll", listenScrollEvent);
   }, [listenScrollEvent]);
-  console.log(current);
+
   return (
     <div
       className={`${styles.wrapper} ${isVisible ? styles.active : ""} ${
