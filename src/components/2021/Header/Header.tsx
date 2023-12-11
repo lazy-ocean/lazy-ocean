@@ -5,7 +5,7 @@ export const Header = () => (
   <header className={styles.header}>
     <div className={styles.header__container}>
       <img
-        src="/2021/avatar.jpg"
+        src="/2021/avatar.jpeg"
         alt="avatar"
         className={styles.header__photo}
       />
