@@ -6,6 +6,7 @@ import { skills } from "../../../backups/skills";
 import styles from "./Main.module.css";
 import MainInfo from "../Info/Info";
 import { TimeMachineBtn } from "../TimeMachine/TimeMachineBtn";
+import Github from "../SocialLinks/GithubLink";
 
 interface MainProps extends MainData {
   items: Project[];
@@ -33,6 +34,10 @@ const Main = ({ header, description, tags, items }: MainProps) => (
     <div>
       <h2>Projects</h2>
       <Cards items={items} />
+    </div>
+    <div className={styles.footer}>
+      <p>Everything else: </p>
+      {<Github link="https://github.com/lazy-ocean"></Github>}
     </div>
   </main>
 );

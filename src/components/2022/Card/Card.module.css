@@ -20,10 +20,6 @@
 .container p {
   font-size: 1rem;
   line-height: 140%;
-
-  @media only screen and (max-width: 900px) {
-    font-size: 1.2rem;
-  }
 }
 
 .childPosition {
@@ -34,14 +30,10 @@
   font-size: 1rem;
   font-weight: 400;
   font-family: var(--font-raleway);
-
-  @media only screen and (max-width: 900px) {
-    font-size: 1.2rem;
-  }
 }
 
-.container:not(.isStuck):hover {
-  @media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) {
+  .container:not(.isStuck):hover {
     transform: translate(-5px, 5px);
     box-shadow: 0px 0px var(--main-colour);
   }
@@ -59,10 +51,6 @@
   align-items: center;
   gap: var(--spacings-xs);
   flex-wrap: wrap;
-
-  @media only screen and (min-width: 1200px) {
-    flex-wrap: nowrap;
-  }
 }
 
 .tag {
@@ -71,10 +59,6 @@
   top: 0;
   font-size: 0.8rem;
   padding: var(--spacings-xxs);
-
-  @media only screen and (max-width: 900px) {
-    font-size: 1rem;
-  }
 }
 
 .link {
@@ -88,8 +72,28 @@
 .link h2 {
   font-family: var(--font-raleway);
   font-size: 1.5rem;
+}
 
-  @media only screen and (max-width: 900px) {
+@media only screen and (min-width: 1200px) {
+  .header {
+    flex-wrap: nowrap;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .container p {
+    font-size: 1.2rem;
+  }
+
+  .container h3 {
+    font-size: 1.2rem;
+  }
+
+  .tag {
+    font-size: 1rem;
+  }
+
+  .link h2 {
     font-size: 1.8rem;
   }
 }

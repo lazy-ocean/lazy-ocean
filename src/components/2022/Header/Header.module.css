@@ -3,8 +3,10 @@
   justify-content: space-between;
   align-items: center;
   padding: var(--spacings-s);
+}
 
-  @media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1200px) {
+  .head {
     flex-wrap: nowrap;
     padding: var(--spacings-s) var(--spacings-m);
     gap: var(--spacings-m);

@@ -1,10 +1,6 @@
 .sticky {
   position: sticky;
   top: var(--spacings-s);
-
-  @media only screen and (max-width: 900px) {
-    top: var(--spacings-xxs);
-  }
 }
 
 .container {
@@ -28,8 +24,8 @@
   top: calc(var(--index) * 20px);
 }
 
-.container:hover {
-  @media (hover: hover) and (pointer: fine) {
+@media (hover: hover) and (pointer: fine) {
+  .container:hover {
     transform: translate(8px, 8px);
     box-shadow: none;
   }
@@ -80,10 +76,6 @@
   bottom: 0;
   right: 0;
   overflow: hidden;
-
-  @media only screen and (max-width: 900px) {
-    display: none;
-  }
 }
 
 .cardImage {
@@ -96,12 +88,22 @@
 .cardTextWrapper {
   width: 60%;
   z-index: 100;
-
-  @media only screen and (max-width: 900px) {
-    width: 100%;
-  }
 }
 
 .container:not(:has(.cardImageWrapper)) .cardTextWrapper {
   width: 100%;
+}
+
+@media (max-width: 900px) {
+  .cardImageWrapper {
+    display: none;
+  }
+
+  .cardTextWrapper {
+    width: 100%;
+  }
+
+  .sticky {
+    top: var(--spacings-xxs);
+  }
 }

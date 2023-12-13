@@ -8,14 +8,6 @@
     "email"
     "social"
     "copy";
-
-  @media only screen and (min-width: 810px) {
-    padding: var(--spacings-s) var(--spacings-m);
-    gap: var(--spacings-m);
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: 1fr;
-    grid-template-areas: "email copy social";
-  }
 }
 
 .copyright {
@@ -37,4 +29,14 @@
 
 .email {
   grid-area: email;
+}
+
+@media only screen and (min-width: 810px) {
+  .container {
+    padding: var(--spacings-s) var(--spacings-m);
+    gap: var(--spacings-m);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "email copy social";
+  }
 }

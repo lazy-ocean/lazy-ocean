@@ -24,10 +24,6 @@
   grid-template-columns: repeat(3, 30%);
   grid-template-rows: repeat(3, 30%);
   transition: all 0.3s;
-
-  @media only screen and (max-width: 1000px) {
-    display: none;
-  }
 }
 
 .card__pics:hover {
@@ -56,10 +52,6 @@
   flex-shrink: 10;
   overflow: hidden;
   line-height: 180%;
-
-  @media only screen and (max-width: 1000px) {
-    padding-right: 0;
-  }
 }
 
 .card__text p {
@@ -96,10 +88,6 @@
 .card__text__h {
   display: flex;
   gap: 1rem;
-
-  @media only screen and (max-width: 850px) {
-    flex-direction: column;
-  }
 }
 
 .card__text__h p {
@@ -227,4 +215,20 @@
 
 .card__text__list li {
   padding: 0.2rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .card__pics {
+    display: none;
+  }
+
+  .card__text {
+    padding-right: 0;
+  }
+}
+
+@media only screen and (max-width: 850px) {
+  .card__text__h {
+    flex-direction: column;
+  }
 }

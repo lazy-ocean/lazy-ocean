@@ -9,16 +9,20 @@
   display: flex;
   gap: var(--spacings-xxs);
   justify-content: center;
-
-  @media only screen and (min-width: 1200px) {
-    justify-content: flex-start;
-  }
 }
 
 .footer p {
   font-size: inherit;
+}
 
-  @media only screen and (max-width: 900px) {
+@media only screen and (min-width: 1200px) {
+  .footer {
+    justify-content: flex-start;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .footer p {
     font-size: 1.2rem;
   }
 }

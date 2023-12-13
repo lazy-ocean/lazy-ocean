@@ -3,10 +3,6 @@
   padding: 0;
   box-sizing: border-box;
 
-  @media only screen and (max-width: 1000px) {
-    font-size: 13px;
-  }
-
   --2021-color-yellow: #ffe0ac;
   --2021-color-yellow-dark: #ffc563;
   --2021-color-font-grey: #454545;
@@ -49,11 +45,20 @@
   width: 100%;
   background-color: var(--2021-color-background);
   z-index: 5;
-  @media only screen and (max-width: 1200px) {
-    padding: 2rem 8rem;
+}
+
+@media only screen and (max-width: 1000px) {
+  .body {
+    font-size: 13px;
   }
 
-  @media only screen and (max-width: 950px) {
+  .main {
+    padding: 2rem 8rem;
+  }
+}
+
+@media only screen and (max-width: 950px) {
+  .main {
     padding: 2rem;
   }
 }

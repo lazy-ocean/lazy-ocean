@@ -22,8 +22,9 @@
 
 :where(main) .socials {
   flex-direction: column;
-
-  @media only screen and (max-width: 900px) {
+}
+@media only screen and (max-width: 900px) {
+  :where(main) .socials {
     flex-direction: row;
   }
 }

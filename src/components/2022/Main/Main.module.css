@@ -3,21 +3,11 @@
   display: flex;
   gap: var(--spacings-s);
   flex-wrap: wrap;
-
-  @media only screen and (min-width: 1200px) {
-    flex-wrap: nowrap;
-    padding: var(--spacings-s) var(--spacings-m);
-    gap: var(--spacings-m);
-  }
 }
 
 .copy {
   font-size: 1.2rem;
   max-width: 100%;
-
-  @media only screen and (min-width: 1200px) {
-    max-width: 40%;
-  }
 }
 
 .copy h1 {
@@ -29,10 +19,6 @@
 .copy h3 {
   font-size: 1.2rem;
   font-family: var(--font-raleway);
-
-  @media only screen and (max-width: 900px) {
-    font-size: 1.3rem;
-  }
 }
 
 .skillsH {
@@ -59,4 +45,22 @@
 
 .copy p > .wttLink {
   border-bottom: 2.5px dashed var(--palette-dark-orange);
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    flex-wrap: nowrap;
+    padding: var(--spacings-s) var(--spacings-m);
+    gap: var(--spacings-m);
+  }
+
+  .copy {
+    max-width: 40%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .copy h3 {
+    font-size: 1.3rem;
+  }
 }
