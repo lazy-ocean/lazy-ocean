@@ -22,6 +22,7 @@ export enum TechStack {
   cypress = "Cypress",
   styled = "styled-components",
   Remix = "Remix",
+  cssModules = "CSS Modules",
 }
 
 export enum Tags {

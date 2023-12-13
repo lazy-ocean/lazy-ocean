@@ -47,7 +47,7 @@ export const TimeMachineBtn = ({ current }: { current: Year }) => {
         )}
         {current !== Year.twentyThree && (
           <Link href="/" className={styles.third}>
-            2023
+            {new Date().getFullYear()}
           </Link>
         )}
       </div>

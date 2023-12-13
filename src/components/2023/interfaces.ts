@@ -1,5 +1,5 @@
 export enum AccentColours {
-  teal = "#b9e7de",
+  teal = "#a9bdfd",
   violet = "#d1b4de",
   orange = "#FFC999",
   blue = "#9ECEE6",
@@ -22,6 +22,7 @@ export enum TechStack {
   cypress = "Cypress",
   styled = "styled-components",
   Remix = "Remix",
+  cssModules = "CSS Modules",
 }
 
 export enum Tags {
