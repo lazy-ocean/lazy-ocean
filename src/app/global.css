@@ -62,7 +62,7 @@ h3 {
 }
 
 p {
-  font-size: 1.3rem;
+  font-size: 1.2rem;
 }
 
 body {
@@ -76,4 +76,8 @@ body {
 
 .wttLink:hover {
   border-bottom: 2px dashed var(--palette-accent);
+}
+
+.hidden {
+  display: none;
 }

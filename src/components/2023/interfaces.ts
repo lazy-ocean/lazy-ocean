@@ -23,6 +23,7 @@ export enum TechStack {
   styled = "styled-components",
   Remix = "Remix",
   cssModules = "CSS Modules",
+  emotion = "emotion",
 }
 
 export enum Tags {

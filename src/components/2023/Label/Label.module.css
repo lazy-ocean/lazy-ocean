@@ -4,6 +4,18 @@
   padding-top: var(--spacings-xxs);
 }
 
+.label button {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  font-family: monospace;
+  cursor: pointer;
+}
+
+.inactive {
+  filter: opacity(0.5);
+}
+
 :where(section) .label {
   padding: var(--spacings-xxs);
   width: max-content;
@@ -11,4 +23,19 @@
   border: var(--dashed-border-s);
   background-color: var(--color);
   font-family: monospace;
+}
+
+.skills {
+  margin: 0;
+  margin-top: var(--spacings-xs);
+}
+
+.skills div {
+  display: flex;
+  gap: var(--spacings-xs);
+  flex-wrap: wrap;
+}
+
+.skills h3 {
+  margin-bottom: var(--spacings-xs);
 }

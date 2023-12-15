@@ -10,7 +10,6 @@ const checkIfVisible = (): boolean => {
   const totalScrolledInPercentage = Math.round(
     (currentOffset / offsetHeight) * 100
   );
-  console.log(totalScrolledInPercentage);
   return totalScrolledInPercentage < 10;
 };
 
@@ -18,8 +17,6 @@ export const TimeMachineBtn = ({ current }: { current: Year }) => {
   const [isVisible, setIsVisible] = useState(true);
 
   const listenScrollEvent = useCallback((): void => {
-    const a = checkIfVisible();
-    console.log({ a });
     setIsVisible(checkIfVisible());
   }, []);
 

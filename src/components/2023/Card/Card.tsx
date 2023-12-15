@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { TechStack, Project, Tags } from "../interfaces";
 import Label from "../Label/Label";
 import styles from "./Card.module.css";
@@ -36,7 +36,11 @@ const Card = ({ card, i }: CardProps) => {
   );
 
   return (
-    <div className={styles.sticky}>
+    <div
+      className={`card ${styles.sticky} ${stack
+        .join(" ")
+        .replaceAll(".", "-")}`}
+    >
       <div
         className={`${styles.container} ${styles.childPosition}`}
         style={{ "--main-colour": color, "--index": i } as any}

@@ -1,6 +1,6 @@
 import React from "react";
 import Cards from "../Card/Cards";
-import Label from "../Label/Label";
+import Label, { Labels } from "../Label/Label";
 import { MainData, Project, TechStack, Year } from "../interfaces";
 import { skills } from "../../../backups/skills";
 import styles from "./Main.module.css";
@@ -19,20 +19,11 @@ const Main = ({ header, description, tags, items }: MainProps) => (
     <section>
       <h2>Skills</h2>
       <article className={styles.skillsWrapper}>
-        {Object.keys(tags || skills).map((name) => (
-          <ul key={name} className={styles.skills}>
-            <h3>{name}</h3>
-            <div>
-              {tags[name].map((item: TechStack, i: number) => (
-                <Label text={item} key={i} />
-              ))}
-            </div>
-          </ul>
-        ))}
+        <Labels tags={tags} />
       </article>
     </section>
     <div>
-      <h2>Projects</h2>
+      <h2 id="projects">Projects</h2>
       <Cards items={items} />
     </div>
     <div className={styles.footer}>
