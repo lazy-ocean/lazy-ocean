@@ -1,0 +1,16 @@
+.githubLink {
+  display: flex;
+  align-items: center;
+  gap: var(--spacings-xxs);
+}
+
+.githubLink svg {
+  width: 20px;
+  height: 20px;
+}
+
+@media only screen and (max-width: 900px) {
+  .githubLink {
+    font-size: 1.2rem;
+  }
+}

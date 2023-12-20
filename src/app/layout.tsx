@@ -1,12 +1,14 @@
 import { Metadata } from "next";
 import Head from "next/head";
-import { Raleway } from "next/font/google";
+import { Quicksand, Raleway } from "next/font/google";
 import "./global.css";
+import localFont from "next/font/local";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lazy-ocean.vercel.app/"),
   title: "Vladlena | Frontend Engineer",
   description: "I am Vladlena Panchenko and I am a frontend engineer",
+  icons: "icon.ico",
   openGraph: {
     description:
       "Hello! 👋 I am Vladlena Panchenko and I am a frontend engineer",
@@ -17,8 +19,21 @@ export const metadata: Metadata = {
   },
 };
 
+const myFont = localFont({
+  src: "./SandeMore-Regular.otf",
+  display: "swap",
+  variable: "--font-header",
+});
+
+const quicksand = Quicksand({
+  weight: ["300", "700"],
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-main",
+});
+
 const raleway = Raleway({
-  weight: ["100", "400", "700"],
+  weight: ["300", "700"],
   display: "swap",
   subsets: ["latin"],
   variable: "--font-raleway",
@@ -30,21 +45,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={raleway.className}>
+    <html
+      lang="en"
+      className={`${quicksand.variable} ${myFont.variable} ${raleway.variable}`}
+    >
       <Head>
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link
-          rel="icon"
-          href="/icon?<generated>"
-          type="image/<generated>"
-          sizes="<generated>"
-        />
-        <link
-          rel="apple-touch-icon"
-          href="/apple-icon?<generated>"
-          type="image/<generated>"
-          sizes="<generated>"
-        />
+        <link rel="icon" href="/icon.ico" sizes="any" />
       </Head>
       <body>{children}</body>
     </html>

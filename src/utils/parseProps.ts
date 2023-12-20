@@ -3,9 +3,14 @@ import {
   PageObjectResponse,
   QueryDatabaseResponse,
 } from "@notionhq/client/build/src/api-endpoints";
-import { MainData, Roles, Tags, TechStack } from "../components/interfaces";
+import {
+  MainData,
+  Roles,
+  Tags,
+  TechStack,
+} from "../components/2023/interfaces";
 import { mainData } from "../backups/mainData";
-import { Project, AccentColours } from "../components/interfaces";
+import { Project, AccentColours } from "../components/2023/interfaces";
 
 export const parseMainProperties = (
   database: QueryDatabaseResponse
@@ -65,6 +70,7 @@ export const parseItemProperties = (
         tag,
         color,
         number,
+        image,
       } = (row as PartialDatabaseObjectResponse).properties;
 
       return {
@@ -79,6 +85,7 @@ export const parseItemProperties = (
         tag: Tags[tag.multi_select[0].name],
         color: AccentColours[color.rich_text[0].plain_text],
         orderNum: number.number,
+        image: image?.rich_text[0]?.plain_text || "",
       };
     })
     .sort((a, b) => a.orderNum - b.orderNum);

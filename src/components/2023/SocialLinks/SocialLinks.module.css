@@ -1,0 +1,30 @@
+.socials {
+  display: flex;
+  list-style-type: none;
+  grid-area: social;
+  margin: 0;
+}
+
+.socials li {
+  padding: 0 var(--spacings-xxs);
+}
+
+.socials svg {
+  width: 35px;
+  height: 35px;
+  fill: var(--palette-text);
+  transition: fill 0.4s ease-in-out;
+}
+
+.socials svg:hover {
+  fill: var(--palette-accent);
+}
+
+:where(main) .socials {
+  flex-direction: column;
+}
+@media only screen and (max-width: 900px) {
+  :where(main) .socials {
+    flex-direction: row;
+  }
+}

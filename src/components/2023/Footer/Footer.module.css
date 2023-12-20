@@ -1,0 +1,49 @@
+.container {
+  justify-items: center;
+  align-items: center;
+  padding: var(--spacings-s);
+  gap: var(--spacings-xs);
+  display: grid;
+  grid-template-areas:
+    "email"
+    "social"
+    "copy";
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  gap: var(--spacings-xxs);
+  grid-area: copy;
+  font-family: var(--font-header);
+}
+
+.copyright p {
+  margin: 0;
+  text-align: right;
+}
+
+.copyright svg {
+  fill: var(--palette-accent);
+}
+
+.email {
+  grid-area: email;
+  padding: 0;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 1rem;
+  color: inherit;
+}
+
+@media only screen and (min-width: 810px) {
+  .container {
+    padding: var(--spacings-s) var(--spacings-m);
+    gap: var(--spacings-m);
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas: "email copy social";
+  }
+}

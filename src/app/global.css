@@ -4,17 +4,26 @@
   --spacings-s: 2rem;
   --spacings-m: 4rem;
 
-  --palette-bg: #edece8;
-  --palette-text: #161614;
-  --palette-dark-orange: #f2a71b;
-  --palette-light-bg: #fff;
+  --palette-bg: rgb(251, 244, 236);
+  --palette-text: rgb(46, 46, 48);
+
+  --palette-accent: #ffae00;
+
+  --dashed-border-m: 3px dashed black;
+  --dashed-border-s: 2px dashed black;
+}
+
+@media only screen and (max-width: 900px) {
+  :root {
+    font-size: 13px;
+  }
 }
 
 html,
 body {
   padding: 0;
   margin: 0;
-  font-family: var(--font-raleway);
+  font-family: var(--font-main), sans-serif;
   background-color: var(--palette-bg);
   color: var(--palette-text);
 }
@@ -28,11 +37,32 @@ a {
   box-sizing: border-box;
 }
 
+ul {
+  padding: 0;
+}
+
 h1,
 h2,
 h3,
 h4 {
   margin: 0;
+  font-family: var(--font-header), serif;
+}
+
+h1 {
+  font-size: 3rem;
+}
+
+h2 {
+  font-size: 2.2rem;
+}
+
+h3 {
+  font-size: 1.6rem;
+}
+
+p {
+  font-size: 1.2rem;
 }
 
 body {
@@ -40,5 +70,14 @@ body {
 }
 
 .wttLink {
-  border-bottom: 2.5px dashed var(--palette-dark-orange);
+  transition: all 0.2s;
+  border-bottom: 2px dashed var(--palette-accent, --palette-bg);
+}
+
+.wttLink:hover {
+  border-bottom: 2px dashed var(--palette-accent);
+}
+
+.hidden {
+  display: none;
 }

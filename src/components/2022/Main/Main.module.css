@@ -1,0 +1,66 @@
+.container {
+  padding: var(--spacings-xxs) var(--spacings-s);
+  display: flex;
+  gap: var(--spacings-s);
+  flex-wrap: wrap;
+}
+
+.copy {
+  font-size: 1.2rem;
+  max-width: 100%;
+}
+
+.copy h1 {
+  margin-bottom: var(--spacings-xs);
+  font-size: 2.5rem;
+  font-family: var(--font-raleway);
+}
+
+.copy h3 {
+  font-size: 1.2rem;
+  font-family: var(--font-raleway);
+}
+
+.skillsH {
+  font-family: var(--font-raleway);
+  font-size: 1.8rem;
+}
+
+.copy p {
+  line-height: 2.2rem;
+}
+
+.sticky {
+  position: sticky;
+  top: var(--spacings-m);
+}
+
+.skills {
+  display: flex;
+  gap: var(--spacings-xs);
+  padding: 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.copy p > .wttLink {
+  border-bottom: 2.5px dashed var(--palette-dark-orange);
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    flex-wrap: nowrap;
+    padding: var(--spacings-s) var(--spacings-m);
+    gap: var(--spacings-m);
+  }
+
+  .copy {
+    max-width: 40%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .copy h3 {
+    font-size: 1.3rem;
+  }
+}

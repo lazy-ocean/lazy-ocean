@@ -1,0 +1,14 @@
+.copy {
+  display: flex;
+}
+
+.copy p {
+  line-height: 2rem;
+  width: 100%;
+}
+
+@media only screen and (max-width: 900px) {
+  .copy {
+    flex-wrap: wrap;
+  }
+}

@@ -3,7 +3,7 @@ import {
   Tags,
   TechStack,
   AccentColours,
-} from "../components/interfaces";
+} from "../components/2023/interfaces";
 
 const projects: Project[] = [
   {
@@ -20,6 +20,7 @@ const projects: Project[] = [
     ],
     color: AccentColours.teal,
     link: "https://www.tedbaker.com/",
+    image: "/tedbaker.png",
   },
   {
     title: "Spotify Releaser",
@@ -35,6 +36,7 @@ const projects: Project[] = [
     color: AccentColours.lightgreen,
     link: "https://spotify-releaser.vercel.app/",
     github: "https://github.com/lazy-ocean/releaser",
+    image: "/spotify.png",
   },
   {
     title: "The Pushkin State Museum - a11y playground",
