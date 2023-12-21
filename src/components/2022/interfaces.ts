@@ -7,6 +7,7 @@ export enum AccentColours {
   pink = "#FFADAD",
   yellow = "#fae97a",
   lightgreen = "#bbf2bc",
+  brightPink = "#f9afd5",
 }
 
 export enum TechStack {
@@ -24,6 +25,8 @@ export enum TechStack {
   Remix = "Remix",
   cssModules = "CSS Modules",
   emotion = "emotion",
+  auth = "auth",
+  Supabase = "Supabase",
 }
 
 export enum Tags {
