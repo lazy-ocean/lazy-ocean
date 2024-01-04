@@ -1,8 +1,7 @@
 import React from "react";
 import Cards from "../Card/Cards";
-import Label, { Labels } from "../Label/Label";
-import { MainData, Project, TechStack, Year } from "../interfaces";
-import { skills } from "../../../backups/skills";
+import { Labels } from "../Label/Label";
+import { MainData, Project, Year } from "../interfaces";
 import styles from "./Main.module.css";
 import MainInfo from "../Info/Info";
 import { TimeMachineBtn } from "../TimeMachine/TimeMachineBtn";

@@ -1,0 +1,22 @@
+.container {
+  padding: var(--spacings-s);
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacings-s);
+}
+
+.postsSpace {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacings-xs);
+}
+
+.postsSpace > h2 {
+  margin-top: var(--spacings-s);
+}
+
+.allPosts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50ch, 1fr));
+  gap: 2rem;
+}

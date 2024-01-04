@@ -6,4 +6,5 @@ export interface Post {
   ogImage?: string;
   excerpt?: string;
   content?: string;
+  color?: string;
 }
