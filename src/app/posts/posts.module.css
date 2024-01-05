@@ -1,5 +1,5 @@
 .container {
-  padding: var(--spacings-s);
+  padding: var(--spacings-s) var(--spacings-s) 0 var(--spacings-s);
   display: flex;
   flex-direction: column;
   gap: var(--spacings-s);
@@ -17,6 +17,12 @@
 
 .allPosts {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50ch, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(45ch, 1fr));
   gap: 2rem;
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    padding: var(--spacings-s) var(--spacings-m);
+  }
 }

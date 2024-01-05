@@ -5,7 +5,7 @@ import styles from "./Label.module.css";
 import { skills } from "../../../backups/skills";
 
 interface LabelsProps {
-  text: TechStack;
+  text: TechStack | string;
   active?: string | null;
   setActive?: (arg: string | null) => void;
 }
@@ -30,10 +30,14 @@ const colorMap: Map = {
   [TechStack.cssModules]: "#a9bdfd",
 };
 
+const isKnown = (txt: string | TechStack): txt is TechStack => {
+  return colorMap[txt as TechStack] !== undefined;
+};
+
 const Label = ({ text, active, setActive }: LabelsProps) => {
-  const colour =
-    colorMap[text] ||
-    Object.values(colorMap)[Math.floor(Math.random() * 10) + 0];
+  const colour = isKnown(text)
+    ? colorMap[text]
+    : Object.values(colorMap)[Math.floor(Math.random() * 10) + 0];
 
   const handleClick = () => {
     if (active === text && setActive) {

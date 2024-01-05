@@ -7,4 +7,5 @@ export interface Post {
   excerpt?: string;
   content?: string;
   color?: string;
+  tags?: string;
 }

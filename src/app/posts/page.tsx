@@ -10,6 +10,7 @@ export default function Index() {
     "coverImage",
     "excerpt",
     "color",
+    "tags",
   ]);
 
   const [heroPost, ...rest] = allPosts;
@@ -22,10 +23,17 @@ export default function Index() {
         opinion on.
       </h3>
       <h2>Recently published</h2>
-      <HeroBlogCard {...heroPost} />
+      <HeroBlogCard post={heroPost}>
+        <>
+          <img src="stickers/headphones.png" alt="headphones sticker" />
+          <img src="stickers/tech.png" alt="tech sticker" />
+          <img src="stickers/learn.png" alt="learn sticker" />
+        </>
+      </HeroBlogCard>
+      <h2>All posts</h2>
       <div className={styles.allPosts}>
         {rest.map((post) => (
-          <HeroBlogCard {...post} />
+          <HeroBlogCard post={post} key={post.slug} />
         ))}
       </div>
     </div>
