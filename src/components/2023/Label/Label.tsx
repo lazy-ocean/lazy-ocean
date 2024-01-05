@@ -1,23 +1,26 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import { TechStack } from "../interfaces";
+import { BlogTags, TechStack } from "../interfaces";
 import styles from "./Label.module.css";
 import { skills } from "../../../backups/skills";
 
 interface LabelsProps {
-  text: TechStack | string;
+  text: TechStack | BlogTags | string;
   active?: string | null;
   setActive?: (arg: string | null) => void;
 }
 
 type Map = {
-  [key in TechStack]?: string;
+  [key in TechStack | BlogTags]?: string;
 };
 
 const colorMap: Map = {
   [TechStack.TypeScript]: "#F1C0E8",
+  [BlogTags.music]: "#F1C0E8",
   [TechStack.Next]: "#d4d4d4",
+  [BlogTags.frontend]: "#d4d4d4",
   [TechStack.Jest]: "#CDE4B4",
+  [BlogTags.movies]: "#CDE4B4",
   [TechStack.a11y]: "#ffcccc",
   [TechStack.JavaScript]: "#fae97a",
   [TechStack.node]: "#9ECEE6",
@@ -30,12 +33,11 @@ const colorMap: Map = {
   [TechStack.cssModules]: "#a9bdfd",
 };
 
-const isKnown = (txt: string | TechStack): txt is TechStack => {
-  return colorMap[txt as TechStack] !== undefined;
-};
+const isTechStack = (txt: string | TechStack | BlogTags): txt is TechStack =>
+  colorMap[txt as TechStack | BlogTags] !== undefined;
 
 const Label = ({ text, active, setActive }: LabelsProps) => {
-  const colour = isKnown(text)
+  const colour = isTechStack(text)
     ? colorMap[text]
     : Object.values(colorMap)[Math.floor(Math.random() * 10) + 0];
 

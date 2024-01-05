@@ -1,7 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
-import { Post } from "../interfaces";
+import { BlogTags, Post } from "../components/2023/interfaces";
 
 const postsDirectory = join(process.cwd(), "_posts");
 
@@ -29,10 +29,22 @@ export const getPostBySlug = (
   return item;
 };
 
-export function getAllPosts(fields: Array<keyof Post> = []) {
+export function getAllPosts(fields: Array<keyof Post> = []): {
+  posts: Post[];
+  tags: BlogTags[];
+} {
   const slugs = getPostSlugs();
   const posts = slugs
     .map((slug) => getPostBySlug(slug, fields))
     .sort((post1, post2) => (post1?.date! > post2?.date! ? -1 : 1));
-  return posts;
+
+  const tags = Array.from(
+    new Set(
+      posts
+        .map((post) => post.tags)
+        .join(",")
+        .split(",")
+    )
+  ) as BlogTags[];
+  return { posts, tags };
 }

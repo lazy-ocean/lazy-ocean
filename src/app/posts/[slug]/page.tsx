@@ -1,7 +1,7 @@
 import Head from "next/head";
 import { getAllPosts, getPostBySlug } from "../../../api/postsApi";
 import markdownToHtml from "../../../utils/markdownToHtml";
-import { Post } from "../../../interfaces";
+import { Post } from "../../../components/2023/interfaces";
 
 const loadPostData = async (slug: string): Promise<{ post: Post }> => {
   const post = getPostBySlug(slug, [
@@ -47,7 +47,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
 }
 
 export async function generateStaticParams() {
-  const posts = getAllPosts(["slug"]);
+  const { posts } = getAllPosts(["slug"]);
 
   return posts.map((post) => ({
     slug: post.slug,

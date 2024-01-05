@@ -81,3 +81,22 @@ export interface SocialLink {
   link: string;
   icon?: React.ReactElement;
 }
+
+export interface Post {
+  title?: string;
+  date?: string;
+  slug?: string;
+  coverImage?: string;
+  ogImage?: string;
+  excerpt?: string;
+  content?: string;
+  color?: string;
+  tags?: string;
+}
+
+export enum BlogTags {
+  frontend = "frontend",
+  music = "music",
+  a11y = "a11y",
+  movies = "movies",
+}

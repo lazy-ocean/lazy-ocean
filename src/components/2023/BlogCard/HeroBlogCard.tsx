@@ -1,8 +1,7 @@
 import Link from "next/link";
-import { Post } from "../../../interfaces";
+import { Post } from "../interfaces";
 import styles from "./BlogCard.module.css";
 import Label from "../Label/Label";
-import { ReactComponentElement } from "react";
 
 export const HeroBlogCard = ({
   post,
@@ -14,8 +13,8 @@ export const HeroBlogCard = ({
   const { title, excerpt, color, slug, tags } = post;
 
   return (
-    <Link href={`posts/${slug}`} passHref={true}>
-      <div className={styles.cont}>
+    <div className={`card ${styles.cont} ${tags?.split(",").join(" ")}`}>
+      <Link href={`posts/${slug}`} passHref={true}>
         <div
           className={styles.container}
           style={{ "--main-colour": color } as any}
@@ -34,7 +33,7 @@ export const HeroBlogCard = ({
           </div>
           {children && <div className={styles.icons}>{children}</div>}
         </div>
-      </div>
-    </Link>
+      </Link>
+    </div>
   );
 };

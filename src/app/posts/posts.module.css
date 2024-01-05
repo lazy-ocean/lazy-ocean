@@ -1,18 +1,18 @@
 .container {
-  padding: var(--spacings-s) var(--spacings-s) 0 var(--spacings-s);
+  padding: var(--spacings-s);
   display: flex;
   flex-direction: column;
   gap: var(--spacings-s);
+}
+
+.postsSpace > h2 {
+  margin-block-start: var(--spacings-s);
 }
 
 .postsSpace {
   display: flex;
   flex-direction: column;
   gap: var(--spacings-xs);
-}
-
-.postsSpace > h2 {
-  margin-top: var(--spacings-s);
 }
 
 .allPosts {
