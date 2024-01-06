@@ -2,6 +2,7 @@ import Head from "next/head";
 import { getAllPosts, getPostBySlug } from "../../../api/postsApi";
 import markdownToHtml from "../../../utils/markdownToHtml";
 import { Post } from "../../../components/2023/interfaces";
+import { BlogPost } from "../../../components/2023/BlogPost/BlogPost";
 import Label from "../../../components/2023/Label/Label";
 import { Header } from "../../../components/2023/Header/Header";
 import styles from "../../../components/2023/Header/Header.module.css";
@@ -60,7 +61,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
             <Label key={tag} text={tag} />
           ))}
         </section>
-        <p>{post.content}</p>
+        <BlogPost post={post} />
       </article>
     </>
   );

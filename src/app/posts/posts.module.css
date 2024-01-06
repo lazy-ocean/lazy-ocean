@@ -21,6 +21,14 @@
   gap: 2rem;
 }
 
+.blogTags {
+  display: flex;
+  gap: var(--spacings-xs);
+  align-items: center;
+  margin-block: var(--spacings-xs);
+  flex-wrap: wrap;
+}
+
 @media only screen and (min-width: 1200px) {
   .container {
     padding: var(--spacings-s) var(--spacings-m);
