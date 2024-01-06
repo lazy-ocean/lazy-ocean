@@ -1,5 +1,5 @@
 "use client";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useMemo, useState } from "react";
 import { BlogTags, TechStack } from "../interfaces";
 import styles from "./Label.module.css";
 import { skills } from "../../../backups/skills";
@@ -37,9 +37,13 @@ const isTechStack = (txt: string | TechStack | BlogTags): txt is TechStack =>
   colorMap[txt as TechStack | BlogTags] !== undefined;
 
 const Label = ({ text, active, setActive }: LabelsProps) => {
-  const colour = isTechStack(text)
-    ? colorMap[text]
-    : Object.values(colorMap)[Math.floor(Math.random() * 10) + 0];
+  const colour = useMemo(
+    () =>
+      isTechStack(text)
+        ? colorMap[text]
+        : Object.values(colorMap)[Math.floor(Math.random() * 10) + 0],
+    [text]
+  );
 
   const handleClick = () => {
     if (active === text && setActive) {
