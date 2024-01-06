@@ -1,7 +1,8 @@
 import Image from "next/image";
 import styles from "./Header.module.css";
+import { ReactElement } from "react";
 
-export const Header = () => {
+export const Header = ({ children }: { children?: ReactElement }) => {
   return (
     <header className={styles.header}>
       <a href={"/"} aria-label="Return to the main page">
@@ -13,6 +14,7 @@ export const Header = () => {
           aria-hidden={true}
         />
       </a>
+      {children}
     </header>
   );
 };

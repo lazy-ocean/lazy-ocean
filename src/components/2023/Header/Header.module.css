@@ -1,3 +1,18 @@
 .header {
   display: flex;
+  align-items: center;
+  gap: var(--spacings-xxs);
+}
+
+.backLink {
+  margin-left: auto;
+  font-size: 1.4rem;
+  border-block-end: var(--dashed-border-s);
+  transition: border 0.2s ease-in-out;
+}
+
+.backLink:hover,
+.backLink:active {
+  border-block-end: var(--dashed-border-s);
+  border-block-end-color: var(--palette-accent);
 }
