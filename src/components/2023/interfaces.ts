@@ -100,3 +100,13 @@ export enum BlogTags {
   a11y = "a11y",
   movies = "movies",
 }
+
+export enum BitsTypes {
+  concert = "concert",
+  movie = "movie",
+  album = "album",
+  book = "book",
+  podcast = "podcast",
+}
+
+export type Bits = Record<BitsTypes, string>;

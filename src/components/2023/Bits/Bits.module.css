@@ -1,0 +1,25 @@
+.card {
+  padding: var(--spacings-xs);
+  border: var(--dashed-border-m);
+  border-radius: 20px;
+  background-color: var(--palette-offwhite);
+  gap: var(--spacings-xs);
+  display: flex;
+}
+
+.emoji {
+  font-size: 2.2rem;
+}
+
+.cardtxt {
+  display: flex;
+  flex-direction: column;
+}
+
+.list {
+  display: flex;
+  gap: var(--spacings-s);
+  list-style-type: none;
+  flex-wrap: wrap;
+  font-size: 1.2rem;
+}

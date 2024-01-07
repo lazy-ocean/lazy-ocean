@@ -1,4 +1,5 @@
 import { getAllPosts } from "../../api/postsApi";
+import { Bits } from "../../components/2023/Bits/Bits";
 import { HeroBlogCard } from "../../components/2023/BlogCard/HeroBlogCard";
 import { Header } from "../../components/2023/Header/Header";
 import { Tags } from "../../components/2023/Tags/Tags";
@@ -26,6 +27,8 @@ export default function Index() {
           Thoughts on tech, life, content I consume and everything else I have
           an opinion on.
         </h3>
+        <h2>Things I loved/did lately</h2>
+        <Bits />
         <h2>Tags</h2>
         <Tags tags={tags} />
         <h2 id="hero-h">Recently published</h2>
