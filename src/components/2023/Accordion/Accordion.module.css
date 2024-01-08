@@ -1,0 +1,15 @@
+.accordion .accordionTitle {
+  margin-block-start: var(--spacings-s);
+  margin-block-end: var(--spacings-xs);
+}
+
+.accordionTitle {
+  display: flex;
+  gap: var(--spacings-xxs);
+  align-items: center;
+}
+
+.accordionTitle svg {
+  width: 2rem;
+  height: 2rem;
+}

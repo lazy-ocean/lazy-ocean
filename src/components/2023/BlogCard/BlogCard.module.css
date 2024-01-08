@@ -11,6 +11,9 @@
   align-items: center;
   column-gap: var(--spacings-s);
   background-color: var(--palette-offwhite);
+}
+
+.container p {
   line-height: 1.5;
 }
 

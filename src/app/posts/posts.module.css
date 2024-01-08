@@ -16,12 +16,12 @@
 
 .postsSpace > h2 {
   margin-block-start: var(--spacings-s);
+  margin-block-end: var(--spacings-xs);
 }
 
 .postsSpace {
   display: flex;
   flex-direction: column;
-  gap: var(--spacings-xs);
 }
 
 .allPosts {
