@@ -28,16 +28,15 @@ export default function Index() {
           Thoughts on tech, life, content I consume and everything else I have
           an opinion on.
         </h3>
-        <BlogAccordion tags={tags}>
-          <Bits />
-        </BlogAccordion>
+        <BlogAccordion tags={tags} bits={<Bits />} />
         <h2 id="hero-h">Recently published</h2>
         <HeroBlogCard post={heroPost}>
-          <>
-            <img src="stickers/headphones.png" alt="headphones sticker" />
-            <img src="stickers/tech.png" alt="tech sticker" />
-            <img src="stickers/learn.png" alt="learn sticker" />
-          </>
+          {heroPost.coverImage &&
+            heroPost.coverImage
+              .split(",")
+              .map((img) => (
+                <img key={img} src={img} alt="" role="presentation" />
+              ))}
         </HeroBlogCard>
         <h2>All posts</h2>
         <div className={styles.allPosts}>

@@ -9,17 +9,46 @@ import {
 } from "react-accessible-accordion";
 import { Tags } from "../Tags/Tags";
 import { BlogTags } from "../interfaces";
-import { ReactElement } from "react";
-import { BsChevronDown } from "react-icons/bs";
+
+import { ReactElement, useEffect, useMemo, useRef, useState } from "react";
 import { AiOutlineDownSquare } from "react-icons/ai";
+
+const AccordionContent = ({ children }: { children: ReactElement }) => {
+  const contentRef = useRef<HTMLDivElement>(null);
+  const [maxHeight, setMaxHeight] = useState("");
+
+  useEffect(() => {
+    if (contentRef.current) {
+      const contentHeight = `${contentRef.current.scrollHeight}px`;
+      setMaxHeight(contentHeight);
+    }
+  }, [contentRef]);
+
+  return (
+    <AccordionItemPanel
+      className={styles.accordionContent}
+      style={{ "--calcH": maxHeight } as any}
+    >
+      <div ref={contentRef}>{children}</div>
+    </AccordionItemPanel>
+  );
+};
 
 export const BlogAccordion = ({
   tags,
-  children,
+  bits,
 }: {
   tags: BlogTags[];
-  children: ReactElement;
+  bits: ReactElement;
 }) => {
+  const data = useMemo(
+    () => [
+      { uuid: "bits", h: "Things I loved/did lately", content: bits },
+      { uuid: "tags", h: "Tags", content: <Tags tags={tags} /> },
+    ],
+    [tags, bits]
+  );
+
   return (
     <Accordion
       allowZeroExpanded
@@ -27,26 +56,17 @@ export const BlogAccordion = ({
       preExpanded={["bits", "tags"]}
       className={styles.accordion}
     >
-      <AccordionItem uuid="bits">
-        <AccordionItemHeading>
-          <AccordionItemButton className={styles.accordionTitle}>
-            <h2>Things I loved/did lately</h2>
-            <AiOutlineDownSquare aria-hidden={true} />
-          </AccordionItemButton>
-        </AccordionItemHeading>
-        <AccordionItemPanel>{children}</AccordionItemPanel>
-      </AccordionItem>
-      <AccordionItem uuid="tags">
-        <AccordionItemHeading>
-          <AccordionItemButton className={styles.accordionTitle}>
-            <h2>Tags</h2>
-            <AiOutlineDownSquare aria-hidden={true} />
-          </AccordionItemButton>
-        </AccordionItemHeading>
-        <AccordionItemPanel>
-          <Tags tags={tags} />
-        </AccordionItemPanel>
-      </AccordionItem>
+      {data.map(({ uuid, h, content }) => (
+        <AccordionItem uuid={uuid} key={uuid}>
+          <AccordionItemHeading>
+            <AccordionItemButton className={styles.accordionTitle}>
+              <h2>{h}</h2>
+              <AiOutlineDownSquare aria-hidden={true} />
+            </AccordionItemButton>
+          </AccordionItemHeading>
+          <AccordionContent>{content}</AccordionContent>
+        </AccordionItem>
+      ))}
     </Accordion>
   );
 };
