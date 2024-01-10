@@ -1,4 +1,4 @@
-import Head from "next/head";
+import { Metadata } from "next";
 import { getAllPosts, getPostBySlug } from "../../../api/postsApi";
 import markdownToHtml from "../../../utils/markdownToHtml";
 import { Post } from "../../../components/2023/interfaces";
@@ -17,6 +17,7 @@ const loadPostData = async (slug: string): Promise<{ post: Post }> => {
     "ogImage",
     "coverImage",
     "tags",
+    "meta",
   ]);
   const content = await markdownToHtml(post.content || "");
 
@@ -28,6 +29,25 @@ const loadPostData = async (slug: string): Promise<{ post: Post }> => {
   };
 };
 
+export const generateMetadata = async ({
+  params,
+}: {
+  params: { slug: string };
+}): Promise<Metadata> => {
+  const blog = await loadPostData(params.slug);
+
+  const ogImage = blog.post.ogImage!.url;
+
+  return {
+    title: blog.post.title,
+    description: blog.post.meta!.description,
+    openGraph: {
+      images: [ogImage],
+      url: `https://lazy-ocean.vercel.app/posts/${params.slug}`,
+    },
+  };
+};
+
 export default async function Post({ params }: { params: { slug: string } }) {
   const { post } = await loadPostData(params.slug);
 
@@ -35,7 +55,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
     return;
   }
 
-  const { title, tags, date, ogImage } = post;
+  const { title, tags, date } = post;
 
   return (
     <>
@@ -50,10 +70,6 @@ export default async function Post({ params }: { params: { slug: string } }) {
         </>
       </Header>
       <article>
-        <Head>
-          <title>{title}</title>
-          <meta property="og:image" content={ogImage} />
-        </Head>
         <p className={postsStyles.date}> {new Date(date!).toDateString()}</p>
         <h1>{title}</h1>
         <section className={postsStyles.blogTags}>

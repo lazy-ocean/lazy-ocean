@@ -87,11 +87,12 @@ export interface Post {
   date?: string;
   slug?: string;
   coverImage?: string;
-  ogImage?: string;
+  ogImage?: { url: string };
   excerpt?: string;
   content?: string;
   color?: string;
   tags?: string;
+  meta?: { description: string };
 }
 
 export enum BlogTags {
