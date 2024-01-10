@@ -35,7 +35,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
     return;
   }
 
-  const { title, tags } = post;
+  const { title, tags, date, ogImage } = post;
 
   return (
     <>
@@ -52,9 +52,10 @@ export default async function Post({ params }: { params: { slug: string } }) {
       <article>
         <Head>
           <title>{title}</title>
-          <meta property="og:image" content={post.ogImage} />
+          <meta property="og:image" content={ogImage} />
         </Head>
-        <h1>{post.title}</h1>
+        <p className={postsStyles.date}> {new Date(date!).toDateString()}</p>
+        <h1>{title}</h1>
         <section className={postsStyles.blogTags}>
           <h3>Tags:</h3>
           {tags?.split(",").map((tag) => (

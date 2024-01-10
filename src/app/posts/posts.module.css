@@ -38,6 +38,12 @@
   flex-wrap: wrap;
 }
 
+.date {
+  margin: 0;
+  font-variant: all-petite-caps;
+  margin-block-end: var(--spacings-xxs);
+}
+
 @media only screen and (min-width: 1200px) {
   .container {
     padding: var(--spacings-s) var(--spacings-m);
