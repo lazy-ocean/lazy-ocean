@@ -3,10 +3,6 @@
   flex-direction: column;
 }
 
-.body footer {
-  margin-top: auto;
-}
-
 .container {
   padding: var(--spacings-s);
   display: flex;

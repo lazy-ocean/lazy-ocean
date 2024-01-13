@@ -4,6 +4,7 @@
   padding: var(--spacings-s);
   gap: var(--spacings-xs);
   display: grid;
+  margin-top: auto;
   grid-template-areas:
     "email"
     "social"

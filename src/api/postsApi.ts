@@ -15,18 +15,22 @@ export const getPostBySlug = (
 ): Post => {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
-  const fileContents = fs.readFileSync(fullPath, "utf8");
-  const { data, content } = matter(fileContents);
+  try {
+    const fileContents = fs.readFileSync(fullPath, "utf8");
+    const { data, content } = matter(fileContents);
 
-  const item: Post = {};
+    const item: Post = {};
 
-  fields.forEach((field: keyof Post) => {
-    if (field === "slug") item[field] = realSlug;
-    if (field === "content") item[field] = content;
-    if (typeof data[field] !== "undefined") item[field] = data[field];
-  });
+    fields.forEach((field: keyof Post) => {
+      if (field === "slug") item[field] = realSlug;
+      if (field === "content") item[field] = content;
+      if (typeof data[field] !== "undefined") item[field] = data[field];
+    });
 
-  return item;
+    return item;
+  } catch (e) {
+    console.log(e);
+  }
 };
 
 export function getAllPosts(fields: Array<keyof Post> = []): {

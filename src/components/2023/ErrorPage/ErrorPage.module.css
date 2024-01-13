@@ -1,0 +1,51 @@
+.page {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.fortuneBlock {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: var(--spacings-xs);
+}
+
+.cards {
+  display: flex;
+  gap: var(--spacings-s);
+}
+
+.card {
+  height: 20rem;
+  width: 20rem;
+  background-color: var(--main-colour);
+  box-shadow: 8px 8px black;
+  border: var(--dashed-border-m);
+  border-radius: 1rem;
+  padding: var(--spacings-s);
+  display: flex;
+  background-color: white;
+}
+
+.hiddenCard {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card img {
+  height: 15rem;
+}
+
+.hiddenCard img {
+  height: 10rem;
+}
+
+.card a {
+  border-bottom: var(--dashed-border-s);
+  font-size: 1.4rem;
+}
