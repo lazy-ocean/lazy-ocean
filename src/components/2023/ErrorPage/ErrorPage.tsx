@@ -60,11 +60,11 @@ export const ErrorPage = ({
                 (not rickroll I promise)
               </p>
               <div>
-                <a href="/posts/meow">Let's go </a>
+                <a href="https://www.youtube.com/watch?v=gieQh1E0b4o">
+                  Let's go
+                </a>
                 <span>🐱</span>
               </div>
-
-              {/*   <img src="/kitty.png" alt="cute cat" /> */}
             </div>
           </ReactCardFlip>
           <ReactCardFlip
