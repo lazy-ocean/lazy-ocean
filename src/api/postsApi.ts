@@ -12,7 +12,7 @@ export function getPostSlugs() {
 export const getPostBySlug = (
   slug: string,
   fields: Array<keyof Post> = []
-): Post => {
+): Post | undefined => {
   const realSlug = slug.replace(/\.md$/, "");
   const fullPath = join(postsDirectory, `${realSlug}.md`);
   try {
@@ -39,7 +39,7 @@ export function getAllPosts(fields: Array<keyof Post> = []): {
 } {
   const slugs = getPostSlugs();
   const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
+    .map((slug) => getPostBySlug(slug, fields) as Post)
     .sort((post1, post2) => (post1?.date! > post2?.date! ? -1 : 1));
 
   const tags = Array.from(

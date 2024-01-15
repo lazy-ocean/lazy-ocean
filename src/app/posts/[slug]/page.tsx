@@ -19,7 +19,7 @@ const loadPostData = async (slug: string): Promise<{ post: Post }> => {
     "tags",
     "meta",
   ]);
-  const content = await markdownToHtml(post.content || "");
+  const content = await markdownToHtml(post?.content || "");
 
   return {
     post: {
