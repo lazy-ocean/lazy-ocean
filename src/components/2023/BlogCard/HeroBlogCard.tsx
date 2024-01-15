@@ -13,7 +13,7 @@ export const HeroBlogCard = ({
   const { title, excerpt, color, slug, tags } = post;
 
   return (
-    <div className={`card ${styles.cont} ${tags?.split(",").join(" ")}`}>
+    <article className={`card ${styles.cont} ${tags?.split(",").join(" ")}`}>
       <Link href={`posts/${slug}`} passHref={true}>
         <div
           className={styles.container}
@@ -23,7 +23,7 @@ export const HeroBlogCard = ({
           <h2>{title}</h2>
           <div style={{ display: "inline-block" }}>
             <p>
-              {excerpt} <span className={styles.pseudolink}>Read more..</span>.
+              {excerpt} <span className={styles.pseudolink}>Read more...</span>
             </p>
             <ul className={styles.labels}>
               {tags?.split(",").map((item, i) => (
@@ -31,9 +31,13 @@ export const HeroBlogCard = ({
               ))}
             </ul>
           </div>
-          {children && <div className={styles.icons}>{children}</div>}
+          {children && (
+            <div className={styles.icons} aria-role="presentation">
+              {children}
+            </div>
+          )}
         </div>
       </Link>
-    </div>
+    </article>
   );
 };

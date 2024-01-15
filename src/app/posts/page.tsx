@@ -36,28 +36,29 @@ export default function Index() {
   return (
     <>
       <Header />
-      <div className={styles.postsSpace}>
-        <h1>Vlada's Blog</h1>
-        <h3>
-          Thoughts on tech, life, content I consume and everything else I have
-          an opinion on.
-        </h3>
-        <BlogAccordion tags={tags} bits={<Bits />} />
-        <h2 id="hero-h">Recently published</h2>
-        <HeroBlogCard post={heroPost}>
-          {heroPost.coverImage &&
-            heroPost.coverImage
-              .split(",")
-              .map((img) => (
-                <img key={img} src={img} alt="" role="presentation" />
-              ))}
-        </HeroBlogCard>
-        <h2>All posts</h2>
-        <div className={styles.allPosts}>
-          {rest.map((post) => (
-            <HeroBlogCard post={post} key={post.slug} />
-          ))}
-        </div>
+      <h1>Vlada's Blog</h1>
+      <h3>
+        Thoughts on tech, life, content I consume and everything else I have an
+        opinion on.
+      </h3>
+
+      <BlogAccordion tags={tags} bits={<Bits />} />
+
+      <h2 id="hero-h">Recently published</h2>
+      <HeroBlogCard post={heroPost}>
+        {heroPost.coverImage &&
+          heroPost.coverImage
+            .split(",")
+            .map((img) => (
+              <img key={img} src={img} alt="" role="presentation" />
+            ))}
+      </HeroBlogCard>
+
+      <h2>All posts</h2>
+      <div className={styles.allPosts}>
+        {rest.map((post) => (
+          <HeroBlogCard post={post} key={post.slug} />
+        ))}
       </div>
     </>
   );

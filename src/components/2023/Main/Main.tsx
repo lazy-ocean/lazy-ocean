@@ -12,7 +12,7 @@ interface MainProps extends MainData {
 }
 
 const Main = ({ header, description, tags, items }: MainProps) => (
-  <main className={styles.container}>
+  <main className={`${styles.container} flexColumn`}>
     <TimeMachineBtn current={Year.twentyThree} />
     <MainInfo header={header} description={description} />
     <section>
@@ -36,7 +36,7 @@ const Main = ({ header, description, tags, items }: MainProps) => (
     </div>
     <div className={styles.footer}>
       <p>Everything else: </p>
-      {<Github link="https://github.com/lazy-ocean"></Github>}
+      <Github link="https://github.com/lazy-ocean"></Github>
     </div>
   </main>
 );

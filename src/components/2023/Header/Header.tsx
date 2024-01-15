@@ -11,7 +11,7 @@ export const Header = ({ children }: { children?: ReactElement }) => {
           height={60}
           width={60}
           alt="Vladlena's Website"
-          aria-hidden={true}
+          aria-role="presentation"
         />
       </a>
       {children}

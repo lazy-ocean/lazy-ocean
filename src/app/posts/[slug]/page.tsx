@@ -61,7 +61,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
     <>
       <Header>
         <>
-          <a href="/">
+          <a href="/" aria-label="Go to the main page">
             <h3 className={styles.subheader}>Vlada's blog</h3>
           </a>
           <a href="/posts" className={styles.backLink}>

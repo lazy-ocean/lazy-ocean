@@ -1,13 +1,7 @@
 .post {
-  box-shadow: 8px 8px var(--main-colour);
   border: var(--dashed-border-m);
-  border-radius: 1rem;
-  padding: var(--spacings-s);
-  padding-block-start: 0;
-  width: 100%;
-  transition: all 0.4s;
-  position: relative;
-  align-items: center;
+  border-radius: var(--border-radius);
+  padding: 0 var(--spacings-s);
   margin-block-start: var(--spacings-s);
   background-color: var(--palette-offwhite);
 }

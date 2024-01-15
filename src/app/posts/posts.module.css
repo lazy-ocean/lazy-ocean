@@ -1,29 +1,16 @@
-.body {
-  display: flex;
-  flex-direction: column;
-}
-
 .container {
   padding: var(--spacings-s);
-  display: flex;
-  flex-direction: column;
-  gap: var(--spacings-s);
+  gap: var(--spacings-xs);
 }
 
-.postsSpace > h2 {
+.container > h2 {
   margin-block-start: var(--spacings-s);
-  margin-block-end: var(--spacings-xs);
-}
-
-.postsSpace {
-  display: flex;
-  flex-direction: column;
 }
 
 .allPosts {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(45ch, 1fr));
-  gap: 2rem;
+  gap: var(--spacings-s);
 }
 
 .blogTags {

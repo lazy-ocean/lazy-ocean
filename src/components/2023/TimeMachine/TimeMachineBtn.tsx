@@ -31,7 +31,7 @@ export const TimeMachineBtn = ({ current }: { current: Year }) => {
         styles[current]
       }`}
     >
-      <div className={styles.expandingButtons}>
+      <div className={`${styles.expandingButtons} flexColumn`}>
         {current !== Year.twentyOne && (
           <Link href="/2021" className={styles.first}>
             2021

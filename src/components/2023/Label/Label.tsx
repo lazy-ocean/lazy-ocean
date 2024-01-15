@@ -88,23 +88,18 @@ const Label = ({ text, active, setActive }: LabelsProps) => {
     }
   }, [active]);
 
-  return !!setActive ? (
+  return (
     <li
       className={`${styles.label} ${
         active && active !== text ? styles.inactive : ""
       }`}
       style={{ ["--color" as string]: colour }}
     >
-      <button onClick={handleClick}>#{text}</button>
-    </li>
-  ) : (
-    <li
-      className={`${styles.label} ${
-        active && active !== text ? styles.inactive : ""
-      }`}
-      style={{ ["--color" as string]: colour }}
-    >
-      #{text}
+      {!!setActive ? (
+        <button onClick={handleClick}>#{text}</button>
+      ) : (
+        `#${text}`
+      )}
     </li>
   );
 };
@@ -115,9 +110,9 @@ export const Labels = ({ tags }: { tags: { [key: string]: TechStack[] } }) => {
   return (
     <>
       {Object.keys(tags || skills).map((name: string) => (
-        <ul key={name} className={styles.skills}>
+        <div key={name} className={styles.skills}>
           <h3>{name}</h3>
-          <div>
+          <ul>
             {tags[name].map((item: TechStack, i: number) => (
               <Label
                 text={item}
@@ -126,8 +121,8 @@ export const Labels = ({ tags }: { tags: { [key: string]: TechStack[] } }) => {
                 setActive={setActive}
               />
             ))}
-          </div>
-        </ul>
+          </ul>
+        </div>
       ))}
     </>
   );

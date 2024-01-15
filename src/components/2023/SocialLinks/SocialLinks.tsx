@@ -17,7 +17,12 @@ const SocialLinks = ({ cv }: { cv: string }) => {
       <ul className={styles.socials}>
         {[...socials, resume].map(({ alt, link, icon }: SocialLink) => (
           <li key={alt}>
-            <a href={link} target="_blank" rel="noreferrer">
+            <a
+              href={link}
+              target="_blank"
+              rel="noreferrer"
+              aria-label={`${alt} link`}
+            >
               {icon}
             </a>
           </li>

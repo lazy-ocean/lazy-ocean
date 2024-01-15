@@ -4,21 +4,7 @@ import { Header } from "../Header/Header";
 import styles from "./ErrorPage.module.css";
 import ReactCardFlip from "react-card-flip";
 
-/* const FlipCard = ({ children }) => {
-  return (
-    <ReactCardFlip isFlipped={isFlipped}>
-      {children}
-    </ReactCardFlip>
-  );
-}; */
-
-export const ErrorPage = ({
-  error,
-  reset,
-}: {
-  error: Error & { digest?: string };
-  reset: () => void;
-}) => {
+export const ErrorPage = () => {
   const [isFlipped, setIsFlipped] = useState<false | 1 | 2>(false);
 
   const style = (ind: 1 | 2) => ({
@@ -30,9 +16,9 @@ export const ErrorPage = ({
   });
 
   return (
-    <div className={styles.page}>
+    <div className={`${styles.page} flexColumn`}>
       <Header />
-      <div className={styles.fortuneBlock}>
+      <main className={`${styles.fortuneBlock} flexColumn`}>
         <h2>Whoops, looks like there's no such page</h2>
         <h3>Choose your fortune instead:</h3>
         <div className={styles.cards}>
@@ -50,7 +36,7 @@ export const ErrorPage = ({
               <img src="/crystal-ball.png" />
             </div>
             <div
-              className={`${styles.card} ${styles.hiddenCard}`}
+              className={`${styles.card} ${styles.hiddenCard} flexColumn`}
               key="back"
               onClick={() => setIsFlipped(false)}
             >
@@ -93,9 +79,8 @@ export const ErrorPage = ({
             </div>
           </ReactCardFlip>
         </div>
-      </div>
-
-      <Footer cv="" />
+      </main>
+      <Footer cv="/Vladlena_Panchenko_CV.pdf" />
     </div>
   );
 };
