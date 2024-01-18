@@ -1,4 +1,4 @@
-import Footer from "../../components/2023/Footer/Footer";
+import Footer from "@/2023/Footer/Footer";
 import styles from "./posts.module.css";
 
 export default function Layout({ children }: { children: React.ReactNode }) {

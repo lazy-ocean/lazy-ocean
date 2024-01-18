@@ -1,8 +1,8 @@
 import React from "react";
-import { TechStack, Project, Tags } from "../interfaces";
-import Label from "../Label/Label";
+import { TechStack, Project, Tags } from "@/2023/interfaces";
+import Label from "@/2023/Label/Label";
 import styles from "./Card.module.css";
-import Github from "../SocialLinks/GithubLink";
+import Github from "@/2023/SocialLinks/GithubLink";
 
 interface CardProps {
   card: Project;

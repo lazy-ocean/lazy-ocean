@@ -1,10 +1,10 @@
 import styles from "./posts.module.css";
 import { Metadata } from "next";
-import { getAllPosts } from "../../api/postsApi";
-import { Bits } from "../../components/2023/Bits/Bits";
-import { HeroBlogCard } from "../../components/2023/BlogCard/HeroBlogCard";
-import { Header } from "../../components/2023/Header/Header";
-import { BlogAccordion } from "../../components/2023/Accordion/Accordion";
+import { getAllPosts } from "@/api/postsApi";
+import { Bits } from "@/2023/Bits/Bits";
+import { HeroBlogCard } from "@/2023/BlogCard/HeroBlogCard";
+import { Header } from "@/2023/Header/Header";
+import { BlogAccordion } from "@/2023/Accordion/Accordion";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lazy-ocean.vercel.app/posts"),

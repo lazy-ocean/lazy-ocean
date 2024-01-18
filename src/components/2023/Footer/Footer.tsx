@@ -1,6 +1,6 @@
 import React from "react";
 import { AiFillHeart } from "react-icons/ai";
-import SocialLinks from "../SocialLinks/SocialLinks";
+import SocialLinks from "@/2023/SocialLinks/SocialLinks";
 import styles from "./Footer.module.css";
 import Email from "./Email";
 

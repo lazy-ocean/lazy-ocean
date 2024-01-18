@@ -1,4 +1,4 @@
-import { TechStack } from "../components/2023/interfaces";
+import { TechStack } from "@/2023/interfaces";
 
 export const mainData = {
   cv: "/Vladlena_Panchenko_CV.pdf",

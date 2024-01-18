@@ -1,6 +1,6 @@
 import { useState } from "react";
-import Footer from "../Footer/Footer";
-import { Header } from "../Header/Header";
+import Footer from "@/2023/Footer/Footer";
+import { Header } from "@/2023/Header/Header";
 import styles from "./ErrorPage.module.css";
 import ReactCardFlip from "react-card-flip";
 

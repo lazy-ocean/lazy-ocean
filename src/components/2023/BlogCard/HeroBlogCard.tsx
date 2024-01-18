@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { Post } from "../interfaces";
+import { Post } from "@/2023/interfaces";
 import styles from "./BlogCard.module.css";
-import Label from "../Label/Label";
+import Label from "@/2023/Label/Label";
 
 export const HeroBlogCard = ({
   post,

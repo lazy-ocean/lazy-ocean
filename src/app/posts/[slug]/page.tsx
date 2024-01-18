@@ -1,11 +1,11 @@
 import { Metadata } from "next";
-import { getAllPosts, getPostBySlug } from "../../../api/postsApi";
-import markdownToHtml from "../../../utils/markdownToHtml";
-import { Post } from "../../../components/2023/interfaces";
-import { BlogPost } from "../../../components/2023/BlogPost/BlogPost";
-import Label from "../../../components/2023/Label/Label";
-import { Header } from "../../../components/2023/Header/Header";
-import styles from "../../../components/2023/Header/Header.module.css";
+import { getAllPosts, getPostBySlug } from "@/api/postsApi";
+import markdownToHtml from "@/utils/markdownToHtml";
+import { Post } from "@/2023/interfaces";
+import { BlogPost } from "@/2023/BlogPost/BlogPost";
+import Label from "@/2023/Label/Label";
+import { Header } from "@/2023/Header/Header";
+import styles from "@/2023/Header/Header.module.css";
 import postsStyles from "../posts.module.css";
 
 const loadPostData = async (slug: string): Promise<{ post: Post }> => {

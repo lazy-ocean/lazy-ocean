@@ -1,7 +1,7 @@
 "use client";
 import { useEffect, useState } from "react";
-import Label from "../Label/Label";
-import { BlogTags } from "../interfaces";
+import Label from "@/2023/Label/Label";
+import { BlogTags } from "@/2023/interfaces";
 import styles from "./Tags.module.css";
 
 export const Tags = ({ tags }: { tags: BlogTags[] }) => {

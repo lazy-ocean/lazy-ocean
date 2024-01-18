@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import styles from "./TimeMachine.module.css";
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { Year } from "../interfaces";
+import { useCallback, useEffect, useState } from "react";
+import { Year } from "@/2023/interfaces";
 
 const checkIfVisible = (): boolean => {
   const currentOffset = window.scrollY;

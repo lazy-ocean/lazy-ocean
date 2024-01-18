@@ -1,6 +1,6 @@
-import { getAllBits } from "../../../api/bitsApi";
+import { getAllBits } from "@/api/bitsApi";
 import styles from "./Bits.module.css";
-import { Bits as BitsType, BitsTypes } from "../interfaces";
+import { Bits as BitsType, BitsTypes } from "@/2023/interfaces";
 
 const EMOJI_MAP = {
   [BitsTypes.concert]: "🎤",

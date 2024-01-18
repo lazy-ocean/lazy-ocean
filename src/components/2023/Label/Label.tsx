@@ -1,8 +1,8 @@
 "use client";
 import React, { useEffect, useMemo, useState } from "react";
-import { BlogTags, TechStack } from "../interfaces";
+import { BlogTags, TechStack } from "@/2023/interfaces";
 import styles from "./Label.module.css";
-import { skills } from "../../../backups/skills";
+import { skills } from "@/backups/skills";
 
 interface LabelsProps {
   text: TechStack | BlogTags | string;

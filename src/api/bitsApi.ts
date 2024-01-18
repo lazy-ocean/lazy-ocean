@@ -1,7 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
-import { Bits } from "../components/2023/interfaces";
+import { Bits } from "@/2023/interfaces";
 
 const bitsDirectory = join(process.cwd(), "_bits");
 

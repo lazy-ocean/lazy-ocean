@@ -1,4 +1,4 @@
-import { SocialLink } from "../components/2023/interfaces";
+import { SocialLink } from "@/2023/interfaces";
 import { SlSocialLinkedin } from "react-icons/sl";
 import { PiCodepenLogoLight } from "react-icons/pi";
 import { VscGithubAlt } from "react-icons/vsc";

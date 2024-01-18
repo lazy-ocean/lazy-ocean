@@ -1,5 +1,5 @@
 import styles from "./BlogPost.module.css";
-import { Post } from "../interfaces";
+import { Post } from "@/2023/interfaces";
 
 export const BlogPost = ({ post }: { post: Post }) => {
   return (

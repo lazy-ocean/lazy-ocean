@@ -1,5 +1,5 @@
 import React from "react";
-import { Project } from "../interfaces";
+import { Project } from "@/2023/interfaces";
 import Card from "./Card";
 
 const Cards = ({ items }: { items: Project[] }) => (

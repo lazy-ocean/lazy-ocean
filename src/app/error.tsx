@@ -1,5 +1,5 @@
 "use client";
-import { ErrorPage } from "../components/2023/ErrorPage/ErrorPage";
+import { ErrorPage } from "@/2023/ErrorPage/ErrorPage";
 
 export default function Error({
   error,

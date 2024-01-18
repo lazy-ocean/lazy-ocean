@@ -1,7 +1,7 @@
-import Main from "../components/2023/Main/Main";
-import Footer from "../components/2023/Footer/Footer";
+import Main from "@/2023/Main/Main";
+import Footer from "@/2023/Footer/Footer";
 import React from "react";
-import { MainData, Project } from "../components/2023/interfaces";
+import { MainData, Project } from "@/2023/interfaces";
 
 const Home = ({
   mainContent,

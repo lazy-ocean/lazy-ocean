@@ -1,7 +1,7 @@
 import fs from "fs";
 import { join } from "path";
 import matter from "gray-matter";
-import { BlogTags, Post } from "../components/2023/interfaces";
+import { BlogTags, Post } from "@/2023/interfaces";
 
 const postsDirectory = join(process.cwd(), "_posts");
 

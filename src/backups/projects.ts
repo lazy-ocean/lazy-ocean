@@ -1,9 +1,4 @@
-import {
-  Project,
-  Tags,
-  TechStack,
-  AccentColours,
-} from "../components/2023/interfaces";
+import { Project, Tags, TechStack, AccentColours } from "@/2023/interfaces";
 
 const projects: Project[] = [
   {

@@ -7,8 +7,8 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from "react-accessible-accordion";
-import { Tags } from "../Tags/Tags";
-import { BlogTags } from "../interfaces";
+import { Tags } from "@/2023/Tags/Tags";
+import { BlogTags } from "@/2023/interfaces";
 
 import { ReactElement, useEffect, useMemo, useRef, useState } from "react";
 import { AiOutlineDownSquare } from "react-icons/ai";

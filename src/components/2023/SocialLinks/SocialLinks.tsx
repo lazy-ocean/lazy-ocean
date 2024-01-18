@@ -1,7 +1,6 @@
 import React from "react";
-import { AiOutlineProfile } from "react-icons/ai";
-import { socials } from "../../../backups/socialLinks";
-import { SocialLink } from "../interfaces";
+import { socials } from "@/backups/socialLinks";
+import { SocialLink } from "@/2023/interfaces";
 import styles from "./SocialLinks.module.css";
 import { CiFileOn } from "react-icons/ci";
 
