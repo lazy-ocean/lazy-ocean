@@ -8,13 +8,12 @@ import { Header } from "@/2023/Header/Header";
 import styles from "@/2023/Header/Header.module.css";
 import postsStyles from "../posts.module.css";
 
-const loadPostData = async (slug: string): Promise<{ post: Post }> => {
+export const loadPostData = async (slug: string): Promise<{ post: Post }> => {
   const post = getPostBySlug(slug, [
     "title",
     "date",
     "slug",
     "content",
-    "ogImage",
     "coverImage",
     "tags",
     "meta",
@@ -36,13 +35,10 @@ export const generateMetadata = async ({
 }): Promise<Metadata> => {
   const blog = await loadPostData(params.slug);
 
-  const ogImage = blog.post.ogImage!.url;
-
   return {
     title: blog.post.title,
     description: blog.post.meta!.description,
     openGraph: {
-      images: [ogImage],
       url: `https://lazy-ocean.vercel.app/posts/${params.slug}`,
     },
   };
@@ -69,7 +65,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
           </a>
         </>
       </Header>
-      <article>
+      <article className={postsStyles.main}>
         <p className={postsStyles.date}> {new Date(date!).toDateString()}</p>
         <h1>{title}</h1>
         <section className={postsStyles.blogTags}>
