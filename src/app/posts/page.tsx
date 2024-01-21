@@ -10,13 +10,11 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://lazy-ocean.vercel.app/posts"),
   title: "Vlada's blog",
   description: "Vlada's blog about all things interesting",
-  icons: "icon.ico",
   openGraph: {
     description: "Vlada's blog about all things interesting",
     url: "https://lazy-ocean.vercel.app/posts",
     title: "Vlada's blog",
     type: "website",
-    images: "https://lazy-ocean.vercel.app/meta-img.png",
   },
 };
 
@@ -54,12 +52,16 @@ export default function Index() {
             ))}
       </HeroBlogCard>
 
-      <h2>All posts</h2>
-      <div className={styles.allPosts}>
-        {rest.map((post) => (
-          <HeroBlogCard post={post} key={post.slug} />
-        ))}
-      </div>
+      {rest.length > 0 && (
+        <>
+          <h2>All posts</h2>
+          <div className={styles.allPosts}>
+            {rest.map((post) => (
+              <HeroBlogCard post={post} key={post.slug} />
+            ))}
+          </div>
+        </>
+      )}
     </>
   );
 }
