@@ -87,7 +87,6 @@ export interface Post {
   date?: string;
   slug?: string;
   coverImage?: string;
-  ogImage?: { url: string };
   excerpt?: string;
   content?: string;
   color?: string;
@@ -100,6 +99,7 @@ export enum BlogTags {
   music = "music",
   a11y = "a11y",
   movies = "movies",
+  design = "design",
 }
 
 export enum BitsTypes {

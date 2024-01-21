@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { loadPostData } from "./page";
+import { loadPostData } from "@/utils/loadPostData";
 import fs from "fs";
 import path from "path";
 import { fileURLToPath } from "url";

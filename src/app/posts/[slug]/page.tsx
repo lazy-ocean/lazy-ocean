@@ -1,32 +1,12 @@
 import { Metadata } from "next";
-import { getAllPosts, getPostBySlug } from "@/api/postsApi";
-import markdownToHtml from "@/utils/markdownToHtml";
+import { getAllPosts } from "@/api/postsApi";
 import { Post } from "@/2023/interfaces";
 import { BlogPost } from "@/2023/BlogPost/BlogPost";
 import Label from "@/2023/Label/Label";
 import { Header } from "@/2023/Header/Header";
 import styles from "@/2023/Header/Header.module.css";
 import postsStyles from "../posts.module.css";
-
-export const loadPostData = async (slug: string): Promise<{ post: Post }> => {
-  const post = getPostBySlug(slug, [
-    "title",
-    "date",
-    "slug",
-    "content",
-    "coverImage",
-    "tags",
-    "meta",
-  ]);
-  const content = await markdownToHtml(post?.content || "");
-
-  return {
-    post: {
-      ...post,
-      content,
-    },
-  };
-};
+import { loadPostData } from "@/utils/loadPostData";
 
 export const generateMetadata = async ({
   params,

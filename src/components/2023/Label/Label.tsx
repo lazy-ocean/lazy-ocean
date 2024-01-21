@@ -18,7 +18,7 @@ const colorMap: Map = {
   [TechStack.TypeScript]: "#F1C0E8",
   [BlogTags.music]: "#F1C0E8",
   [TechStack.Next]: "#d4d4d4",
-  [BlogTags.frontend]: "#d4d4d4",
+  [BlogTags.frontend]: "#ffaaaa",
   [TechStack.Jest]: "#CDE4B4",
   [BlogTags.movies]: "#CDE4B4",
   [TechStack.a11y]: "#ffcccc",
@@ -31,6 +31,7 @@ const colorMap: Map = {
   [TechStack.styled]: "#b9e7de",
   [TechStack.Remix]: "#ffe3a1",
   [TechStack.cssModules]: "#a9bdfd",
+  [BlogTags.design]: "#b6e2b9",
 };
 
 const isTechStack = (txt: string | TechStack | BlogTags): txt is TechStack =>
