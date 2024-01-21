@@ -20,12 +20,12 @@
   );
 
   --color-prettylights-syntax-comment: #6e7781;
-  --color-prettylights-syntax-constant: #0550ae;
-  --color-prettylights-syntax-entity: #6639ba;
+  --color-prettylights-syntax-constant: #006af1;
+  --color-prettylights-syntax-entity: #219d02;
   --color-prettylights-syntax-storage-modifier-import: #24292f;
-  --color-prettylights-syntax-entity-tag: #116329;
+  --color-prettylights-syntax-entity-tag: #006af1;
   --color-prettylights-syntax-keyword: #cf222e;
-  --color-prettylights-syntax-string: #0a3069;
+  --color-prettylights-syntax-string: #c70ab1;
   --color-prettylights-syntax-variable: #953800;
   --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
   --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
@@ -34,7 +34,7 @@
   --color-prettylights-syntax-carriage-return-bg: #cf222e;
   --color-prettylights-syntax-string-regexp: #116329;
   --color-prettylights-syntax-markup-list: #3b2300;
-  --color-prettylights-syntax-markup-heading: #0550ae;
+  --color-prettylights-syntax-markup-heading: #219d02;
   --color-prettylights-syntax-markup-italic: #24292f;
   --color-prettylights-syntax-markup-bold: #24292f;
   --color-prettylights-syntax-markup-deleted-text: #82071e;

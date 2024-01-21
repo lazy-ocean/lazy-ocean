@@ -1,5 +1,7 @@
 import Footer from "@/2023/Footer/Footer";
 import styles from "./posts.module.css";
+import "highlight.js/styles/default.css";
+import "../highlight.css";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
