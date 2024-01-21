@@ -6,6 +6,40 @@
   background-color: var(--palette-offwhite);
 }
 
-.post p {
-  line-height: 2rem;
+.post ul {
+  margin: var(--spacings-xs);
+}
+
+.post a {
+  transition: border-bottom-color 0.2s ease-in-out;
+  border-bottom: var(--dashed-border-s);
+  border-bottom-color: var(--palette-accent);
+}
+
+.post a:hover,
+.post a:active {
+  border-bottom-color: black;
+}
+
+.post ol {
+  margin: 0;
+  padding: 0;
+}
+
+.post li {
+  font-size: 1.2rem;
+  margin: var(--spacings-xs);
+  line-height: 1.8rem;
+}
+
+.post p,
+.post li {
+  line-height: 1.8rem;
+}
+
+.post blockquote {
+  background-color: #ebebeb91;
+  margin: 0;
+  padding: var(--spacings-xs);
+  border-radius: 20px;
 }

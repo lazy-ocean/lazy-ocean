@@ -3,6 +3,10 @@
   gap: var(--spacings-xs);
 }
 
+.main p {
+  font-size: 1.2rem;
+}
+
 .container > h2 {
   margin-block-start: var(--spacings-s);
 }
