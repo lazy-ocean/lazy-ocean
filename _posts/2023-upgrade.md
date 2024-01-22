@@ -9,9 +9,8 @@ color: "#fae97a"
 tags: "frontend,design"
 ---
 
-I always treat the development of this website as a playground for things I want to try out. The last update was no different! Here's an overview of some of the things I've done and decisions I've made along the way.
-
-## Contents {#contents}
+<div id='contents' class='contents'> 
+<h2>Contents</h2>
 
 1. [Secret Sauce](#secret-sauce)
 2. [Design](#design)
@@ -19,6 +18,10 @@ I always treat the development of this website as a playground for things I want
 4. [React Server Components and pure-CSS interactions](#rsc)
 5. [CMS, data, posts](#data)
 6. [Time Machine!](#time-machine)
+</div>
+
+<div id='main'>
+<p>I always treat the development of this website as a playground for things I want to try out. The last update was no different! Here's an overview of some of the things I've done and decisions I've made along the way.</p>
 
 ## Secret Sauce {#secret-sauce}
 
@@ -28,11 +31,9 @@ I got the inspiration for this post from the always amazing <a href="https://syn
 
 I'm just not very good at designing things. Ok, maybe not that bad, but it definitely takes a lot of trial and error to make something look good. For this version, I've taken inspiration from all over, especially the neubrutalism trend that's been going on lately, plus defined vibrant colours, borders and sleek typography.
 
-<figure style='display: flex;
-    align-items: center;
-    flex-direction: column;'>
+<figure class='centered'>
     <img src="/blog/2023-upgrade/option.png"
-         alt="Discarded website design option" style='width: 70%'>
+         alt="Discarded website design option" class='blogImg'>
     <figcaption>One of the discarded options</figcaption>
 </figure>
 
@@ -40,9 +41,7 @@ I usually design directly in the browser, trying things out with code rather tha
 
 I also wanted to preserve the cards animation I've used over the years - for some reason I love it so much I didn't want to let it go, at least not just yet.
 
-<figure style='display: flex;
-    align-items: center;
-    flex-direction: column;'>
+<figure class='centered'>
     <img src="/blog/2023-upgrade/cards.gif"
          alt="Animated card stacking over the years" style='width: 50%;margin-bottom: 1rem;box-shadow: 0 4px 16px rgb(0 0 0 / 41%);'>
     <figcaption>Animated card stacking over the years</figcaption>
@@ -131,9 +130,7 @@ I had some of challenges along the way: I still had a few of components where I 
 
 For example, I have this tags functionality that filters out relevant posts:
 
-<figure style='display: flex;
-    align-items: center;
-    flex-direction: column;'>
+<figure class='centered'>
     <img src="/blog/2023-upgrade/labels.gif"
          alt="Tags filtering" style='width: 50%;margin-bottom: 1rem;box-shadow: 0 4px 16px rgb(0 0 0 / 41%);'>
     <figcaption>Tags filtering</figcaption>
@@ -166,7 +163,7 @@ It was fun to reach for the CSS solution, because years of working with React me
 Again, a lot of experimentation:
 
 - Notion as a DB/makeshift CMS: not impressed with the experience so far. Row-based content is fine, but Notion-specific datatypes make the API really messy (`row.properties.content.rich_text[0].plain_text`, wow, why?).
-- Markdown-based blog post dataflow: I write this post in Markdown with the occasional HTML tags when I feel the need for it. The `.md` files are parsed using [remark](https://github.com/remarkjs/remark) and a ton of plugins: [remark-heading-id](https://github.com/imcuttle/remark-heading-id) to make header ids work (as in [Contents](#contents) here), [remark-rehype](https://github.com/remarkjs/remark-rehype) and [rehype-raw](https://github.com/rehypejs/rehype-raw) for full HTML tag support, and [rehype-starry-night](https://github.com/Microflash/rehype-starry-night) to prettify code snippets. Never thought it would be this complex to make Markdown work, think there must be a better way...
+- Markdown-based blog post dataflow: I write this post in Markdown with the occasional HTML tags when I feel the need for it. The `.md` files are parsed using [remark](https://github.com/remarkjs/remark) and a ton of plugins: [remark-heading-id](https://github.com/imcuttle/remark-heading-id) to make header ids work (as in Contents here), [remark-rehype](https://github.com/remarkjs/remark-rehype) and [rehype-raw](https://github.com/rehypejs/rehype-raw) for full HTML tag support, and [rehype-starry-night](https://github.com/Microflash/rehype-starry-night) to prettify code snippets. Never thought it would be this complex to make Markdown work, think there must be a better way...
 
 ## Time machine! {#time-machine}
 
@@ -182,3 +179,5 @@ Fun (?) facts:
 ## Final thoughts
 
 It was fun to document the experience. I certainly learned a lot about RSC, tried some modern CSS with `:has` and container queries, and stretched my UI design skills (and struggled a lot about it). See you next year in a similar guide?
+
+</div>
