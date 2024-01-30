@@ -1,10 +1,10 @@
 import HomePage from "./home-page";
 import React from "react";
-import { queryDatabase, queryItemsDatabase } from "../api/queryDatabase";
-import { parseItemProperties, parseMainProperties } from "../utils/parseProps";
-import { MainData, Project } from "../components/2023/interfaces";
-import projects from "../backups/projects";
-import { mainData } from "../backups/mainData";
+import { queryDatabase, queryItemsDatabase } from "@/api/queryDatabase";
+import { parseItemProperties, parseMainProperties } from "@/utils/parseProps";
+import { MainData, Project } from "@/2023/interfaces";
+import projects from "@/backups/projects";
+import { mainData } from "@/backups/mainData";
 
 async function getData() {
   let items: Project[] = projects;

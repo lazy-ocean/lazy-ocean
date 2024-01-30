@@ -1,0 +1,51 @@
+.page {
+  height: 100%;
+  padding: var(--spacings-s) var(--spacings-s) 0 var(--spacings-s);
+}
+
+.fortuneBlock {
+  flex: 1;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacings-xs);
+  text-align: center;
+  margin-block-start: var(--spacings-s);
+}
+
+.cards {
+  display: flex;
+  gap: var(--spacings-s);
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  height: 20rem;
+  width: 20rem;
+  background-color: var(--main-colour);
+  box-shadow: var(--shadow);
+  border: var(--dashed-border-m);
+  border-radius: var(--border-radius);
+  padding: var(--spacings-s);
+  display: flex;
+  background-color: var(--palette-offwhite);
+}
+
+.hiddenCard {
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.card img {
+  height: 15rem;
+}
+
+.hiddenCard img {
+  height: 10rem;
+}
+
+.card a {
+  border-bottom: var(--dashed-border-s);
+  font-size: 1.4rem;
+}

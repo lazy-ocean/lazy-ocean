@@ -1,11 +1,10 @@
 import React from "react";
-import { Project } from "../interfaces";
-import styles from "./Cards.module.css";
+import { Project } from "@/2023/interfaces";
 import Card from "./Card";
 
 const Cards = ({ items }: { items: Project[] }) => (
   <>
-    <div className={styles.wrapper}>
+    <div className="flexColumn" style={{ gap: "var(--spacings-s)" }}>
       {items.map((card: Project, i) => (
         <Card card={card} i={i + 1} key={i} />
       ))}

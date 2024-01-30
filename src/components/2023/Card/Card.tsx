@@ -1,8 +1,8 @@
 import React from "react";
-import { TechStack, Project, Tags } from "../interfaces";
-import Label from "../Label/Label";
+import { TechStack, Project, Tags } from "@/2023/interfaces";
+import Label from "@/2023/Label/Label";
 import styles from "./Card.module.css";
-import Github from "../SocialLinks/GithubLink";
+import Github from "@/2023/SocialLinks/GithubLink";
 
 interface CardProps {
   card: Project;
@@ -18,22 +18,26 @@ const colorMap: {
   [Tags.learning]: "#FFC5C8",
 };
 
+const CardLabels = ({ stack }: { stack: TechStack[] }) => (
+  <ul className={styles.labels}>
+    {stack.map((item: TechStack, i) => (
+      <Label text={item} key={i} />
+    ))}
+  </ul>
+);
+
+const CardImage = ({ image, title }: { image: string; title: string }) => (
+  <div className={`${styles.cardImageWrapper} flexColumn`}>
+    <img
+      src={image}
+      className={styles.cardImage}
+      alt={`Screenshot of ${title}`}
+    />
+  </div>
+);
+
 const Card = ({ card, i }: CardProps) => {
   const { title, tag, date, text, stack, color, link, github, image } = card;
-
-  const CardLabels = () => (
-    <ul className={styles.labels}>
-      {stack.map((item: TechStack, i) => (
-        <Label text={item} key={i} />
-      ))}
-    </ul>
-  );
-
-  const CardImage = () => (
-    <div className={styles.cardImageWrapper}>
-      <img src={image} className={styles.cardImage} />
-    </div>
-  );
 
   return (
     <div
@@ -44,7 +48,6 @@ const Card = ({ card, i }: CardProps) => {
       <div
         className={`${styles.container} ${styles.childPosition}`}
         style={{ "--main-colour": color, "--index": i } as any}
-        color={color}
       >
         <div className={styles.cardTextWrapper}>
           <div className={styles.header}>
@@ -57,18 +60,18 @@ const Card = ({ card, i }: CardProps) => {
               <h2>{title}</h2>
             </a>
             <h3>{date}</h3>
-            <div
+            <span
               className={styles.tag}
               style={{ "--main-colour": colorMap[tag] } as any}
             >
               {tag}
-            </div>
+            </span>
           </div>
           <p>{text}</p>
           {github && <Github link={github} />}
-          <CardLabels />
+          <CardLabels stack={stack} />
         </div>
-        {image && <CardImage />}
+        {image && <CardImage image={image} title={title} />}
       </div>
     </div>
   );

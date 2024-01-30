@@ -14,11 +14,18 @@
     "isolatedModules": true,
     "jsx": "preserve",
     "incremental": true,
+    "baseUrl": "src",
     "plugins": [
       {
         "name": "next"
       }
-    ]
+    ],
+    "paths": {
+      "@/2023/*": ["components/2023/*"],
+      "@/api/*": ["api/*"],
+      "@/backups/*": ["backups/*"],
+      "@/utils/*": ["utils/*"]
+    }
   },
   "include": [
     "next-env.d.ts",

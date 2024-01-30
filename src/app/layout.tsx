@@ -8,7 +8,6 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://lazy-ocean.vercel.app/"),
   title: "Vladlena | Frontend Engineer",
   description: "I am Vladlena Panchenko and I am a frontend engineer",
-  icons: "icon.ico",
   openGraph: {
     description:
       "Hello! 👋 I am Vladlena Panchenko and I am a frontend engineer",
@@ -49,9 +48,6 @@ export default function RootLayout({
       lang="en"
       className={`${quicksand.variable} ${myFont.variable} ${raleway.variable}`}
     >
-      <Head>
-        <link rel="icon" href="/icon.ico" sizes="any" />
-      </Head>
       <body>{children}</body>
     </html>
   );

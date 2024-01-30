@@ -1,8 +1,8 @@
 "use client";
 import Link from "next/link";
 import styles from "./TimeMachine.module.css";
-import { useCallback, useEffect, useMemo, useState } from "react";
-import { Year } from "../interfaces";
+import { useCallback, useEffect, useState } from "react";
+import { Year } from "@/2023/interfaces";
 
 const checkIfVisible = (): boolean => {
   const currentOffset = window.scrollY;
@@ -31,7 +31,7 @@ export const TimeMachineBtn = ({ current }: { current: Year }) => {
         styles[current]
       }`}
     >
-      <div className={styles.expandingButtons}>
+      <div className={`${styles.expandingButtons} flexColumn`}>
         {current !== Year.twentyOne && (
           <Link href="/2021" className={styles.first}>
             2021

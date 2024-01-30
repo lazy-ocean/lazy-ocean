@@ -32,7 +32,7 @@
   margin-top: var(--spacings-xs);
 }
 
-.skills div {
+.skills ul {
   display: flex;
   gap: var(--spacings-xs);
   flex-wrap: wrap;

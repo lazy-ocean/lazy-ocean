@@ -1,0 +1,296 @@
+:root {
+  --highlight-background-color: hsl(0, 0%, 100%);
+  --highlight-border-color: hsl(208, 21%, 86%);
+  --highlight-code-highlight: hsl(39.85deg 100% 88.66%);
+  --hlBackgroundColor: var(--highlight-background-color, hsl(240, 20%, 2%));
+  --hlBorderThickness: var(--highlight-border-thickness, 1px);
+  --hlBorderColor: var(--highlight-border-color, hsl(208, 21%, 12%));
+  --hlBorderRadius: var(--highlight-border-radius, 12px);
+  --hlFontFamilyMono: ui-monospace, SFMono-Regular, "Roboto Mono", Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  --hlFontFamilyCode: var(--highlight-font-mono, var(--hlFontFamilyMono));
+  --hlCodeHighlight: var(--highlight-code-highlight, hsl(208, 19%, 13%));
+  --hlLineNumberColor: var(
+    --highlight-color-line-number,
+    var(--color-prettylights-syntax-sublimelinter-gutter-mark)
+  );
+  --hlLineNumberColorHighlighted: var(
+    --highlight-color-line-number-highlighted,
+    var(--color-prettylights-syntax-comment)
+  );
+
+  --color-prettylights-syntax-comment: #6e7781;
+  --color-prettylights-syntax-constant: #006af1;
+  --color-prettylights-syntax-entity: #219d02;
+  --color-prettylights-syntax-storage-modifier-import: #24292f;
+  --color-prettylights-syntax-entity-tag: #006af1;
+  --color-prettylights-syntax-keyword: #cf222e;
+  --color-prettylights-syntax-string: #c70ab1;
+  --color-prettylights-syntax-variable: #953800;
+  --color-prettylights-syntax-brackethighlighter-unmatched: #82071e;
+  --color-prettylights-syntax-invalid-illegal-text: #f6f8fa;
+  --color-prettylights-syntax-invalid-illegal-bg: #82071e;
+  --color-prettylights-syntax-carriage-return-text: #f6f8fa;
+  --color-prettylights-syntax-carriage-return-bg: #cf222e;
+  --color-prettylights-syntax-string-regexp: #116329;
+  --color-prettylights-syntax-markup-list: #3b2300;
+  --color-prettylights-syntax-markup-heading: #219d02;
+  --color-prettylights-syntax-markup-italic: #24292f;
+  --color-prettylights-syntax-markup-bold: #24292f;
+  --color-prettylights-syntax-markup-deleted-text: #82071e;
+  --color-prettylights-syntax-markup-deleted-bg: #ffebe9;
+  --color-prettylights-syntax-markup-inserted-text: #116329;
+  --color-prettylights-syntax-markup-inserted-bg: #dafbe1;
+  --color-prettylights-syntax-markup-changed-text: #953800;
+  --color-prettylights-syntax-markup-changed-bg: #ffd8b5;
+  --color-prettylights-syntax-markup-ignored-text: #eaeef2;
+  --color-prettylights-syntax-markup-ignored-bg: #0550ae;
+  --color-prettylights-syntax-meta-diff-range: #8250df;
+  --color-prettylights-syntax-brackethighlighter-angle: #57606a;
+  --color-prettylights-syntax-sublimelinter-gutter-mark: #8c959f;
+  --color-prettylights-syntax-constant-other-reference-link: #0a3069;
+}
+
+.pl-c {
+  color: var(--color-prettylights-syntax-comment);
+}
+
+.pl-c1,
+.pl-s .pl-v {
+  color: var(--color-prettylights-syntax-constant);
+}
+
+.pl-e,
+.pl-en {
+  color: var(--color-prettylights-syntax-entity);
+}
+
+.pl-smi,
+.pl-s .pl-s1 {
+  color: var(--color-prettylights-syntax-storage-modifier-import);
+}
+
+.pl-ent {
+  color: var(--color-prettylights-syntax-entity-tag);
+}
+
+.pl-k {
+  color: var(--color-prettylights-syntax-keyword);
+}
+
+.pl-s,
+.pl-pds,
+.pl-s .pl-pse .pl-s1,
+.pl-sr,
+.pl-sr .pl-cce,
+.pl-sr .pl-sre,
+.pl-sr .pl-sra {
+  color: var(--color-prettylights-syntax-string);
+}
+
+.pl-v,
+.pl-smw {
+  color: var(--color-prettylights-syntax-variable);
+}
+
+.pl-bu {
+  color: var(--color-prettylights-syntax-brackethighlighter-unmatched);
+}
+
+.pl-ii {
+  color: var(--color-prettylights-syntax-invalid-illegal-text);
+  background-color: var(--color-prettylights-syntax-invalid-illegal-bg);
+}
+
+.pl-c2 {
+  color: var(--color-prettylights-syntax-carriage-return-text);
+  background-color: var(--color-prettylights-syntax-carriage-return-bg);
+}
+
+.pl-sr .pl-cce {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-string-regexp);
+}
+
+.pl-ml {
+  color: var(--color-prettylights-syntax-markup-list);
+}
+
+.pl-mh,
+.pl-mh .pl-en,
+.pl-ms {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-heading);
+}
+
+.pl-mi {
+  font-style: italic;
+  color: var(--color-prettylights-syntax-markup-italic);
+}
+
+.pl-mb {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-markup-bold);
+}
+
+.pl-md {
+  color: var(--color-prettylights-syntax-markup-deleted-text);
+  background-color: var(--color-prettylights-syntax-markup-deleted-bg);
+}
+
+.pl-mi1 {
+  color: var(--color-prettylights-syntax-markup-inserted-text);
+  background-color: var(--color-prettylights-syntax-markup-inserted-bg);
+}
+
+.pl-mc {
+  color: var(--color-prettylights-syntax-markup-changed-text);
+  background-color: var(--color-prettylights-syntax-markup-changed-bg);
+}
+
+.pl-mi2 {
+  color: var(--color-prettylights-syntax-markup-ignored-text);
+  background-color: var(--color-prettylights-syntax-markup-ignored-bg);
+}
+
+.pl-mdr {
+  font-weight: bold;
+  color: var(--color-prettylights-syntax-meta-diff-range);
+}
+
+.pl-ba {
+  color: var(--color-prettylights-syntax-brackethighlighter-angle);
+}
+
+.pl-sg {
+  color: var(--color-prettylights-syntax-sublimelinter-gutter-mark);
+}
+
+.pl-corl {
+  text-decoration: underline;
+  color: var(--color-prettylights-syntax-constant-other-reference-link);
+}
+
+.highlight {
+  --hlBackgroundColor: var(--highlight-background-color, hsl(240, 20%, 2%));
+  --hlBorderThickness: var(--highlight-border-thickness, 1px);
+  --hlBorderColor: var(--highlight-border-color, hsl(208, 21%, 12%));
+  --hlBorderRadius: var(--highlight-border-radius, 12px);
+  --hlFontFamilyMono: ui-monospace, SFMono-Regular, "Roboto Mono", Menlo, Monaco,
+    Consolas, "Liberation Mono", "Courier New", monospace;
+  --hlFontFamilyCode: var(--highlight-font-mono, var(--hlFontFamilyMono));
+  --hlCodeHighlight: var(--highlight-code-highlight, hsl(208, 19%, 13%));
+  --hlLineNumberColor: var(
+    --highlight-color-line-number,
+    var(--color-prettylights-syntax-sublimelinter-gutter-mark)
+  );
+  --hlLineNumberColorHighlighted: var(
+    --highlight-color-line-number-highlighted,
+    var(--color-prettylights-syntax-comment)
+  );
+
+  background-color: var(--hlBackgroundColor);
+  border: var(--hlBorderThickness) solid var(--hlBorderColor);
+  border-radius: var(--hlBorderRadius);
+}
+
+.highlight:focus-within {
+  outline-color: var(--hlBorderColor);
+  outline-style: solid;
+  outline-width: var(--hlBorderThickness);
+  outline-offset: -0.125em;
+}
+
+.highlight-header {
+  display: flex;
+  align-items: center;
+  gap: 1ch;
+  border-block-end: 1px solid var(--hlBorderColor);
+  padding: 0.75ch;
+  font-size: 0.75em;
+}
+
+.highlight-language {
+  font-family: var(--hlFontFamilyCode);
+  background-color: var(--hlCodeHighlight);
+  padding: 0.75ch 1ch;
+  border-radius: calc(var(--hlBorderRadius) / 1.5);
+}
+
+.highlight pre {
+  background-color: transparent;
+  border: none;
+  overflow-x: auto;
+}
+
+.highlight pre > code {
+  display: grid;
+  padding: 1em 0;
+  cursor: auto;
+  touch-action: auto;
+}
+
+.highlight pre .line {
+  border-left: 2px solid transparent;
+  padding-left: 1ch;
+  padding-right: 1ch;
+}
+
+.highlight pre .line:focus:not(:focus-visible),
+.highlight pre .line:hover {
+  background-color: var(--hlCodeHighlight);
+}
+
+.highlight pre .line:focus:not(:focus-visible) .line-number,
+.highlight pre .line:hover .line-number {
+  color: var(--hlLineNumberColorHighlighted);
+}
+
+.highlight pre .line .line-number {
+  user-select: none;
+  margin-right: 1em;
+  text-align: right;
+  color: var(--hlLineNumberColor);
+}
+
+.highlight pre .line[data-highlighted] {
+  background-color: var(--hlCodeHighlight);
+  border-left-color: var(--hlLineNumberColorHighlighted);
+}
+
+.highlight pre .line[data-highlighted] .line-number {
+  color: var(--hlLineNumberColorHighlighted);
+}
+
+.highlight pre .line .line-prompt::before {
+  margin-right: 1ch;
+  vertical-align: middle;
+  content: "";
+  mask-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' fill-rule='evenodd' clip-rule='evenodd' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M17.179 5.597C13.491 3.081 5.957 3.057 6.344 8.186c.399 5.287 11.204 1.813 11.566 7.102.369 5.375-8 5.71-11.832 2.666M12.017 2v20'/%3E%3C/svg%3E");
+  mask-repeat: no-repeat;
+  mask-position: top center;
+  mask-size: contain;
+  background-color: currentColor;
+  color: var(--hlLineNumberColor);
+  display: inline-block;
+  text-decoration: none;
+  user-select: none;
+  width: 1em;
+  height: 1em;
+  min-width: 1em;
+  min-height: 1em;
+}
+
+code[data-code-lang] {
+  --hlBackgroundColorInline: var(
+    --highlight-background-color-inline,
+    hsl(208, 21%, 14%)
+  );
+
+  font-family: var(--highlight-font-mono);
+  background-color: var(--hlBackgroundColorInline);
+  padding-left: 0.5ch;
+  padding-right: 0.5ch;
+  font-size: 0.95em;
+  border-radius: 0.5ch;
+}

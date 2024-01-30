@@ -1,0 +1,35 @@
+.accordion .accordionTitle {
+  margin-block-start: var(--spacings-s);
+  cursor: pointer;
+}
+
+.accordionContent {
+  margin-block-start: var(--spacings-xs);
+  overflow: hidden;
+  max-height: 0px;
+  transition: max-height 0.3s ease-out;
+  display: block;
+}
+
+.accordionContent[aria-hidden="false"] {
+  max-height: var(--calcH);
+}
+
+.accordionTitle {
+  display: flex;
+  gap: var(--spacings-xxs);
+  align-items: center;
+}
+
+.accordionTitle svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.accordionTitle[aria-expanded="true"] > svg {
+  transform: rotate(180deg);
+}
+
+.accordionTitle[aria-expanded="false"] > svg {
+  transform: rotate(0deg);
+}

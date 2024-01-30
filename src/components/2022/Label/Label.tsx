@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useMemo } from "react";
 import { TechStack } from "../interfaces";
 import styles from "./Label.module.css";
 
@@ -26,10 +26,12 @@ const colorMap: Map = {
 };
 
 const Label = ({ text }: LabelsProps) => {
-  const colour =
-    colorMap[text] ||
-    Object.values(colorMap)[Math.floor(Math.random() * 10) + 0];
-
+  const colour = useMemo(
+    () =>
+      colorMap[text] ||
+      Object.values(colorMap)[Math.floor(Math.random() * 10) + 0],
+    [text]
+  );
   return (
     <li className={styles.label} style={{ backgroundColor: colour }}>
       {text}

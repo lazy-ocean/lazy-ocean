@@ -6,11 +6,16 @@
 
   --palette-bg: rgb(251, 244, 236);
   --palette-text: rgb(46, 46, 48);
+  --palette-offwhite: #fffdfb;
 
   --palette-accent: #ffae00;
 
   --dashed-border-m: 3px dashed black;
   --dashed-border-s: 2px dashed black;
+
+  --border-radius: 1rem;
+
+  --shadow: 8px 8px var(--main-colour, black);
 }
 
 @media only screen and (max-width: 900px) {
@@ -26,6 +31,7 @@ body {
   font-family: var(--font-main), sans-serif;
   background-color: var(--palette-bg);
   color: var(--palette-text);
+  height: 100%;
 }
 
 a {
@@ -62,7 +68,7 @@ h3 {
 }
 
 p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
 }
 
 body {
@@ -80,4 +86,9 @@ body {
 
 .hidden {
   display: none;
+}
+
+.flexColumn {
+  display: flex;
+  flex-direction: column;
 }

@@ -4,7 +4,7 @@
   top: 45lvh;
   right: 0%;
   z-index: 10000;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--palette-offwhite, white);
   padding: 0.8rem 0;
   border: var(--dashed-border-s);
   border-right: 0;
@@ -27,15 +27,13 @@
 }
 
 .expandingButtons {
-  display: flex;
   visibility: hidden;
   opacity: 0;
-  flex-direction: column;
   position: absolute;
   top: -9.7rem;
   width: 5.6rem;
   right: 0;
-  background-color: #fff;
+  background-color: var(--palette-offwhite, white);
   border: var(--dashed-border-s);
   border-bottom: 0;
   border-right: 0;

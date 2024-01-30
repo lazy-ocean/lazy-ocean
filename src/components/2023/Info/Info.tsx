@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./Info.module.css";
-import SocialLinks from "../SocialLinks/SocialLinks";
+import SocialLinks from "@/2023/SocialLinks/SocialLinks";
 
 const MainInfo = ({
   header,

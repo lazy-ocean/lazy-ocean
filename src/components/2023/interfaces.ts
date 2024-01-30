@@ -81,3 +81,33 @@ export interface SocialLink {
   link: string;
   icon?: React.ReactElement;
 }
+
+export interface Post {
+  title?: string;
+  date?: string;
+  slug?: string;
+  coverImage?: string;
+  excerpt?: string;
+  content?: string;
+  color?: string;
+  tags?: string;
+  meta?: { description: string };
+}
+
+export enum BlogTags {
+  frontend = "frontend",
+  music = "music",
+  a11y = "a11y",
+  movies = "movies",
+  design = "design",
+}
+
+export enum BitsTypes {
+  concert = "concert",
+  movie = "movie",
+  album = "album",
+  book = "book",
+  podcast = "podcast",
+}
+
+export type Bits = Record<BitsTypes, string>;

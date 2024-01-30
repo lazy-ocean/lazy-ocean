@@ -9,8 +9,8 @@ import {
   Tags,
   TechStack,
 } from "../components/2023/interfaces";
-import { mainData } from "../backups/mainData";
-import { Project, AccentColours } from "../components/2023/interfaces";
+import { mainData } from "@/backups/mainData";
+import { Project, AccentColours } from "@/2023/interfaces";
 
 export const parseMainProperties = (
   database: QueryDatabaseResponse

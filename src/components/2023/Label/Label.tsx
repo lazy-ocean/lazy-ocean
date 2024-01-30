@@ -1,23 +1,26 @@
 "use client";
-import React, { useEffect, useState } from "react";
-import { TechStack } from "../interfaces";
+import React, { useEffect, useMemo, useState } from "react";
+import { BlogTags, TechStack } from "@/2023/interfaces";
 import styles from "./Label.module.css";
-import { skills } from "../../../backups/skills";
+import { skills } from "@/backups/skills";
 
 interface LabelsProps {
-  text: TechStack;
+  text: TechStack | BlogTags | string;
   active?: string | null;
   setActive?: (arg: string | null) => void;
 }
 
 type Map = {
-  [key in TechStack]?: string;
+  [key in TechStack | BlogTags]?: string;
 };
 
 const colorMap: Map = {
   [TechStack.TypeScript]: "#F1C0E8",
+  [BlogTags.music]: "#F1C0E8",
   [TechStack.Next]: "#d4d4d4",
+  [BlogTags.frontend]: "#ffaaaa",
   [TechStack.Jest]: "#CDE4B4",
+  [BlogTags.movies]: "#CDE4B4",
   [TechStack.a11y]: "#ffcccc",
   [TechStack.JavaScript]: "#fae97a",
   [TechStack.node]: "#9ECEE6",
@@ -28,12 +31,20 @@ const colorMap: Map = {
   [TechStack.styled]: "#b9e7de",
   [TechStack.Remix]: "#ffe3a1",
   [TechStack.cssModules]: "#a9bdfd",
+  [BlogTags.design]: "#b6e2b9",
 };
 
+const isTechStack = (txt: string | TechStack | BlogTags): txt is TechStack =>
+  colorMap[txt as TechStack | BlogTags] !== undefined;
+
 const Label = ({ text, active, setActive }: LabelsProps) => {
-  const colour =
-    colorMap[text] ||
-    Object.values(colorMap)[Math.floor(Math.random() * 10) + 0];
+  const colour = useMemo(
+    () =>
+      isTechStack(text)
+        ? colorMap[text]
+        : Object.values(colorMap)[Math.floor(Math.random() * 10) + 0],
+    [text]
+  );
 
   const handleClick = () => {
     if (active === text && setActive) {
@@ -78,23 +89,18 @@ const Label = ({ text, active, setActive }: LabelsProps) => {
     }
   }, [active]);
 
-  return !!setActive ? (
+  return (
     <li
       className={`${styles.label} ${
         active && active !== text ? styles.inactive : ""
       }`}
       style={{ ["--color" as string]: colour }}
     >
-      <button onClick={handleClick}>#{text}</button>
-    </li>
-  ) : (
-    <li
-      className={`${styles.label} ${
-        active && active !== text ? styles.inactive : ""
-      }`}
-      style={{ ["--color" as string]: colour }}
-    >
-      #{text}
+      {!!setActive ? (
+        <button onClick={handleClick}>#{text}</button>
+      ) : (
+        `#${text}`
+      )}
     </li>
   );
 };
@@ -105,9 +111,9 @@ export const Labels = ({ tags }: { tags: { [key: string]: TechStack[] } }) => {
   return (
     <>
       {Object.keys(tags || skills).map((name: string) => (
-        <ul key={name} className={styles.skills}>
+        <div key={name} className={styles.skills}>
           <h3>{name}</h3>
-          <div>
+          <ul>
             {tags[name].map((item: TechStack, i: number) => (
               <Label
                 text={item}
@@ -116,8 +122,8 @@ export const Labels = ({ tags }: { tags: { [key: string]: TechStack[] } }) => {
                 setActive={setActive}
               />
             ))}
-          </div>
-        </ul>
+          </ul>
+        </div>
       ))}
     </>
   );
