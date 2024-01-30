@@ -13,8 +13,8 @@ tags: "frontend,design"
 <h2>Contents</h2>
 
 1. [Secret Sauce](#secret-sauce)
-2. [Design](#design)
-3. [Stack: Next.js FTW 🖤](#stack)
+2. [Stack: Next.js FTW 🖤](#stack)
+3. [Design](#design)
 4. [React Server Components and pure-CSS interactions](#rsc)
 5. [CMS, data, posts](#data)
 6. [Time Machine!](#time-machine)
@@ -26,26 +26,6 @@ tags: "frontend,design"
 ## Secret Sauce {#secret-sauce}
 
 I got the inspiration for this post from the always amazing <a href="https://syntax.fm/">Syntax</a> podcast - if you've never heard of it, give it a listen! In one of the episodes last year, they came up with this great idea of Secret Sauce - basically breaking down your website into some ideas and tech stack solutions you've chosen and challenges you've faced. That inspired me to talk about this site in particular: I feel like I've learned quite a lot in trying to get it to look and feel like it does now, and I've got to try some new exciting stuff, so here's a little reflection.
-
-## Design {#design}
-
-I'm just not very good at designing things. Ok, maybe not that bad, but it definitely takes a lot of trial and error to make something look good. For this version, I've taken inspiration from all over, especially the neubrutalism trend that's been going on lately, plus defined vibrant colours, borders and sleek typography.
-
-<figure class='centered'>
-    <img src="/blog/2023-upgrade/option.png"
-         alt="Discarded website design option" class='blogImg'>
-    <figcaption>One of the discarded options</figcaption>
-</figure>
-
-I usually design directly in the browser, trying things out with code rather than drawing and moving things around in Figma or elsewhere. his helps to identify tokens and design them right away: spacings, colours, sizes, fonts, and, in my case, also borders.
-
-I also wanted to preserve the cards animation I've used over the years - for some reason I love it so much I didn't want to let it go, at least not just yet.
-
-<figure class='centered'>
-    <img src="/blog/2023-upgrade/cards.gif"
-         alt="Animated card stacking over the years" style='width: 50%;margin-bottom: 1rem;box-shadow: 0 4px 16px rgb(0 0 0 / 41%);'>
-    <figcaption>Animated card stacking over the years</figcaption>
-</figure>
 
 ## Stack: framework and styling {#stack}
 
@@ -119,6 +99,26 @@ With styled-components:
 ```
 
 <p>  </p>
+
+## Design {#design}
+
+I'm just not very good at designing things. Ok, maybe not that bad, but it definitely takes a lot of trial and error to make something look good. For this version, I've taken inspiration from all over, especially the neubrutalism trend that's been going on lately, plus defined vibrant colours, borders and sleek typography.
+
+<figure class='centered'>
+    <img src="/blog/2023-upgrade/option.png"
+         alt="Discarded website design option" class='blogImg'>
+    <figcaption>One of the discarded options</figcaption>
+</figure>
+
+I usually design directly in the browser, trying things out with code rather than drawing and moving things around in Figma or elsewhere. his helps to identify tokens and design them right away: spacings, colours, sizes, fonts, and, in my case, also borders.
+
+I also wanted to preserve the cards animation I've used over the years - for some reason I love it so much I didn't want to let it go, at least not just yet.
+
+<figure class='centered'>
+    <img src="/blog/2023-upgrade/cards.gif"
+         alt="Animated card stacking over the years" style='width: 50%;margin-bottom: 1rem;box-shadow: 0 4px 16px rgb(0 0 0 / 41%);'>
+    <figcaption>Animated card stacking over the years</figcaption>
+</figure>
 
 ## React Server Components all the way {#rsc}
 

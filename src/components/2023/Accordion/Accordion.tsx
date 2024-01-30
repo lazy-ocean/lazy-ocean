@@ -43,7 +43,7 @@ export const BlogAccordion = ({
 }) => {
   const data = useMemo(
     () => [
-      { uuid: "bits", h: "Things I loved/did lately", content: bits },
+      { uuid: "bits", h: "Bits and pieces", content: bits },
       { uuid: "tags", h: "Tags", content: <Tags tags={tags} /> },
     ],
     [tags, bits]

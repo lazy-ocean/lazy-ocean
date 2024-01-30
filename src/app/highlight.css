@@ -1,7 +1,7 @@
 :root {
   --highlight-background-color: hsl(0, 0%, 100%);
   --highlight-border-color: hsl(208, 21%, 86%);
-  --highlight-code-highlight: hsl(208, 19%, 82%);
+  --highlight-code-highlight: hsl(39.85deg 100% 88.66%);
   --hlBackgroundColor: var(--highlight-background-color, hsl(240, 20%, 2%));
   --hlBorderThickness: var(--highlight-border-thickness, 1px);
   --hlBorderColor: var(--highlight-border-color, hsl(208, 21%, 12%));

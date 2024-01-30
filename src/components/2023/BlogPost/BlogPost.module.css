@@ -22,6 +22,7 @@
 .post ol {
   margin: 0;
   padding: 0;
+  margin-inline-start: 0.5rem;
 }
 
 .post li {
@@ -86,11 +87,25 @@
 }
 
 @media (max-width: 1050px) {
+  .post p {
+    line-height: 2rem;
+  }
+
   .post :global figure {
     margin: var(--spacings-xs);
   }
 
   .post :global figure img {
     width: 100% !important;
+  }
+
+  .post pre {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 850px) {
+  .post pre {
+    white-space: pre-wrap !important;
   }
 }
