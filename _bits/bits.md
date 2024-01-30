@@ -1,7 +1,7 @@
 ---
-concert: "Bombay Bicycle Club"
+concert: "The Vaccines"
 movie: "Poor Things"
 album: "Lahai by Sampha"
-book: "Man and Boy by Tony Parsons"
+book: "Margarettown by Gabrielle Zevin"
 podcast: "Syntax"
 ---

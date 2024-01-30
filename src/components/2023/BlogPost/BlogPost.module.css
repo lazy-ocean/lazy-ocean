@@ -59,6 +59,7 @@
   display: block;
   overflow: auto;
   min-width: 20%;
+  align-self: flex-start;
 }
 
 .post :global #main {
@@ -66,6 +67,10 @@
   border-radius: var(--border-radius);
   padding: 0 var(--spacings-s);
   background-color: var(--palette-offwhite);
+}
+
+.post h2 {
+  scroll-margin-top: 2rem;
 }
 
 @media (max-width: 1200px) {
