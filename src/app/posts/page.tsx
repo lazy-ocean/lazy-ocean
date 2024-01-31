@@ -15,6 +15,7 @@ export const metadata: Metadata = {
     url: "https://lazy-ocean.vercel.app/posts",
     title: "Vlada's blog",
     type: "website",
+    images: ["opengraph-image.png"],
   },
 };
 
