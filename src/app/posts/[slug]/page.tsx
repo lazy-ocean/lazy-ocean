@@ -14,20 +14,12 @@ export const generateMetadata = async ({
   params: { slug: string };
 }): Promise<Metadata> => {
   const blog = await loadPostData(params.slug);
-  /* s */
+
   return {
     title: blog.post.title,
     description: blog.post.meta!.description,
     openGraph: {
       url: `https://lazy-ocean.vercel.app/posts/${params.slug}`,
-      images: [
-        {
-          url: `https://lazy-ocean.vercel.app/api/og?slug=${params.slug}`,
-          width: 1200,
-          height: 630,
-          alt: blog.post.title,
-        },
-      ],
     },
   };
 };

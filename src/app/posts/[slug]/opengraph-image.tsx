@@ -1,22 +1,17 @@
-// @ts-nocheck
 import { ImageResponse } from "next/og";
-import type { NextRequest } from "next/server";
 import { getPostsName } from "@/api/getOGmeta";
 
 export const runtime = "edge";
 
-const size = {
+export const size = {
   width: 1200,
   height: 630,
 };
 
-const contentType = "image/png";
+export const contentType = "image/png";
 
-export async function GET(request: NextRequest) {
-  const { searchParams } = new URL(request.url);
-  const slug = searchParams.get("slug");
-
-  const post = getPostsName(slug as string);
+export default async function Image({ params }: { params: { slug: string } }) {
+  const post = getPostsName(params.slug);
 
   const fontData = await fetch(
     new URL("SandeMore-Regular.otf", import.meta.url)
@@ -38,21 +33,19 @@ export async function GET(request: NextRequest) {
           border: "10px dashed black",
         }}
       >
-        {
-          <div style={{ display: "flex", gap: "20px", marginBottom: "20px" }}>
-            {post.images?.split(",").map((img: string) => (
-              <img
-                style={{
-                  width: "100px",
-                }}
-                key={img}
-                src={`http://localhost:3000/${img}`}
-                alt=""
-                role="presentation"
-              />
-            ))}
-          </div>
-        }
+        <div style={{ display: "flex", gap: "20px", marginBottom: "20px" }}>
+          {post.images?.split(",").map((img: string) => (
+            <img
+              style={{
+                width: "100px",
+              }}
+              key={img}
+              src={`https://lazy-ocean.vercel.app/${img}`}
+              alt=""
+              role="presentation"
+            />
+          ))}
+        </div>
         <p
           style={{
             fontSize: 100,
