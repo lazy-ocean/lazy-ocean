@@ -2,7 +2,7 @@
 title: "How this website was built"
 excerpt: "I always treat this website as a playground for things I wanted to try. The recent update was no different! Here's the overview of some things I've done and decisions I've made along the way. "
 coverImage: "stickers/design.png,stickers/programming.png,stickers/sand-clock.png"
-date: "2020-03-16T05:35:07.322Z"
+date: "2024-01-31T18:30:05.322Z"
 meta:
   description: "How this website was built - 2023/2024 edition"
 color: "#fae97a"
