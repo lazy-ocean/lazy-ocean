@@ -1,6 +1,5 @@
 import { Metadata } from "next";
-import Head from "next/head";
-import { Quicksand, Raleway } from "next/font/google";
+import { Raleway, Poppins } from "next/font/google";
 import "./global.css";
 import localFont from "next/font/local";
 
@@ -24,18 +23,18 @@ const myFont = localFont({
   variable: "--font-header",
 });
 
-const quicksand = Quicksand({
-  weight: ["300", "700"],
-  display: "swap",
-  subsets: ["latin"],
-  variable: "--font-main",
-});
-
 const raleway = Raleway({
   weight: ["300", "700"],
   display: "swap",
   subsets: ["latin"],
   variable: "--font-raleway",
+});
+
+const poppins = Poppins({
+  weight: ["200", "400"],
+  display: "swap",
+  subsets: ["latin"],
+  variable: "--font-main",
 });
 
 export default function RootLayout({
@@ -46,7 +45,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${quicksand.variable} ${myFont.variable} ${raleway.variable}`}
+      className={`${myFont.variable} ${raleway.variable} ${poppins.variable}`}
     >
       <body>{children}</body>
     </html>

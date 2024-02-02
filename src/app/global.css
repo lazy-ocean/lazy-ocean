@@ -68,7 +68,12 @@ h3 {
 }
 
 p {
-  font-size: 1.4rem;
+  font-size: 1.2rem;
+  font-weight: 200;
+}
+
+li {
+  font-weight: 200;
 }
 
 body {

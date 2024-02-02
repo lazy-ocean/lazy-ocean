@@ -9,6 +9,7 @@
   font-size: 1.4rem;
   border-block-end: var(--dashed-border-s);
   transition: border 0.2s ease-in-out;
+  font-weight: 200;
 }
 
 .backLink:hover,
