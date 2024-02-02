@@ -100,6 +100,7 @@ export enum BlogTags {
   a11y = "a11y",
   movies = "movies",
   design = "design",
+  finds = "finds",
 }
 
 export enum BitsTypes {

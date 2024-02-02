@@ -28,7 +28,8 @@
 
 .labels {
   display: flex;
-  gap: var(--spacings-s);
+  column-gap: var(--spacings-s);
+  flex-wrap: wrap;
 }
 
 .icons {
@@ -83,5 +84,6 @@
     grid-template-rows: auto;
     width: 100%;
     margin-block-end: var(--spacings-s);
+    max-width: min-content;
   }
 }

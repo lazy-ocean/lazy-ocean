@@ -58,7 +58,14 @@ export default function Index() {
           <h2>All posts</h2>
           <div className={styles.allPosts}>
             {rest.map((post) => (
-              <HeroBlogCard post={post} key={post.slug} />
+              <HeroBlogCard post={post} key={post.slug}>
+                {post.coverImage &&
+                  post.coverImage
+                    .split(",")
+                    .map((img) => (
+                      <img key={img} src={img} alt="" role="presentation" />
+                    ))}
+              </HeroBlogCard>
             ))}
           </div>
         </>

@@ -22,6 +22,7 @@ const colorMap: Map = {
   [TechStack.Jest]: "#CDE4B4",
   [BlogTags.movies]: "#CDE4B4",
   [TechStack.a11y]: "#ffcccc",
+  [BlogTags.finds]: "#fae97a",
   [TechStack.JavaScript]: "#fae97a",
   [TechStack.node]: "#9ECEE6",
   [TechStack.gulp]: "#FFADAD",

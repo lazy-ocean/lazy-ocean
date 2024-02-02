@@ -21,7 +21,7 @@ export const HeroBlogCard = ({
           color={color}
         >
           <h2>{title}</h2>
-          <div style={{ display: "inline-block" }}>
+          <div style={{ display: "inline-block", width: "100%" }}>
             <p>
               {excerpt} <span className={styles.pseudolink}>Read more...</span>
             </p>
@@ -32,7 +32,7 @@ export const HeroBlogCard = ({
             </ul>
           </div>
           {children && (
-            <div className={styles.icons} aria-role="presentation">
+            <div className={styles.icons} aria-hidden="true">
               {children}
             </div>
           )}

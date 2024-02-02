@@ -74,6 +74,36 @@
   scroll-margin-top: 2rem;
 }
 
+.post :global .hiddenLink {
+  border-bottom: 0;
+  font-weight: 200;
+  font-size: 0.8rem;
+  margin: 0;
+}
+
+.post :global .githubLink::after {
+  background: url("/github.png") no-repeat center center;
+}
+
+.post :global .spotifyLink::after {
+  background: url("/spotify.png") no-repeat center center;
+}
+
+.post :global .spotifyLink::after,
+.post :global .githubLink::after {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  background-size: contain;
+  margin-left: 5px;
+}
+
+.post figcaption {
+  font-weight: 200;
+  text-align: center;
+}
+
 @media (max-width: 1200px) {
   .post {
     display: flex;
