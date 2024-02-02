@@ -2,7 +2,7 @@
 title: "Awesome finds - January 2024"
 excerpt: "Some cool things I enjoyed this month: movies, media, tech. "
 coverImage: "stickers/santa.png,stickers/music.png,stickers/perfume.png"
-date: "2024-02-01T18:30:05.322Z"
+date: "2024-02-02T18:30:05.322Z"
 meta:
   description: "Awesome things I liked enough to write about - January 2024 edition."
 color: "#b3dcfd"
