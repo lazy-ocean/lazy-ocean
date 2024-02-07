@@ -50,7 +50,7 @@ It's been mostly quiet for me, but <a class='spotifyLink' href='https://open.spo
     <figcaption>Quick draft version of Twitterhop: all done in a few hours tops, with data dynamically loaded and stored on the device for privacy</figcaption>
 </figure>
 
-## Products
+## Products {#products}
 
 **Perfume: En Passant by Frederic Malle**: Ultimate, like 100% concentrated lilac, it is more lilac than ever in real life, but somehow not overpowering. Spring vibes! 💟
 

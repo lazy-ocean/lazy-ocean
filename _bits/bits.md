@@ -1,7 +1,7 @@
 ---
 concert: "The Vaccines"
-movie: "Poor Things"
+movie: "The Holdovers"
 album: "Lahai by Sampha"
-book: "Margarettown by Gabrielle Zevin"
+book: "A Testament To Murder by Vivian Conroy"
 podcast: "Syntax"
 ---
