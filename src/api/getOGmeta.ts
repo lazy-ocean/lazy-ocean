@@ -8,6 +8,10 @@ const postsMap: { [key: string]: { title: string; images: string } } = {
     title: "Awesome finds - January 2024",
     images: "stickers/santa.png,stickers/music.png,stickers/perfume.png",
   },
+  "newsletters-tech": {
+    title: "Newsletters I read: frontend + design edition",
+    images: "stickers/email.png,stickers/css.png,stickers/webdesign.png",
+  },
 };
 
 export const getPostsName = (slug: string) => postsMap[slug];

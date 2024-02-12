@@ -33,6 +33,7 @@ const colorMap: Map = {
   [TechStack.Remix]: "#ffe3a1",
   [TechStack.cssModules]: "#a9bdfd",
   [BlogTags.design]: "#b6e2b9",
+  [BlogTags.recommendations]: "#a9bdfd",
 };
 
 const isTechStack = (txt: string | TechStack | BlogTags): txt is TechStack =>

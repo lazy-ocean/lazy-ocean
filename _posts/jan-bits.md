@@ -6,7 +6,7 @@ date: "2024-02-02T18:30:05.322Z"
 meta:
   description: "Awesome things I liked enough to write about - January 2024 edition."
 color: "#b3dcfd"
-tags: "finds,music,movies,frontend"
+tags: "finds,music,movies,frontend,recommendations"
 ---
 
 <div id='contents' class='contents'> 

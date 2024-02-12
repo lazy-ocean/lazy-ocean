@@ -2,6 +2,6 @@
 concert: "The Vaccines"
 movie: "The Holdovers"
 album: "Lahai by Sampha"
-book: "A Testament To Murder by Vivian Conroy"
+book: "Trust by Hernan Diaz"
 podcast: "Syntax"
 ---
