@@ -6,6 +6,7 @@ import styles from "./Main.module.css";
 import MainInfo from "@/2023/Info/Info";
 import { TimeMachineBtn } from "@/2023/TimeMachine/TimeMachineBtn";
 import Github from "@/2023/SocialLinks/GithubLink";
+import BlogLink from "../BlogLink/BlogLink";
 
 interface MainProps extends MainData {
   items: Project[];
@@ -15,15 +16,7 @@ const Main = ({ header, description, tags, items }: MainProps) => (
   <main className={`${styles.container} flexColumn`}>
     <TimeMachineBtn current={Year.twentyThree} />
     <MainInfo header={header} description={description} />
-    <section>
-      <h2>Blog</h2>
-      <p>
-        I run a tiny blog where I write about things I find interesting.{" "}
-        <span className={styles.link}>
-          <a href="/posts">Check it out!</a>
-        </span>
-      </p>
-    </section>
+    <BlogLink />
     <section>
       <h2>Skills</h2>
       <article className={styles.skillsWrapper}>

@@ -17,17 +17,6 @@
   margin-top: 10rem;
 }
 
-.link {
-  border-bottom: var(--dashed-border-s);
-  transition: border-bottom-color 0.2s ease-in-out;
-  line-height: 2.2rem;
-}
-
-.link:hover,
-.link:active {
-  border-bottom-color: var(--palette-accent);
-}
-
 @media only screen and (min-width: 1200px) {
   .container {
     padding: var(--spacings-s) var(--spacings-m);
