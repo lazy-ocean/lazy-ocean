@@ -12,6 +12,10 @@ const postsMap: { [key: string]: { title: string; images: string } } = {
     title: "Newsletters I read: frontend + design edition",
     images: "stickers/email.png,stickers/css.png,stickers/webdesign.png",
   },
+  "dynamic-og-image": {
+    title: "Dynamic OG image with Next.js",
+    images: "stickers/image.png,stickers/meta.png,stickers/code.png",
+  },
 };
 
-export const getPostsName = (slug: string) => postsMap[slug];
+export const getOGMeta = (slug: string) => postsMap[slug];

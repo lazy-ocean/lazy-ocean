@@ -1,7 +1,7 @@
 ---
 concert: "Daria Zawiałow"
-movie: "The Holdovers"
-album: "What Happened To The Beach? by Declan McKenna"
-book: "Trust by Hernan Diaz"
+movie: "Anatony of a Fall"
+album: "Mountainhead by Everything Everything"
+book: "Recursion by Blake Crouch"
 podcast: "Syntax"
 ---

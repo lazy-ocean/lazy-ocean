@@ -1,5 +1,5 @@
 import { ImageResponse } from "next/og";
-import { getPostsName } from "@/api/getOGmeta";
+import { getOGMeta } from "@/api/getOGmeta";
 
 export const runtime = "edge";
 
@@ -11,11 +11,11 @@ export const size = {
 export const contentType = "image/png";
 
 export default async function Image({ params }: { params: { slug: string } }) {
-  const post = getPostsName(params.slug);
-
   const fontData = await fetch(
     new URL("SandeMore-Regular.otf", import.meta.url)
   ).then((res) => res.arrayBuffer());
+
+  const post = getOGMeta(params.slug);
 
   return new ImageResponse(
     (
@@ -40,7 +40,11 @@ export default async function Image({ params }: { params: { slug: string } }) {
                 width: "100px",
               }}
               key={img}
-              src={`https://lazy-ocean.vercel.app/${img}`}
+              src={`${
+                process.env.NODE_ENV === "production"
+                  ? "https://lazy-ocean.vercel.app/"
+                  : "http://localhost:3000/"
+              }${img}`}
               alt=""
               role="presentation"
             />
