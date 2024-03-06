@@ -7,14 +7,15 @@ meta:
   description: "Awesome things I liked enough to write about - February 2024 edition."
 color: "#b3dcfd"
 tags: "finds,music,movies,books,frontend,recommendations"
+embeds: true
 ---
 
 <div id='contents' class='contents'> 
 <h2>Contents</h2>
 
 1. [Books](#books)
-2. [Movies](#movies)
-3. [Music](#music)
+2. [Music](#music)
+3. [Movies](#movies)
 4. [Tech articles](#tech)
 5. [Curiosities](#curiosities)
 </div>
@@ -28,17 +29,9 @@ tags: "finds,music,movies,books,frontend,recommendations"
 
 **<a href="https://en.wikipedia.org/wiki/Recursion_(Crouch_novel)" target="_blank"> Recursion by Blake Crouch</a>**: This is my second book by Blake Crouch, and while the first left me with the feeling "this should be a short sci-fi story instead", **Recursion** is much more balanced and, frankly, less mundane. Even in the most extreme twists and turns, it never leaves you to figure everything out on your own, which can be a bit annoying, so I think it is a decent read for someone who enjoys sci-fi, but only _from time to time_.
 
-## Movies {#movies}
-
-**<a href="https://letterboxd.com/film/the-holdovers/" target="_blank">The Holdovers</a>**: Such a sweet thing, I really enjoyed the warmth of this movie. Yeah it was a bit difficult at times to zoom out and not think of <a href="https://letterboxd.com/film/dead-poets-society/" target="_blank">Dead Poets Society</a> (especially given that I've watched it about 5 times, or more), but even with similarities, it is still a great, quite comforting movie.
-
-**<a href='https://letterboxd.com/film/anatomy-of-a-fall/' target="_blank">Anatony of a Fall</a>**: I really liked how I felt "wow, that's good" and not much else right after watching it, but then I went back to it for a whole week, rethinking whole scenes. _**SPOILER ALERT**_, it leaves you with the same kind of "and that's it?" dissatisfaction, longing for _something_ you don't even know what, it's absolutely fantastic. And Sandra Hüller has totally won my heart.
-
-<blockquote class="twitter-tweet centered"><p lang="en" dir="ltr">Sandra Hüller&#39;s defending her child scene in Anatomy of a Fall remains the best performance of 2023 to me. And she deserves more than this. <a href="https://t.co/lMj5EB4K1Z">pic.twitter.com/lMj5EB4K1Z</a></p>&mdash; sharon🕯️sandra hüller Oscar nominee (@iamsharonle) <a href="https://twitter.com/iamsharonle/status/1759306381876949005?ref_src=twsrc%5Etfw">February 18, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
-
 ## Music
 
-- <a class='spotifyLink' href='spotify:album:1s3ypfinSBGQl36cJSRjOv' target="_blank">Everything Everything's new album</a> is a gem: not the bangers IN YЁ FACE like their previous album (at least its first half), but a breath of fresh air in their own league of no one else.
+- <a class='spotifyLink' href='spotify:album:1s3ypfinSBGQl36cJSRjOv' target="_blank">Everything Everything's new album</a> is a gem: not the bangers IN YE FACE like their previous album (at least its first half), but a breath of fresh air in their own league of no one else.
 - <a class='spotifyLink' href='spotify:track:0eAXtuToazVgRJvKn8Rln9' target="_blank">Sampha</a>, as usual, makes pretty much everyone sound better. Mellow, warm hip-hop that I love so much.
 - <a class='spotifyLink' href='spotify:track:6Qb7YsAqH4wWFUMbGsCpap' target="_blank">D U A L I P A</a>. nuff said
 
@@ -48,6 +41,14 @@ tags: "finds,music,movies,books,frontend,recommendations"
 - <a class='spotifyLink' href='spotify:track:36FZL9SzRh5BhtG1cUyGWr'>girl in red</a> in her new, but still honest and touching and catchy and raw and whatever awesome self.
 
 Eventful!
+
+## Movies {#movies}
+
+**<a href="https://letterboxd.com/film/the-holdovers/" target="_blank">The Holdovers</a>**: Such a sweet thing, I really enjoyed the warmth of this movie. Yeah it was a bit difficult at times to zoom out and not think of <a href="https://letterboxd.com/film/dead-poets-society/" target="_blank">Dead Poets Society</a> (especially given that I've watched it about 5 times, or more), but even with similarities, it is still a great, quite comforting movie.
+
+**<a href='https://letterboxd.com/film/anatomy-of-a-fall/' target="_blank">Anatony of a Fall</a>**: I really liked how I felt "wow, that's good" and not much else right after watching it, but then I went back to it for a whole week, rethinking whole scenes. _**SPOILER ALERT**_, it leaves you with the same kind of "and that's it?" dissatisfaction, longing for _something_ you don't even know what, it's absolutely fantastic. And Sandra Hüller has totally won my heart.
+
+<blockquote class="twitter-tweet centered"><p lang="en" dir="ltr">Sandra Hüller&#39;s defending her child scene in Anatomy of a Fall remains the best performance of 2023 to me. And she deserves more than this. <a href="https://t.co/lMj5EB4K1Z">pic.twitter.com/lMj5EB4K1Z</a></p>&mdash; sharon🕯️sandra hüller Oscar nominee (@iamsharonle) <a href="https://twitter.com/iamsharonle/status/1759306381876949005?ref_src=twsrc%5Etfw">February 18, 2024</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
 
 ## Tech articles {#tech}
 

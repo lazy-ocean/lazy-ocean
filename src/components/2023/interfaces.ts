@@ -92,6 +92,7 @@ export interface Post {
   color?: string;
   tags?: string;
   meta?: { description: string };
+  embeds?: boolean;
 }
 
 export enum BlogTags {

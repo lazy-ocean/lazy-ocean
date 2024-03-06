@@ -28,6 +28,7 @@ export default function Index() {
     "excerpt",
     "color",
     "tags",
+    "embeds",
   ]);
 
   const [heroPost, ...rest] = posts;

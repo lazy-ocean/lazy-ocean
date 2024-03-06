@@ -11,6 +11,7 @@ export const loadPostData = async (slug: string): Promise<{ post: Post }> => {
     "coverImage",
     "tags",
     "meta",
+    "embeds",
   ]);
   const content = await markdownToHtml(post?.content || "");
 
