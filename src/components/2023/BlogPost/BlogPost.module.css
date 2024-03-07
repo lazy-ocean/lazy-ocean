@@ -36,11 +36,17 @@
   line-height: 1.8rem;
 }
 
-.post blockquote {
+.post blockquote:not(.twitter-tweet) {
   background-color: #ebebeb91;
   margin: 0;
   padding: var(--spacings-xs);
   border-radius: 20px;
+}
+
+.post :global .twitter-tweet,
+.post :global .tenor-gif-embed {
+  margin: 2rem auto !important;
+  background-color: transparent;
 }
 
 .post :global .centered {
