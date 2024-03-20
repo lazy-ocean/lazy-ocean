@@ -104,6 +104,7 @@ export enum BlogTags {
   finds = "finds",
   recommendations = "recommendations",
   books = "books",
+  ai = "ai",
 }
 
 export enum BitsTypes {

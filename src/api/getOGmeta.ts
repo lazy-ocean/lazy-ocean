@@ -20,6 +20,10 @@ const postsMap: { [key: string]: { title: string; images: string } } = {
     title: "Dynamic OG image with Next.js",
     images: "stickers/image.png,stickers/meta.png,stickers/code.png",
   },
+  "oh-devin": {
+    title: "Generative AI + frontend: how to stay relevant",
+    images: "stickers/ai.png,stickers/speed.png,stickers/programmer.png",
+  },
 };
 
 export const getOGMeta = (slug: string) => postsMap[slug];

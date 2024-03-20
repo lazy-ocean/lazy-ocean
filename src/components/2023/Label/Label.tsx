@@ -17,24 +17,37 @@ type Map = {
 const colorMap: Map = {
   [TechStack.TypeScript]: "#F1C0E8",
   [BlogTags.music]: "#F1C0E8",
-  [TechStack.Next]: "#d4d4d4",
+
   [BlogTags.frontend]: "#ffaaaa",
+  [TechStack.gulp]: "#FFADAD",
+
   [TechStack.Jest]: "#CDE4B4",
   [BlogTags.movies]: "#CDE4B4",
-  [TechStack.a11y]: "#ffcccc",
+
   [BlogTags.finds]: "#fae97a",
   [TechStack.JavaScript]: "#fae97a",
+
   [TechStack.node]: "#9ECEE6",
-  [TechStack.gulp]: "#FFADAD",
-  [TechStack.react]: "#81B2D9",
-  [TechStack.express]: "#d1b4de",
-  [TechStack.cypress]: "#FFC999",
-  [TechStack.styled]: "#b9e7de",
-  [TechStack.Remix]: "#ffe3a1",
-  [TechStack.cssModules]: "#a9bdfd",
-  [BlogTags.design]: "#b6e2b9",
-  [BlogTags.recommendations]: "#a9bdfd",
   [BlogTags.books]: "#9ECEE6",
+
+  [TechStack.react]: "#81B2D9",
+  [BlogTags.ai]: "#81B2D9",
+
+  [TechStack.styled]: "#b9e7de",
+  [BlogTags.design]: "#b6e2b9",
+
+  [TechStack.cssModules]: "#a9bdfd",
+  [BlogTags.recommendations]: "#a9bdfd",
+
+  [TechStack.express]: "#d1b4de",
+
+  [TechStack.cypress]: "#FFC999",
+
+  [TechStack.Remix]: "#ffe3a1",
+
+  [TechStack.a11y]: "#ffcccc",
+
+  [TechStack.Next]: "#d4d4d4",
 };
 
 const isTechStack = (txt: string | TechStack | BlogTags): txt is TechStack =>
