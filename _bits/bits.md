@@ -1,7 +1,7 @@
 ---
-concert: "Daria Zawiałow"
+concert: "JMSN"
 movie: "Anatony of a Fall"
-album: "Mountainhead by Everything Everything"
-book: "The Corrections by Jonathan Franzen"
-podcast: "BBC In Our Time"
+album: "Life is a Killer by Love Fame Tragedy"
+book: "Passing by Nella Larsen"
+podcast: "You're Dead to Me"
 ---
