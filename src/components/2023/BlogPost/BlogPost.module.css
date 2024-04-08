@@ -95,8 +95,13 @@
   background: url("/spotify.png") no-repeat center center;
 }
 
+.post :global .youtubeLink::after {
+  background: url("/youtube.png") no-repeat center center;
+}
+
 .post :global .spotifyLink::after,
-.post :global .githubLink::after {
+.post :global .githubLink::after,
+.post :global .youtubeLink::after {
   content: "";
   display: inline-block;
   width: 16px;
