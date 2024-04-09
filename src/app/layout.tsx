@@ -2,6 +2,7 @@ import { Metadata } from "next";
 import { Raleway, Poppins } from "next/font/google";
 import "./global.css";
 import localFont from "next/font/local";
+import { Analytics } from "@vercel/analytics/react";
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://lazy-ocean.vercel.app/"),
@@ -47,7 +48,10 @@ export default function RootLayout({
       lang="en"
       className={`${myFont.variable} ${raleway.variable} ${poppins.variable}`}
     >
-      <body>{children}</body>
+      <body>
+        {children}
+        <Analytics />
+      </body>
     </html>
   );
 }
