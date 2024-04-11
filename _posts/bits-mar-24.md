@@ -46,7 +46,7 @@ embeds: true
 
 **A great talk on CSS performance (what? yes!)**: a bunch of handy tips on what browsers do to figure out your styles, how to test CSS performance and what to look out for to improve the performance of your selectors, classes, and styles.
 
-<div class='centered' ><iframe width="560" height="315"  src="https://www.youtube.com/embed/nWcexTnvIKI?si=gIWzX8bTNa7dL9Vs&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></div>
+<div class='centered'><iframe width="100%" src="https://www.youtube.com/embed/nWcexTnvIKI?si=gIWzX8bTNa7dL9Vs&amp;controls=0" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen  style="aspect-ratio: 16/9"></iframe></div>
 
 **<a target='_blank' href="https://tetralogical.com/blog/2024/03/18/accessbility-foundations/">Accessibility foundations</a>**: a very down-to-earth, user-friendly and non-ableist short but comprehensive guide to digital accessibility. It is full of the principles that, if applied, will make your site more accessible than probably 80% of the sites out there. I really liked the language they used throughout the guide, giving examples of groups of people for whom this or that particular criterion will be important.
 
