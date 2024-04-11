@@ -14,8 +14,8 @@ interface MainProps extends MainData {
 
 const Main = ({ header, description, tags, items }: MainProps) => (
   <main className={`${styles.container} flexColumn`}>
-    <TimeMachineBtn current={Year.twentyThree} />
     <MainInfo header={header} description={description} />
+    <TimeMachineBtn current={Year.twentyThree} />
     <BlogLink />
     <section>
       <h2>Skills</h2>

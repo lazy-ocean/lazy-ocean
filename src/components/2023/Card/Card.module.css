@@ -64,6 +64,11 @@
   text-decoration-thickness: 3px;
 }
 
+.link:focus-visible {
+  outline: 3px dashed white;
+  outline-offset: 6px;
+}
+
 .cardImageWrapper {
   justify-content: center;
   align-items: flex-end;

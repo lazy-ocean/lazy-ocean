@@ -43,6 +43,18 @@
   font-family: inherit;
 }
 
+.wrapper:has(.timeMachineBtn:focus) .expandingButtons {
+  opacity: 1;
+  visibility: visible;
+}
+
+.expandingButtons:has(.first:focus),
+.expandingButtons:has(.second:focus),
+.expandingButtons:has(.third:focus) {
+  opacity: 1;
+  visibility: visible;
+}
+
 .wrapper:hover .expandingButtons,
 .wrapper:active .expandingButtons {
   opacity: 1;

@@ -2,9 +2,15 @@
   display: flex;
   align-items: center;
   gap: var(--spacings-xxs);
+  width: max-content;
 }
 
 .githubLink svg {
   width: 20px;
   height: 20px;
+}
+
+.githubLink:focus-visible {
+  outline: 3px dashed white;
+  outline-offset: 6px;
 }

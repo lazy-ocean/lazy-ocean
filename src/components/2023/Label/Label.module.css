@@ -14,6 +14,11 @@
   font-size: 0.9rem;
 }
 
+.label button:focus-visible {
+  outline: 3px dashed orange;
+  outline-offset: 15px;
+}
+
 .inactive {
   filter: opacity(0.5);
 }
