@@ -48,7 +48,7 @@ export const TimeMachineBtn = ({ current }: { current: Year }) => {
           </Link>
         )}
       </div>
-      <button className={styles.timeMachineBtn}>
+      <button className={styles.timeMachineBtn} aria-label="Time machine">
         <img src="./sand-clock.png" alt="" />
       </button>
     </div>
