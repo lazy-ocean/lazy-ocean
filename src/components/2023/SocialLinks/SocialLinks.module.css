@@ -3,10 +3,8 @@
   list-style-type: none;
   grid-area: social;
   margin: 0;
-}
-
-.socials li {
-  padding: 0 var(--spacings-xxs);
+  gap: var(--spacings-xs);
+  justify-content: space-evenly;
 }
 
 .socials svg {
@@ -22,7 +20,9 @@
 
 :where(main) .socials {
   flex-direction: column;
+  gap: var(--spacings-xxs);
 }
+
 @media only screen and (max-width: 900px) {
   :where(main) .socials {
     flex-direction: row;
