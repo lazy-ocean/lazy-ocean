@@ -127,6 +127,10 @@
     position: relative;
     order: -1;
   }
+
+  .post :global #main {
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 1050px) {
