@@ -74,6 +74,7 @@
   border-radius: var(--border-radius);
   padding: 0 var(--spacings-s);
   background-color: var(--palette-offwhite);
+  max-width: 70%;
 }
 
 .post h2 {
@@ -119,6 +120,7 @@
   .post {
     display: flex;
     flex-direction: column;
+    max-width: 100%;
   }
 
   .post :global #contents {

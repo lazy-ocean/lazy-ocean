@@ -28,6 +28,10 @@ const postsMap: { [key: string]: { title: string; images: string } } = {
     title: "Generative AI + frontend: how to stay relevant",
     images: "stickers/ai.png,stickers/speed.png,stickers/programmer.png",
   },
+  "love-hate-tailwind": {
+    title: "Love, Hate, and Tailwind CSS",
+    images: "stickers/hate.png,stickers/tailwind.png,stickers/styles.png",
+  },
 };
 
 export const getOGMeta = (slug: string) => postsMap[slug];
