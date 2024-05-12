@@ -1,7 +1,7 @@
 ---
 concert: "JMSN"
 movie: "Drive My Car"
-album: "Ohio Players by The Black Keys"
-book: "The Sands of Mars by Arthur C. Clarke"
+album: "The Loop by Jordan Rakei"
+book: "The Stranger by Albert Camus"
 podcast: "Syntax"
 ---

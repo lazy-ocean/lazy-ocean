@@ -40,6 +40,7 @@ const colorMap: Map = {
   [BlogTags.recommendations]: "#a9bdfd",
 
   [TechStack.express]: "#d1b4de",
+  [BlogTags.podcasts]: "#d1b4de",
 
   [TechStack.cypress]: "#FFC999",
 
