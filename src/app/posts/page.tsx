@@ -37,10 +37,10 @@ export default function Index() {
     <>
       <Header />
       <h1>Vlada's Blog</h1>
-      <h3>
+      <p className="h3">
         Thoughts on tech, life, content I consume and everything else I have an
         opinion on.
-      </h3>
+      </p>
 
       <BlogAccordion tags={tags} bits={<Bits />} />
 

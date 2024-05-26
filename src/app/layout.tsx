@@ -28,14 +28,14 @@ const raleway = Raleway({
   weight: ["300", "700"],
   display: "swap",
   subsets: ["latin"],
-  variable: "--font-raleway",
+  variable: "--font-main",
 });
 
 const poppins = Poppins({
   weight: ["200", "400"],
   display: "swap",
   subsets: ["latin"],
-  variable: "--font-main",
+  variable: "--font-mai",
 });
 
 export default function RootLayout({

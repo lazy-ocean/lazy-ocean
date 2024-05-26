@@ -1,7 +1,7 @@
 ---
 concert: "JMSN"
-movie: "Anatony of a Fall"
-album: "Life is a Killer by Love Fame Tragedy"
-book: "The Sea by John Banville"
-podcast: "You're Dead to Me"
+movie: "Drive My Car"
+album: "A LA SALA by Khruangbin"
+book: "The Sands of Mars by Arthur C. Clarke"
+podcast: "Syntax"
 ---

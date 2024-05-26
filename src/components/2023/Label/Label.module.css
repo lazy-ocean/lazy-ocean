@@ -23,7 +23,7 @@
   filter: opacity(0.5);
 }
 
-:where(section) .label {
+:global(#tags) .label {
   padding: var(--spacings-xxs);
   width: max-content;
   list-style-type: none;

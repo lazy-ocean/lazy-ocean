@@ -19,10 +19,10 @@ export const Tags = ({ tags }: { tags: BlogTags[] }) => {
   }, [active]);
 
   return (
-    <section className={styles.container}>
+    <ul className={styles.container} id="tags">
       {tags?.map((item, i) => (
         <Label text={item} key={i} setActive={setActive} active={active} />
       ))}
-    </section>
+    </ul>
   );
 };

@@ -24,8 +24,10 @@ export const Bits = async () => {
   return (
     <div className={styles.list} role="list">
       {(Object.keys(bitsData) as BitsTypes[]).map((item) => (
-        <div className={styles.card} key={item}>
-          <span className={styles.emoji}>{EMOJI_MAP[item]}</span>
+        <div className={styles.card} key={item} role="listitem">
+          <span className={styles.emoji} aria-hidden="true">
+            {EMOJI_MAP[item]}
+          </span>
           <div className="flexColumn">
             <span>{HEADING_MAP[item]}</span>
             <span style={{ fontStyle: "italic" }}>{bitsData[item]}</span>
