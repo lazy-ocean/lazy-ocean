@@ -31,9 +31,9 @@ The first and last time I tried Tailwind CSS was to showcase all the JS + HTML c
 - I had learned _enough_ CSS by then - well enough to enjoy writing it (that powerful feeling of your first layouts!). It just seemed _weird_ to try to write a whole new, not-at-all-pretty syntax for the things I'd probably like to find out how to write in vanilla CSS
 - Docs are confusing. I will talk about this later, because for me they are just as confusing still, but maaan, it is really annoying not to be able to make sense of the official docs that are supposed to help!
 
-<figure class='centered'>
+<figure class='centered zoomhandler'>
     <img src="/blog/tailwind/tailwind-2020.png"
-         alt="Tailwind 2.0 release notes" style='width: 70%;margin-bottom: 1rem;box-shadow: 0 4px 16px rgb(0 0 0 / 41%);'>
+         alt="Tailwind 2.0 release notes" style='width: 70%;margin-bottom: 1rem;box-shadow: 0 4px 16px rgb(0 0 0 / 41%);' class='zoomhandler'>
     <figcaption>Tailwind 2.0, which I used at the time, was released in 2020 😥</figcaption>
 </figure>
 

@@ -111,6 +111,16 @@
   margin-left: 5px;
 }
 
+.post :global .zoomed {
+  /* transform: scale(1.5); */
+  max-width: 80vw !important;
+  max-height: 100%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .post figcaption {
   font-weight: 200;
   text-align: center;
@@ -134,6 +144,11 @@
 }
 
 @media (max-width: 1050px) {
+  .post :global .zoomed {
+    /* transform: scale(1.5); */
+    width: 100vw !important;
+  }
+
   .post p {
     line-height: 2rem;
   }
