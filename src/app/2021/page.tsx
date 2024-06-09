@@ -6,7 +6,7 @@ import { Projects } from "../../components/2021/Projects/Projects";
 import { TimeMachineBtn } from "../../components/2023/TimeMachine/TimeMachineBtn";
 import { Year } from "../../components/2023/interfaces";
 
-export default async function Page() {
+export default function Page() {
   return (
     <body className={`${"raleway.variable"} ${styles.body}`}>
       <Header />

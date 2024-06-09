@@ -70,7 +70,7 @@ const Label = ({ text, active, setActive }: LabelsProps) => {
       const label = text.replace(".", "-");
       setActive(text);
       const cards = document.querySelectorAll(`.card`);
-      for (let card of cards) {
+      for (const card of cards) {
         if (!card.classList.contains(label)) {
           card.classList.add("hidden");
         } else card.classList.remove("hidden");
@@ -100,7 +100,7 @@ const Label = ({ text, active, setActive }: LabelsProps) => {
         h.innerHTML = "Projects";
       }
       const cards = document.querySelectorAll(`.card`);
-      for (let card of cards) {
+      for (const card of cards) {
         card.classList.remove("hidden");
       }
     }
@@ -113,11 +113,7 @@ const Label = ({ text, active, setActive }: LabelsProps) => {
       }`}
       style={{ ["--color" as string]: colour }}
     >
-      {!!setActive ? (
-        <button onClick={handleClick}>#{text}</button>
-      ) : (
-        `#${text}`
-      )}
+      {setActive ? <button onClick={handleClick}>#{text}</button> : `#${text}`}
     </li>
   );
 };

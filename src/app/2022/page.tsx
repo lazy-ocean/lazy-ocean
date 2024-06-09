@@ -4,9 +4,9 @@ import { MainData, Project } from "../../components/2022/interfaces";
 import projects from "../../backups/projects";
 import { mainData } from "../../backups/mainData";
 
-async function getData() {
-  let items: Project[] = projects;
-  let mainContent: MainData = mainData;
+function getData() {
+  const items: Project[] = projects;
+  const mainContent: MainData = mainData;
 
   return {
     mainContent,
@@ -14,7 +14,7 @@ async function getData() {
   };
 }
 
-export default async function Page() {
-  const { mainContent, items } = await getData();
+export default function Page() {
+  const { mainContent, items } = getData();
   return <Home mainContent={mainContent} items={items} />;
 }

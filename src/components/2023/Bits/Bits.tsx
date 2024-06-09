@@ -18,7 +18,7 @@ const HEADING_MAP = {
   [BitsTypes.podcast]: "Latest fav podcast",
 };
 
-export const Bits = async () => {
+export const Bits = () => {
   const bitsData: BitsType = getAllBits();
 
   return (

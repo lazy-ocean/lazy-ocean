@@ -27,7 +27,7 @@ const AccordionContent = ({ children }: { children: ReactElement }) => {
   return (
     <AccordionItemPanel
       className={styles.accordionContent}
-      style={{ "--calcH": maxHeight } as any}
+      style={{ "--calcH": maxHeight } as never}
     >
       <div ref={contentRef}>{children}</div>
     </AccordionItemPanel>

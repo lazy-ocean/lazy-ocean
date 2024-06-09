@@ -29,7 +29,7 @@ export const socials: SocialLink[] = [
   },
 ];
 
-const SocialLinks = ({ cv }: { cv: string }) => {
+const SocialLinks = () => {
   return (
     <nav aria-label="Social links">
       <ul className={styles.socials}>

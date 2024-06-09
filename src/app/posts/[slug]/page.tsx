@@ -1,6 +1,5 @@
 import { Metadata } from "next";
 import { getAllPosts } from "@/api/postsApi";
-import { Post } from "@/2023/interfaces";
 import { BlogPost } from "@/2023/BlogPost/BlogPost";
 import Label from "@/2023/Label/Label";
 import { Header } from "@/2023/Header/Header";
@@ -38,7 +37,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
       <Header>
         <>
           <a href="/posts" aria-label="Go to the main page">
-            <h3 className={styles.subheader}>Vlada's blog</h3>
+            <h3 className={styles.subheader}>Vlada&apos;s blog</h3>
           </a>
           <a href="/posts" className={styles.backLink}>
             All posts
@@ -60,7 +59,7 @@ export default async function Post({ params }: { params: { slug: string } }) {
   );
 }
 
-export async function generateStaticParams() {
+export function generateStaticParams() {
   const { posts } = getAllPosts(["slug"]);
 
   return posts.map((post) => ({

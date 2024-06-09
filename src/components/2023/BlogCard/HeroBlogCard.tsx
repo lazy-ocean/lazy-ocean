@@ -2,20 +2,21 @@ import Link from "next/link";
 import { Post } from "@/2023/interfaces";
 import styles from "./BlogCard.module.css";
 import Label from "@/2023/Label/Label";
+import { ReactNode } from "react";
 
 export const HeroBlogCard = ({
   post,
   children,
 }: {
   post: Post;
-  children?: any;
+  children?: ReactNode;
 }) => {
   const { title, excerpt, color, slug, tags } = post;
 
   const Content = (
     <div
       className={styles.container}
-      style={{ "--main-colour": color } as any}
+      style={{ "--main-colour": color } as never}
       color={color}
     >
       <h2>{title}</h2>

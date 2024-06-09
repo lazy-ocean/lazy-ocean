@@ -19,7 +19,7 @@ export const ErrorPage = () => {
     <div className={`${styles.page} flexColumn`}>
       <Header />
       <main className={`${styles.fortuneBlock} flexColumn`}>
-        <h2>Whoops, looks like there's no such page</h2>
+        <h2>Whoops, looks like there&apos;s no such page</h2>
         <h3>Choose your fortune instead:</h3>
         <div className={styles.cards}>
           <ReactCardFlip
@@ -33,7 +33,7 @@ export const ErrorPage = () => {
               onClick={() => setIsFlipped(1)}
             >
               <p>1.</p>
-              <img src="/crystal-ball.png" />
+              <img src="/crystal-ball.png" alt="Dreamy crystal ball" />
             </div>
             <div
               className={`${styles.card} ${styles.hiddenCard} flexColumn`}
@@ -47,7 +47,7 @@ export const ErrorPage = () => {
               </p>
               <div>
                 <a href="https://www.youtube.com/watch?v=gieQh1E0b4o">
-                  Let's go
+                  Let&apos;s go
                 </a>
                 <span>🐱</span>
               </div>
@@ -64,16 +64,16 @@ export const ErrorPage = () => {
               onClick={() => setIsFlipped(2)}
             >
               <p>2.</p>
-              <img src="/crystal-ball-2.png" />
+              <img src="/crystal-ball-2.png" alt="Magical crystal ball" />
             </div>
             <div
               className={`${styles.card} ${styles.hiddenCard}`}
               key="back"
               onClick={() => setIsFlipped(false)}
             >
-              <p>Here's some random blog post</p>
+              <p>Here&apos;s some random blog post</p>
               <div>
-                <a href="/posts/meow">Check out</a>
+                <a href="/posts/love-hate-tailwind">Check out</a>
                 <span>🤓</span>
               </div>
             </div>

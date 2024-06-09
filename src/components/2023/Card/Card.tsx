@@ -47,7 +47,7 @@ const Card = ({ card, i }: CardProps) => {
     >
       <div
         className={`${styles.container} ${styles.childPosition}`}
-        style={{ "--main-colour": color, "--index": i } as any}
+        style={{ "--main-colour": color, "--index": i } as never}
       >
         <div className={styles.cardTextWrapper}>
           <div className={styles.header}>
@@ -62,7 +62,7 @@ const Card = ({ card, i }: CardProps) => {
             <h3>{date}</h3>
             <span
               className={styles.tag}
-              style={{ "--main-colour": colorMap[tag] } as any}
+              style={{ "--main-colour": colorMap[tag] } as never}
             >
               {tag}
             </span>
