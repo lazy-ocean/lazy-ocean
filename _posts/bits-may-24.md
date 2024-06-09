@@ -1,6 +1,6 @@
 ---
 title: "Awesome finds - May 2024"
-excerpt: "Some cool things I enjoyed this month: podcasts, music, movies. "
+excerpt: "Some cool things I enjoyed this month: articles, art, music. "
 coverImage: "stickers/mona-lisa.png,stickers/detective.png,stickers/woman-programmer.png"
 date: "2024-06-08T23:04:40.322Z"
 meta:
