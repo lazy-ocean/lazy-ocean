@@ -20,20 +20,7 @@
     "sourceType": "module"
   },
   "ignorePatterns": ["/*.*"],
-  "plugins": [
-    "@typescript-eslint",
-    "@next/eslint-plugin-next",
-    "testing-library"
-  ],
-  "overrides": [
-    {
-      "files": ["**/?(*.)+(spec|test).[jt]s?(x)"],
-      "extends": ["plugin:testing-library/react"],
-      "rules": {
-        "testing-library/prefer-screen-queries": "off"
-      }
-    }
-  ],
+  "plugins": ["@typescript-eslint", "@next/eslint-plugin-next"],
   "extends": [
     "eslint:recommended",
     "plugin:react/recommended",
@@ -48,6 +35,8 @@
     "@typescript-eslint/no-unsafe-member-access": "off",
     "@typescript-eslint/no-unsafe-call": "off",
     "@next/next/no-img-element": "off",
-    "@typescript-eslint/ban-ts-comment": "off"
+    "@typescript-eslint/ban-ts-comment": "off",
+    "@typescript-eslint/no-misused-promises": "warn",
+    "@typescript-eslint/no-non-null-asserted-optional-chain": "off"
   }
 }
