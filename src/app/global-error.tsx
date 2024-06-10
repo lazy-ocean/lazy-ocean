@@ -1,13 +1,7 @@
 "use client";
 import { ErrorPage } from "@/2023/ErrorPage/ErrorPage";
 
-export default function GlobalError({
-  error,
-  reset,
-}: {
-  error: Error & { digest?: string };
-  reset: () => void;
-}) {
+export default function GlobalError() {
   return (
     <html>
       <body>

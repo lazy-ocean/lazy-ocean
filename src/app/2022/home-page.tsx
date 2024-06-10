@@ -13,9 +13,9 @@ const Home = ({
   items: Project[];
 }) => (
   <body className={styles.body}>
-    <Header cv={mainContent.cv} />
+    <Header />
     <Main {...mainContent} items={items} />
-    <Footer cv={mainContent.cv} />
+    <Footer />
   </body>
 );
 

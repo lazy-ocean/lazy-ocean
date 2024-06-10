@@ -29,9 +29,12 @@ body {
   padding: 0;
   margin: 0;
   font-family: var(--font-main), sans-serif;
-  background-color: var(--palette-bg);
   color: var(--palette-text);
   height: 100%;
+}
+
+body {
+  background-color: var(--palette-bg);
 }
 
 a {

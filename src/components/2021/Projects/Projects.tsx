@@ -6,7 +6,7 @@ export const Projects = () => (
     <h2 className={typographyStyles.h2}>My projects</h2>
     <div
       className={`${styles.card} ${styles.childPosition}`}
-      style={{ "--index": 1 } as any}
+      style={{ "--index": 1 } as never}
     >
       <div className={styles.card__text}>
         <div className={styles.card__text__h}>
@@ -63,7 +63,7 @@ export const Projects = () => (
 
     <div
       className={`${styles.card} ${styles.childPosition}`}
-      style={{ "--index": 2 } as any}
+      style={{ "--index": 2 } as never}
     >
       <div className={styles.card__text}>
         <div className={styles.card__text__h}>
@@ -129,7 +129,7 @@ export const Projects = () => (
 
     <div
       className={`${styles.card} ${styles.childPosition}`}
-      style={{ "--index": 3 } as any}
+      style={{ "--index": 3 } as never}
     >
       <div className={styles.card__text}>
         <div className={styles.card__text__h}>
@@ -190,13 +190,13 @@ export const Projects = () => (
 
     <div
       className={`${styles.card} ${styles.childPosition}`}
-      style={{ "--index": 4 } as any}
+      style={{ "--index": 4 } as never}
     >
       <div className={styles.card__text}>
         <div className={styles.card__text__h}>
           <h3 className={typographyStyles.h3}>
             <a style={{ cursor: "default" }} target="_blank">
-              Gdziedzik.pl — wild boars' tracking map
+              Gdziedzik.pl — wild boars&apos; tracking map
             </a>
           </h3>
           <p>November 2020</p>
@@ -264,7 +264,7 @@ export const Projects = () => (
 
     <div
       className={`${styles.card} ${styles.childPosition}`}
-      style={{ "--index": 5 } as any}
+      style={{ "--index": 5 } as never}
     >
       <div className={styles.card__text}>
         <div className={styles.card__text__h}>
@@ -325,7 +325,7 @@ export const Projects = () => (
     </div>
     <div
       className={`${styles.card} ${styles.childPosition}`}
-      style={{ "--index": 6 } as any}
+      style={{ "--index": 6 } as never}
     >
       <div className={styles.card__text}>
         <div className={styles.card__text__h}>
@@ -384,7 +384,7 @@ export const Projects = () => (
     </div>
     <div
       className={`${styles.card} ${styles.childPosition}`}
-      style={{ "--index": 7 } as any}
+      style={{ "--index": 7 } as never}
     >
       <div className={styles.card__text}>
         <div className={styles.card__text__h}>
@@ -434,7 +434,7 @@ export const Projects = () => (
     </div>
     <div
       className={`${styles.card} ${styles.childPosition}`}
-      style={{ "--index": 8 } as any}
+      style={{ "--index": 8 } as never}
     >
       <div className={styles.card__text}>
         <div className={styles.card__text__h}>
@@ -491,7 +491,7 @@ export const Projects = () => (
     </div>
     <div
       className={`${styles.card} ${styles.childPosition}`}
-      style={{ "--index": 9 } as any}
+      style={{ "--index": 9 } as never}
     >
       <div className={styles.card__text}>
         <div className={styles.card__text__h}>

@@ -36,7 +36,7 @@ export default function Index() {
   return (
     <>
       <Header />
-      <h1>Vlada's Blog</h1>
+      <h1>Vlada&apos;s Blog</h1>
       <h3>
         Thoughts on tech, life, content I consume and everything else I have an
         opinion on.

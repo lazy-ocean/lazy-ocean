@@ -50,7 +50,7 @@ const Card = ({ card, i }: CardProps) => {
       className={`${styles.container} ${isStuck ? " isStuck" : ""} ${
         styles.childPosition
       }`}
-      style={{ "--main-colour": color, "--index": i } as any}
+      style={{ "--main-colour": color, "--index": i } as never}
       color={color}
       onMouseEnter={() => onHover(color)}
       onMouseLeave={resetBg}
@@ -62,7 +62,7 @@ const Card = ({ card, i }: CardProps) => {
           href={link}
           target="_blank"
           rel="noopener nofollow noreferrer"
-          style={{ "--main-colour": color } as any}
+          style={{ "--main-colour": color } as never}
         >
           <h2>{title}</h2>
         </a>
