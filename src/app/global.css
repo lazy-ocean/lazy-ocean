@@ -70,7 +70,8 @@ h3 {
   font-size: 1.6rem;
 }
 
-p {
+p,
+summary {
   font-size: 1.2rem;
   font-weight: 200;
 }

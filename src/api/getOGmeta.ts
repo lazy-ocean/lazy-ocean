@@ -22,7 +22,8 @@ const postsMap: { [key: string]: { title: string; images: string } } = {
   },
   "bits-may-24": {
     title: "Awesome finds - May 2024",
-    images: "stickers/mona-lisa.png,stickers/detective.png,stickers/woman-programmer.png",
+    images:
+      "stickers/mona-lisa.png,stickers/detective.png,stickers/woman-programmer.png",
   },
   "newsletters-tech": {
     title: "Newsletters I read: frontend + design edition",
@@ -39,6 +40,10 @@ const postsMap: { [key: string]: { title: string; images: string } } = {
   "love-hate-tailwind": {
     title: "Love, Hate, and Tailwind CSS",
     images: "stickers/hate.png,stickers/tailwind.png,stickers/styles.png",
+  },
+  "hard-stuff": {
+    title: "My toughest frontend battles (and lessons learned)",
+    images: "stickers/fire.png,stickers/stress.png,stickers/success.png",
   },
 };
 
