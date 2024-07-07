@@ -33,14 +33,15 @@
 
 .post p,
 .post li {
-  line-height: 1.8rem;
+  line-height: 2.2rem;
 }
 
 .post blockquote:not(.twitter-tweet) {
-  background-color: #ebebeb91;
+  background-color: rgba(255, 174, 0, 0.15);
   margin: 0;
   padding: var(--spacings-xs);
   border-radius: 20px;
+  border: 2px dashed var(--palette-accent);
 }
 
 .post :global .twitter-tweet,
