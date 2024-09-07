@@ -1,7 +1,7 @@
 ---
-concert: "Hozier @ Open'er"
+concert: "Jungle @ Black Sea Arena"
 movie: "Drive My Car"
-album: "Loveseat by Still Woozy"
-book: "Game, Set and Murder by Elizabeth Flynn"
-podcast: "Syntax"
+album: "Paradise State of Mind by Foster the People"
+book: "John Dies at the End by David Wong"
+podcast: "Historia Polski dla dzieci"
 ---
