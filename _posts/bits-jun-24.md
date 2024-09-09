@@ -75,7 +75,7 @@ embeds: true
 And to polish (pun intended) it all, here's some Warsaw for dessert:
 
 <figure class='centered'>
-    <img src="https://pbs.twimg.com/media/GOunxogbYAAhW6G?format=jpg&name=medium"
+    <img src="https://mw-prod.s3.amazonaws.com/exhibits/images/a307dfa1-812a-4bad-b0cd-33240c453d4f.jpg.1200x630_q85.jpg"
          alt="Starówka nocna by Olaf Krzysztofek" style='width: 70%;margin-bottom: 1rem;box-shadow: 0 4px 16px rgb(0 0 0 / 41%);'>
     <figcaption>Starówka nocna by Olaf Krzysztofek</figcaption>
 </figure>
