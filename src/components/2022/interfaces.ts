@@ -8,6 +8,7 @@ export enum AccentColours {
   yellow = "#fae97a",
   lightgreen = "#bbf2bc",
   brightPink = "#f9afd5",
+  sage = "#c7eec7",
 }
 
 export enum TechStack {

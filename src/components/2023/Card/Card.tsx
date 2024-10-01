@@ -67,7 +67,7 @@ const Card = ({ card, i }: CardProps) => {
               {tag}
             </span>
           </div>
-          <p>{text}</p>
+          <p dangerouslySetInnerHTML={{ __html: text }} />
           {github && <Github link={github} />}
           <CardLabels stack={stack} />
         </div>
