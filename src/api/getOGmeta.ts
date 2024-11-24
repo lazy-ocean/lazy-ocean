@@ -34,6 +34,11 @@ const postsMap: { [key: string]: { title: string; images: string } } = {
     images:
       "stickers/sakura.png,stickers/taj-mahal.png,stickers/global-warming.png",
   },
+  "bits-sept-oct-24": {
+    title: "Awesome finds - September/October 2024",
+    images:
+      "stickers/building.png,stickers/running.png,stickers/vaccination.png",
+  },
   "newsletters-tech": {
     title: "Newsletters I read: frontend + design edition",
     images: "stickers/email.png,stickers/css.png,stickers/webdesign.png",
