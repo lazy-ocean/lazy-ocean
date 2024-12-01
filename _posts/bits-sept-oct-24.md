@@ -2,7 +2,7 @@
 title: "Awesome finds - September/October 2024"
 excerpt: "Some cool things I enjoyed this fall: articles, music, running."
 coverImage: "stickers/building.png,stickers/running.png,stickers/vaccination.png"
-date: "2024-20-11T23:14:02.322Z"
+date: "2024-10-24T23:14:02.322Z"
 meta:
   description: "Awesome things I liked enough to write about - Sept/Oct 2024 edition."
 color: "#fae97a"
