@@ -59,6 +59,11 @@ const postsMap: { [key: string]: { title: string; images: string } } = {
     title: "My toughest frontend battles (and lessons learned)",
     images: "stickers/fire.png,stickers/stress.png,stickers/success.png",
   },
+  "advent-of-code": {
+    title: "Advent of Code: become a better dev in a month",
+    images:
+      "stickers/advent-calendar.png,stickers/santa-hat.png,stickers/christmas-day.png",
+  },
 };
 
 export const getOGMeta = (slug: string) => postsMap[slug];
