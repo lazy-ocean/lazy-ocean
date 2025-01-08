@@ -39,6 +39,10 @@ const postsMap: { [key: string]: { title: string; images: string } } = {
     images:
       "stickers/building.png,stickers/running.png,stickers/vaccination.png",
   },
+  "bits-nov-dec-24": {
+    title: "Awesome finds - November/December 2024",
+    images: "stickers/book.png,stickers/italy.png,stickers/topic.png",
+  },
   "newsletters-tech": {
     title: "Newsletters I read: frontend + design edition",
     images: "stickers/email.png,stickers/css.png,stickers/webdesign.png",
