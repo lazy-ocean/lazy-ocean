@@ -33,6 +33,10 @@ body {
   height: 100%;
 }
 
+*:lang(ru) {
+  font-family: var(--font-cyrillic), serif;
+}
+
 body {
   background-color: var(--palette-bg);
 }

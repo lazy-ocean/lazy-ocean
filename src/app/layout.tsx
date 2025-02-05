@@ -1,5 +1,5 @@
 import { Metadata } from "next";
-import { Raleway, Poppins } from "next/font/google";
+import { Raleway, Poppins, Montserrat } from "next/font/google";
 import "./global.css";
 import localFont from "next/font/local";
 import { Analytics } from "@vercel/analytics/react";
@@ -38,6 +38,13 @@ const poppins = Poppins({
   variable: "--font-main",
 });
 
+const montserrat = Montserrat({
+  weight: ["200", "400"],
+  display: "swap",
+  subsets: ["cyrillic"],
+  variable: "--font-cyrillic",
+});
+
 export default function RootLayout({
   children,
 }: {
@@ -46,7 +53,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${myFont.variable} ${raleway.variable} ${poppins.variable}`}
+      className={`${myFont.variable} ${raleway.variable} ${poppins.variable} ${montserrat.variable}`}
     >
       <body>
         {children}

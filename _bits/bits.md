@@ -1,7 +1,7 @@
 ---
 concert: "Still Woozy"
-movie: "Drive My Car"
+movie: "A Real Pain"
 album: "GNX by Kendrick Lamar"
-book: "The Library at Mount Char by Scott Hawkins"
-podcast: "Dead to Me"
+book: "Fiasco by Stanisław Lem"
+podcast: "Short History Of..."
 ---
