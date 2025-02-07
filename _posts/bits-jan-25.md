@@ -24,7 +24,7 @@ embeds: true
 
 ## Books {#books}
 
-**<a href="https://en.wikipedia.org/wiki/The_Sun_Also_Rises" target="_blank">The Sun Also Rises by Ernest Hemingway</a>**: I read Hemingway as part of a school curriculum I felt that Hemingway was like "everyone drinking heavily and nothing ever happens". Well, I am happy to report that literally nothing has changed during those 15 years, BUT now I feel I understand that lost generation a little better. I actually kinda liked it: with all the empty conversations and everyone's emotional bankruptcy, it felt like a real slice of life rather than literature (read: imaginative people/situations).
+**<a href="https://en.wikipedia.org/wiki/The_Sun_Also_Rises" target="_blank">The Sun Also Rises by Ernest Hemingway</a>**: when I read Hemingway as part of a school curriculum I felt that Hemingway was like "everyone drinking heavily and nothing ever happens". Well, I am happy to report that literally nothing has changed during those 15 years, BUT now I feel I understand that lost generation a little better. I actually kinda liked it: with all the empty conversations and everyone's emotional bankruptcy, it felt like a real slice of life rather than literature (read: imaginative people/situations).
 
 **<a href="https://en.wikipedia.org/wiki/The_Library_at_Mount_Char" target="_blank">The Library at Mount Char by Scott Hawkins</a>**: or the past year or so, I've had an idea in my head for a book (which I'll obviously never write) where something really weird (like a unique superpower, a weird dystopian world order, or a new force of nature, literally anything if it's weird enough) is presented to the reader as a matter of fact, without explanation, to create that "wait what? did I miss something earlier?" feeling. This book came dangerously close to that. But the rules are somehow explained at the end, so... no?
 
@@ -58,7 +58,7 @@ Boy, it has been a nice month for me:
 🧪 I had no idea that Maria Skłodowska-Curie's daughter – Irene Joliot Curie - has received a Nobel Prize in Chemistry as well - <a class='spotifyLink' href='spotify:episode:6gfcubSYhSS9XfORynMWig' target="_blank">**Marie Curie by Short History Of...**</a> Anyway, it also turned out that Maria Skłodowska-Curie had such a hard life that I actually felt like crying several times while listening, she really DID do this for women everywhere.
 
 <figure class='centered'>
-    <img src="https://www.researchgate.net/profile/Louise-Giansante/publication/325551543/figure/fig6/AS:633812564332545@1528124099596/Portrait-of-Marie-Curie-and-her-daughter-Irene-Courtesy-of-Wellcome-Collection-12.png"
+    <img src="/blog/bits/curie.png"
          alt="Marie Curie and her daughter Irene working on some chemical equipment" style='width: 50%;margin-bottom: 1rem;box-shadow: 0 4px 16px rgb(0 0 0 / 41%);'>
 </figure>
 
@@ -93,7 +93,7 @@ Boy, it has been a nice month for me:
     <figcaption>comic by <a href='https://www.facebook.com/linguagons' target="_blank">Linguagons</a></figcaption>     
 </figure>
 
-📅 Work on new data handling in JS has started in 2017, and only now <a href='https://englishlanguagethoughts.com/2018/04/13/calque-or-loanword/' target="_blank">`Temporal` is coming to JS</a> 🥹 So happy!
+📅 Work on new data handling in JS has started in 2017, and only now <a href='https://developer.mozilla.org/en-US/blog/javascript-temporal-is-coming/' target="_blank">`Temporal` is coming to JS</a> 🥹 So happy!
 
 🪦 The "modern" internet, with apps and social media and whatnot, is relatively new - so in a sense we're yet to discover how our data, apps, algorithms and flows affect us and look like to us, while we grow, age and die. So here's a <a href='https://interconnected.org/home/2025/01/30/strava' target="_blank">tiny piece of reflection</a> on Strava and a sense of mortality.
 
