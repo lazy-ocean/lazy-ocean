@@ -1,7 +1,7 @@
 ---
 concert: "Still Woozy"
 movie: "In The Mood For Love"
-album: "The Loop by Jordan Rakei"
+album: "everyone, outside by Cassia"
 book: "Under the Volcano by Malcolm Lowry"
 podcast: "Web Standards"
 ---

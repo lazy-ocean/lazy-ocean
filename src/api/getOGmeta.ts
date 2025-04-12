@@ -47,6 +47,10 @@ const postsMap: { [key: string]: { title: string; images: string } } = {
     title: "Awesome finds - January 2025",
     images: "stickers/pony.png,stickers/chemistry.png,stickers/calendar.png",
   },
+  "bits-feb-mar-25": {
+    title: "Awesome finds - February/March 2025",
+    images: "stickers/diet.png,stickers/kebab.png,stickers/pie-chart.png",
+  },
   "newsletters-tech": {
     title: "Newsletters I read: frontend + design edition",
     images: "stickers/email.png,stickers/css.png,stickers/webdesign.png",
