@@ -36,6 +36,7 @@ const poppins = Poppins({
   display: "swap",
   subsets: ["latin"],
   variable: "--font-main",
+  preload: true,
 });
 
 const montserrat = Montserrat({
@@ -43,6 +44,7 @@ const montserrat = Montserrat({
   display: "swap",
   subsets: ["cyrillic"],
   variable: "--font-cyrillic",
+  preload: true,
 });
 
 export default function RootLayout({
@@ -53,7 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${myFont.variable} ${raleway.variable} ${poppins.variable} ${montserrat.variable}`}
+      className={`${poppins.variable} ${myFont.variable} ${raleway.variable} ${montserrat.variable}`}
     >
       <body>
         {children}
