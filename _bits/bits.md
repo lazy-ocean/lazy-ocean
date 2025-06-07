@@ -1,7 +1,7 @@
 ---
-concert: "Still Woozy"
+concert: "Cassia"
 movie: "In The Mood For Love"
 album: "everyone, outside by Cassia"
-book: "Under the Volcano by Malcolm Lowry"
-podcast: "Web Standards"
+book: "My Brilliant Friend by Elena Ferrante"
+podcast: "In Our Time"
 ---
