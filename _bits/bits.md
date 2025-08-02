@@ -1,7 +1,7 @@
 ---
 concert: "Foster The People"
 movie: "In The Mood For Love"
-album: "everyone, outside by Cassia"
-book: "The Girl With the Dragon Tattoo"
+album: "onion by hard life"
+book: "The Unbearable Lightness of Being"
 podcast: "Syntax"
 ---
