@@ -1,7 +1,7 @@
 ---
-concert: "Foster The People"
-movie: "In The Mood For Love"
-album: "onion by hard life"
-book: "The Unbearable Lightness of Being"
+concert: "Chet Faker"
+movie: "Mickey 17"
+album: "Welcome To The Mood by LEISURE"
+book: "The Year Of The Hare by Arto Paasilinna"
 podcast: "Syntax"
 ---
