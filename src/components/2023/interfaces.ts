@@ -107,6 +107,7 @@ export enum BlogTags {
   books = "books",
   ai = "ai",
   podcasts = "podcasts",
+  games = "games",
 }
 
 export enum BitsTypes {

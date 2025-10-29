@@ -3,6 +3,10 @@ const postsMap: { [key: string]: { title: string; images: string } } = {
     title: "Awesome finds - April/May 2024",
     images: "stickers/chess.png,stickers/album.png,stickers/skyscrapper.png",
   },
+  "bits-summer-25": {
+    title: "Awesome finds - summer 2025",
+    images: "stickers/wolf.png,stickers/font.png,stickers/bookshelf.png",
+  },
   "2023-upgrade": {
     title: "How this website was built",
     images:
