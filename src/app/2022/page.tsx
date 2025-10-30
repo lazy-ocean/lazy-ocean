@@ -1,8 +1,8 @@
 import Home from "./home-page";
 import React from "react";
 import { MainData, Project } from "../../components/2022/interfaces";
-import projects from "../../backups/projects";
-import { mainData } from "../../backups/mainData";
+import projects from "../../data/projects";
+import { mainData } from "../../data/mainData";
 
 function getData() {
   const items: Project[] = projects;

@@ -1,5 +1,5 @@
 import React from "react";
-import { socials } from "@/backups/socialLinks";
+import { socials } from "data/socialLinks";
 import { SocialLink } from "@/2023/interfaces";
 import styles from "./SocialLinks.module.css";
 import { CiFileOn } from "react-icons/ci";

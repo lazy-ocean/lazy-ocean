@@ -28,6 +28,7 @@ export enum TechStack {
   emotion = "emotion",
   auth = "auth",
   Supabase = "Supabase",
+  ReactNative = "React Native",
 }
 
 export enum Tags {

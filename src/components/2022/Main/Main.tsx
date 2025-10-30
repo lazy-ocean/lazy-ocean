@@ -2,7 +2,7 @@ import React from "react";
 import Cards from "../Card/Cards";
 import Label from "../Label/Label";
 import { MainData, Project, TechStack } from "../interfaces";
-import { skills } from "../../../backups/skills";
+import { skills } from "../../../data/skills";
 import styles from "./Main.module.css";
 import { TimeMachineBtn } from "../../2023/TimeMachine/TimeMachineBtn";
 import { Year } from "../../2023/interfaces";

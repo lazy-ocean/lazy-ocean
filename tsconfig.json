@@ -23,7 +23,7 @@
     "paths": {
       "@/2023/*": ["components/2023/*"],
       "@/api/*": ["api/*"],
-      "@/backups/*": ["backups/*"],
+      "@/data/*": ["data/*"],
       "@/utils/*": ["utils/*"]
     }
   },

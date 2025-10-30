@@ -9,6 +9,7 @@ export const skills = [
       TechStack.react,
       TechStack.Next,
       TechStack.Remix,
+      TechStack.ReactNative,
     ],
   },
   {
@@ -20,9 +21,12 @@ export const skills = [
     list: [
       TechStack.a11y,
       TechStack.styled,
+      TechStack.emotion,
       TechStack.node,
       TechStack.gulp,
       TechStack.express,
+      TechStack.auth,
+      TechStack.Supabase,
     ],
   },
 ];

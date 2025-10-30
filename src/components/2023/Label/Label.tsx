@@ -2,7 +2,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { BlogTags, TechStack } from "@/2023/interfaces";
 import styles from "./Label.module.css";
-import { skills } from "@/backups/skills";
+import { skills } from "data/skills";
 
 interface LabelsProps {
   text: TechStack | BlogTags | string;
@@ -50,6 +50,8 @@ const colorMap: Map = {
   [TechStack.a11y]: "#ffcccc",
 
   [TechStack.Next]: "#d4d4d4",
+
+  [TechStack.ReactNative]: "#a1a6ffff",
 };
 
 const isTechStack = (txt: string | TechStack | BlogTags): txt is TechStack =>

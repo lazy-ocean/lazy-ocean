@@ -23,6 +23,7 @@ const colorMap: Map = {
   [TechStack.cypress]: "#FFC999",
   [TechStack.styled]: "#b9e7de",
   [TechStack.Remix]: "#ffe3a1",
+  [TechStack.ReactNative]: "#a1a6ffff",
 };
 
 const Label = ({ text }: LabelsProps) => {
