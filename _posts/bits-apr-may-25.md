@@ -135,7 +135,7 @@ To finish this edition, here's a snowy landscape. I don't know about you, but I 
 
 <figure class='centered'>
     <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/96/Anders_Andersen-Lundby_-_Sol_i_vinterskoven_med_kone_og_dreng_p%C3%A5_en_sti_ud_for_et_bondehus_-_1873.png/1030px-Anders_Andersen-Lundby_-_Sol_i_vinterskoven_med_kone_og_dreng_p%C3%A5_en_sti_ud_for_et_bondehus_-_1873.png?20220811062441"
-         alt="Evening Reading by Georg Pauli, 1884" style='width: 70%;margin-bottom: 1rem;box-shadow: 0 4px 16px rgb(0 0 0 / 41%);'>
+         alt="A sunny winter day with a woman and a boy near a farmhouse by Anders Andersen-Lundby, 1873" style='width: 70%;margin-bottom: 1rem;box-shadow: 0 4px 16px rgb(0 0 0 / 41%);'>
     <figcaption>A sunny winter day with a woman and a boy near a farmhouse by Anders Andersen-Lundby, 1873</figcaption>
 </figure>
 

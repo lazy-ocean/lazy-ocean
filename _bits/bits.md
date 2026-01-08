@@ -1,7 +1,7 @@
 ---
-concert: "Lordofon"
-movie: "Mickey 17"
-album: "The Art of Loving by Olivia Dean"
-book: "The House of the Spirits by Isabel Allende"
+concert: "LEISURE"
+movie: "Wake Up Dead Man"
+album: "3, 10, Why, When by Jamie Woon"
+book: "The Last Death of the Year by Sophie Hannah"
 podcast: "Syntax"
 ---

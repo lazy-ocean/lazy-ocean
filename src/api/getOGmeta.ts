@@ -7,6 +7,10 @@ const postsMap: { [key: string]: { title: string; images: string } } = {
     title: "Awesome finds - summer 2025",
     images: "stickers/wolf.png,stickers/font.png,stickers/bookshelf.png",
   },
+  "bits-autumn-25": {
+    title: "Awesome finds - autumn 2025",
+    images: "stickers/bush.png,stickers/dinosaur.png,stickers/cd-player.png",
+  },
   "2023-upgrade": {
     title: "How this website was built",
     images:
