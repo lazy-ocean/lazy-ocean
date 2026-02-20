@@ -111,7 +111,7 @@ const projects: Project[] = [
     text: "A basic fullstack todo app with user authentication. Built as a tryout of using Express for backend.",
     stack: [TechStack.JavaScript, TechStack.react, TechStack.express],
     color: AccentColours.green,
-    link: "https://justdoltapp.herokuapp.com/",
+    link: "https://just-do-it-app-psi.vercel.app/",
     github: "https://github.com/lazy-ocean/just-do-it-app",
   },
   {
