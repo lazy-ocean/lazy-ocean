@@ -2,7 +2,6 @@ import { useState } from "react";
 import Footer from "@/2023/Footer/Footer";
 import { Header } from "@/2023/Header/Header";
 import styles from "./ErrorPage.module.css";
-import ReactCardFlip from "react-card-flip";
 
 export const ErrorPage = () => {
   const [isFlipped, setIsFlipped] = useState<false | 1 | 2>(false);
@@ -22,62 +21,42 @@ export const ErrorPage = () => {
         <h2>Whoops, looks like there&apos;s no such page</h2>
         <h3>Choose your fortune instead:</h3>
         <div className={styles.cards}>
-          <ReactCardFlip
-            isFlipped={isFlipped && isFlipped === 1}
-            containerStyle={{ ...style(1) }}
-            flipSpeedBackToFront={0.9}
+          <div
+            className={`${styles.card} ${styles.hiddenCard} flexColumn`}
+            key="back"
+            onClick={() => setIsFlipped(false)}
           >
-            <div
-              className={styles.card}
-              key="front"
-              onClick={() => setIsFlipped(1)}
-            >
-              <p>1.</p>
-              <img src="/crystal-ball.png" alt="Dreamy crystal ball" />
+            <p>
+              Go watch my favourite YT video
+              <br />
+              (not rickroll I promise)
+            </p>
+            <div>
+              <a href="https://www.youtube.com/watch?v=gieQh1E0b4o">
+                Let&apos;s go
+              </a>
+              <span>🐱</span>
             </div>
-            <div
-              className={`${styles.card} ${styles.hiddenCard} flexColumn`}
-              key="back"
-              onClick={() => setIsFlipped(false)}
-            >
-              <p>
-                Go watch my favourite YT video
-                <br />
-                (not rickroll I promise)
-              </p>
-              <div>
-                <a href="https://www.youtube.com/watch?v=gieQh1E0b4o">
-                  Let&apos;s go
-                </a>
-                <span>🐱</span>
-              </div>
-            </div>
-          </ReactCardFlip>
-          <ReactCardFlip
-            isFlipped={isFlipped && isFlipped === 2}
-            containerStyle={{ ...style(2) }}
-            flipSpeedBackToFront={0.9}
+          </div>
+          <div
+            className={styles.card}
+            key="front"
+            onClick={() => setIsFlipped(2)}
           >
-            <div
-              className={styles.card}
-              key="front"
-              onClick={() => setIsFlipped(2)}
-            >
-              <p>2.</p>
-              <img src="/crystal-ball-2.png" alt="Magical crystal ball" />
+            <p>2.</p>
+            <img src="/crystal-ball-2.png" alt="Magical crystal ball" />
+          </div>
+          <div
+            className={`${styles.card} ${styles.hiddenCard}`}
+            key="back"
+            onClick={() => setIsFlipped(false)}
+          >
+            <p>Here&apos;s some random blog post</p>
+            <div>
+              <a href="/posts/love-hate-tailwind">Check out</a>
+              <span>🤓</span>
             </div>
-            <div
-              className={`${styles.card} ${styles.hiddenCard}`}
-              key="back"
-              onClick={() => setIsFlipped(false)}
-            >
-              <p>Here&apos;s some random blog post</p>
-              <div>
-                <a href="/posts/love-hate-tailwind">Check out</a>
-                <span>🤓</span>
-              </div>
-            </div>
-          </ReactCardFlip>
+          </div>
         </div>
       </main>
       <Footer cv="/Vladlena_Panchenko_CV.pdf" />

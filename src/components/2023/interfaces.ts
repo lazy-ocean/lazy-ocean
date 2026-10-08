@@ -81,7 +81,7 @@ export interface MainData {
 export interface SocialLink {
   alt: string;
   link: string;
-  icon?: React.ReactElement;
+  icon?: React.ReactElement<any>;
 }
 
 export interface Post {
