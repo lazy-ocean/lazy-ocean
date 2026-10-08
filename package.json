@@ -6,19 +6,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint .",
-    "test": "jest --watch",
     "test:ci": "jest --ci",
-    "prepare": "husky install"
-  },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
-    }
+    "prepare": "husky"
   },
   "dependencies": {
     "@microflash/rehype-starry-night": "^8.0.5",
     "@vercel/analytics": "^2.0.1",
-    "@vercel/og": "^1.0.3",
     "gray-matter": "^4.0.3",
     "highlight.js": "^11.12.0",
     "next": "16.3.8",
@@ -39,7 +32,7 @@
     "@commitlint/config-conventional": "^21.2.3",
     "@types/node": "^26.6.3",
     "@types/react": "19.3.0",
-    "eslint": "10.11.0",
+    "eslint": "^9",
     "eslint-config-next": "16.3.8",
     "husky": "^9.1.7",
     "typescript": "~6.0.3",

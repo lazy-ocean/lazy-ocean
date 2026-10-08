@@ -1,11 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2016",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
+    "lib": ["dom", "dom.iterable", "esnext"],
     "allowJs": true,
     "skipLibCheck": true,
     "strict": true,
@@ -18,25 +14,16 @@
     "isolatedModules": true,
     "jsx": "react-jsx",
     "incremental": true,
-    "baseUrl": "src",
     "plugins": [
       {
         "name": "next"
       }
     ],
     "paths": {
-      "@/2023/*": [
-        "components/2023/*"
-      ],
-      "@/api/*": [
-        "api/*"
-      ],
-      "@/data/*": [
-        "data/*"
-      ],
-      "@/utils/*": [
-        "utils/*"
-      ]
+      "@/2023/*": ["./src/components/2023/*"],
+      "@/api/*": ["./src/api/*"],
+      "@/data/*": ["./src/data/*"],
+      "@/utils/*": ["./src/utils/*"]
     }
   },
   "include": [
@@ -47,7 +34,5 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules"]
 }

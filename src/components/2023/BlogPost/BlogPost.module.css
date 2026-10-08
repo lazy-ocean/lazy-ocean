@@ -44,23 +44,23 @@
   border: 2px dashed var(--palette-accent);
 }
 
-.post :global .twitter-tweet,
-.post :global .tenor-gif-embed {
+.post :global(.twitter-tweet),
+.post :global(.tenor-gif-embed) {
   margin: 2rem auto !important;
   background-color: transparent;
 }
 
-.post :global .centered {
+.post :global(.centered) {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.post :global .blogImg {
+.post :global(.blogImg) {
   width: 70%;
 }
 
-.post :global #contents {
+.post :global(#contents) {
   order: 1;
   position: sticky;
   top: var(--spacings-s);
@@ -70,7 +70,7 @@
   align-self: flex-start;
 }
 
-.post :global #main {
+.post :global(#main) {
   border: var(--dashed-border-m);
   border-radius: var(--border-radius);
   padding: 0 var(--spacings-s);
@@ -82,28 +82,28 @@
   scroll-margin-top: 2rem;
 }
 
-.post :global .hiddenLink {
+.post :global(.hiddenLink) {
   border-bottom: 0;
   font-weight: 200;
   font-size: 0.8rem;
   margin: 0;
 }
 
-.post :global .githubLink::after {
+.post :global(.githubLink)::after {
   background: url("/github.png") no-repeat center center;
 }
 
-.post :global .spotifyLink::after {
+.post :global(.spotifyLink)::after {
   background: url("/spotify.png") no-repeat center center;
 }
 
-.post :global .youtubeLink::after {
+.post :global(.youtubeLink)::after {
   background: url("/youtube.png") no-repeat center center;
 }
 
-.post :global .spotifyLink::after,
-.post :global .githubLink::after,
-.post :global .youtubeLink::after {
+.post :global(.spotifyLink)::after,
+.post :global(.githubLink)::after,
+.post :global(.youtubeLink)::after {
   content: "";
   display: inline-block;
   width: 16px;
@@ -124,12 +124,12 @@
     max-width: 100%;
   }
 
-  .post :global #contents {
+  .post :global(#contents) {
     position: relative;
     order: -1;
   }
 
-  .post :global #main {
+  .post :global(#main) {
     max-width: 100%;
   }
 }
@@ -139,11 +139,11 @@
     line-height: 2rem;
   }
 
-  .post :global figure {
+  .post :global(figure) {
     margin: var(--spacings-xs);
   }
 
-  .post :global figure img {
+  .post :global(figure img) {
     width: 100% !important;
   }
 
