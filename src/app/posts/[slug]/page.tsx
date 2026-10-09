@@ -7,11 +7,10 @@ import styles from "@/2023/Header/Header.module.css";
 import postsStyles from "../posts.module.css";
 import { loadPostData } from "@/utils/loadPostData";
 
-export const generateMetadata = async ({
-  params,
-}: {
-  params: { slug: string };
+export const generateMetadata = async (props: {
+  params: Promise<{ slug: string }>;
 }): Promise<Metadata> => {
+  const params = await props.params;
   const blog = await loadPostData(params.slug);
 
   return {
@@ -23,7 +22,10 @@ export const generateMetadata = async ({
   };
 };
 
-export default async function Post({ params }: { params: { slug: string } }) {
+export default async function Post(props: {
+  params: Promise<{ slug: string }>;
+}) {
+  const params = await props.params;
   const { post } = await loadPostData(params.slug);
 
   if (!post?.slug) {

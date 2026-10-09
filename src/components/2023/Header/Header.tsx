@@ -2,7 +2,7 @@ import Image from "next/image";
 import styles from "./Header.module.css";
 import { ReactElement } from "react";
 
-export const Header = ({ children }: { children?: ReactElement }) => {
+export const Header = ({ children }: { children?: ReactElement<any> }) => {
   return (
     <header className={styles.header}>
       <a href={"/"} aria-label="Return to the main page">

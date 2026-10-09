@@ -1,72 +1,34 @@
 "use client";
+import { Fragment } from "react";
 import styles from "./Accordion.module.css";
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemButton,
-  AccordionItemPanel,
-} from "react-accessible-accordion";
 import { Tags } from "@/2023/Tags/Tags";
 import { BlogTags } from "@/2023/interfaces";
 
-import { ReactElement, useEffect, useMemo, useRef, useState } from "react";
-import { AiOutlineDownSquare } from "react-icons/ai";
-
-const AccordionContent = ({ children }: { children: ReactElement }) => {
-  const contentRef = useRef<HTMLDivElement>(null);
-  const [maxHeight, setMaxHeight] = useState("");
-
-  useEffect(() => {
-    if (contentRef.current) {
-      const contentHeight = `${contentRef.current.scrollHeight}px`;
-      setMaxHeight(contentHeight);
-    }
-  }, [contentRef]);
-
-  return (
-    <AccordionItemPanel
-      className={styles.accordionContent}
-      style={{ "--calcH": maxHeight } as never}
-    >
-      <div ref={contentRef}>{children}</div>
-    </AccordionItemPanel>
-  );
-};
+import { ReactElement, useMemo } from "react";
 
 export const BlogAccordion = ({
   tags,
   bits,
 }: {
   tags: BlogTags[];
-  bits: ReactElement;
+  bits: ReactElement<any>;
 }) => {
   const data = useMemo(
     () => [
       { uuid: "bits", h: "Bits and pieces", content: bits },
       { uuid: "tags", h: "Tags", content: <Tags tags={tags} /> },
     ],
-    [tags, bits]
+    [tags, bits],
   );
 
   return (
-    <Accordion
-      allowZeroExpanded
-      allowMultipleExpanded
-      preExpanded={["bits", "tags"]}
-      className={styles.accordion}
-    >
+    <div>
       {data.map(({ uuid, h, content }) => (
-        <AccordionItem uuid={uuid} key={uuid}>
-          <AccordionItemHeading>
-            <AccordionItemButton className={styles.accordionTitle}>
-              <h2>{h}</h2>
-              <AiOutlineDownSquare aria-hidden={true} />
-            </AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionContent>{content}</AccordionContent>
-        </AccordionItem>
+        <div key={uuid} className={styles.accordion}>
+          <h2 className={styles.accordionTitle}>{h}</h2>
+          {content}
+        </div>
       ))}
-    </Accordion>
+    </div>
   );
 };

@@ -2,7 +2,7 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { BlogTags, TechStack } from "@/2023/interfaces";
 import styles from "./Label.module.css";
-import { skills } from "data/skills";
+import { skills } from "@/data/skills";
 
 interface LabelsProps {
   text: TechStack | BlogTags | string;
@@ -63,7 +63,7 @@ const Label = ({ text, active, setActive }: LabelsProps) => {
       isTechStack(text)
         ? colorMap[text]
         : Object.values(colorMap)[Math.floor(Math.random() * 10) + 0],
-    [text]
+    [text],
   );
 
   const handleClick = () => {
@@ -85,7 +85,7 @@ const Label = ({ text, active, setActive }: LabelsProps) => {
         const card = cards2[i];
         (card.children[0] as HTMLElement).style.setProperty(
           "--index",
-          (i + 1).toString()
+          (i + 1).toString(),
         );
       }
 
