@@ -1,7 +1,7 @@
 ---
-concert: "LEISURE"
-movie: "Wake Up Dead Man"
-album: "3, 10, Why, When by Jamie Woon"
-book: "Appleseed by Matt Bell"
+concert: "Mumiy Troll"
+movie: "The Odyssey"
+album: "Ghosts (100 Days of Morning) by Jamie T"
+book: "The Aosawa Murders"
 podcast: "Works In Progress"
 ---
